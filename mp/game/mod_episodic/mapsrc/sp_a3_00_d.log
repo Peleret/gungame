@@ -1,0 +1,26 @@
+19:09:53.969 INFO  Loading C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\sp_a3_00.bsp
+19:09:54.108 WARN  Lump LUMP_CLIPPORTALVERTS is empty
+19:09:54.108 WARN  Lump LUMP_DISPINFO is empty
+19:09:54.108 WARN  Lump LUMP_DISP_VERTS is empty
+19:09:54.108 WARN  Lump LUMP_DISP_TRIS is empty
+19:09:54.109 WARN  Lump LUMP_DISP_MULTIBLEND is empty
+19:09:54.114 WARN  Lump LUMP_OVERLAYS is empty
+19:09:54.115 WARN  Lump LUMP_OVERLAY_FADES is empty
+19:09:54.115 WARN  Lump LUMP_OVERLAY_SYSTEM_LEVELS is empty
+19:09:54.115 INFO  BSP version: 21
+19:09:54.115 INFO  Game: Portal 2
+19:09:54.116 INFO  No areaportals to reallocate...
+19:09:54.116 INFO  No occluders to reallocate...
+19:09:54.209 INFO  3011 (11.1%) exact brushside->origface matches
+19:09:54.209 INFO  1/0 (nondisp/disp) original faces left after exact brushside->origface matching
+19:09:54.317 INFO  29 (0.1%) partial brushside->origface matches
+19:09:54.317 INFO  Writing brushes and planes
+19:09:54.322 INFO  Writing displacements
+19:09:54.323 INFO  Writing entities
+19:09:55.025 INFO  Writing func_details
+19:09:55.025 INFO  Writing func_viscluster
+19:09:55.025 INFO  Writing info_overlays
+19:09:55.025 INFO  Writing prop_statics
+19:09:55.025 INFO  Writing env_cubemaps
+19:09:55.025 INFO  Writing func_ladders
+19:09:55.025 INFO  Finished decompiling C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\sp_a3_00.bsp.

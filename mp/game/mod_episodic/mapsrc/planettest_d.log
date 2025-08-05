@@ -1,0 +1,24 @@
+19:09:55.608 INFO  Loading C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\planettest.bsp
+19:09:55.648 INFO  Using 'DStaticPropV9' for sprp version 9
+19:09:55.648 WARN  Lump LUMP_CLIPPORTALVERTS is empty
+19:09:55.657 WARN  Lump LUMP_DISP_MULTIBLEND is empty
+19:09:55.658 WARN  Lump LUMP_OVERLAYS is empty
+19:09:55.659 WARN  Lump LUMP_OVERLAY_FADES is empty
+19:09:55.659 WARN  Lump LUMP_OVERLAY_SYSTEM_LEVELS is empty
+19:09:55.659 INFO  BSP version: 21
+19:09:55.659 INFO  Game: Alien Swarm
+19:09:55.661 INFO  No areaportals to reallocate...
+19:09:55.662 INFO  No occluders to reallocate...
+19:09:55.671 INFO  832 (46.4%) exact brushside->origface matches
+19:09:55.671 INFO  9/850 (nondisp/disp) original faces left after exact brushside->origface matching
+19:09:55.674 INFO  110 (6.1%) partial brushside->origface matches
+19:09:55.674 INFO  Writing brushes and planes
+19:09:55.750 INFO  Writing displacements
+19:09:55.884 INFO  Writing entities
+19:09:55.885 INFO  Writing func_details
+19:09:55.885 INFO  Writing func_viscluster
+19:09:55.886 INFO  Writing info_overlays
+19:09:55.886 INFO  Writing prop_statics
+19:09:55.887 INFO  Writing env_cubemaps
+19:09:55.887 INFO  Writing func_ladders
+19:09:55.887 INFO  Finished decompiling C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\planettest.bsp.

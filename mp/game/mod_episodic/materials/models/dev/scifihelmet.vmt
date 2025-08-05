@@ -1,0 +1,14 @@
+vertexlitgeneric
+{
+	$basetexture "\models\dev\SciFiHelmet_BaseColor"
+	"$mraotexture" "\models\dev\scifihelmet_MRAO"
+	"$roughness" "\models\dev\scifihelmet_roughness"
+	"$metallic" "\models\dev\scifihelmet_metallic"
+	$ao "\models\dev\scifihelmet_ao"
+	$bumpmap "\models\dev\SciFiHelmet_Normal"
+	$brdf "models/PBRTest/BRDF"
+	
+	$model			"1"
+
+	
+}

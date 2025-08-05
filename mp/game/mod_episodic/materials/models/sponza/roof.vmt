@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$baseTexture"	"models\sponza\sponza_roof_diff"
+	"$bumpmap" 	"models\sponza\sponza_roof_ddn"
+
+	//"$mraotexture" "models\props_trainstation\train_2_mrao"
+	
+	//"$pbr" "1"
+	"$envmap" "env_cubemap"
+}

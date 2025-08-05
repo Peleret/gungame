@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\i386\\memcpy.asm||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{353A799F-E73F-7A69-07AD-B2AD57F3B775}|game\\client\\client_episodic.vcxproj|A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\hl2_clientmode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{353A799F-E73F-7A69-07AD-B2AD57F3B775}|game\\client\\client_episodic.vcxproj|solutionrelative:game\\client\\hl2\\hl2_clientmode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{353A799F-E73F-7A69-07AD-B2AD57F3B775}|game\\client\\client_episodic.vcxproj|A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\clientmode_hlnormal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{353A799F-E73F-7A69-07AD-B2AD57F3B775}|game\\client\\client_episodic.vcxproj|solutionrelative:game\\client\\hl2\\clientmode_hlnormal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "memcpy.asm",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\i386\\memcpy.asm",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.42.34433\\crt\\src\\i386\\memcpy.asm",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAIwNMAAAAlAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKBSURBVDhPnZJLSJRRFMd/d15qMkq1MDUtI6zoAT3sHSgWJGgJLUIQbCG1iJ4UYoFRQWK0c2PhLgzcpNGACzNLtCAiHEqsTKMaR5kZ/eY9X/PNN7fFTJ8pbeoPl3PvefzOuXAES3Sl4cCZXeW1LUBB2uV2jjx/CAy0dvb1L0qWUooOZ5u0DoURSKQUlJW63Os2byvQNZXEzyiaGkLxKrz\u002BVAQIVO/Y8A937G5rZ99TANHhbJP1K2wGVNdU\u002Bgc8vHoxCkDe6jXs3\u002BQiNzOMpobx\u002BjTGIxVIaL18o\u002BOauP7stDybX0J2lkh1jAXRYiHi0SDxaIC1B\u002Bq4c/MJIADJ3sJRlmfH6fu8m9vtvUI0PDoiz\u002BaWUpxvQ/HNM\u002BtW6OmfBySky47Xn6Pi6EljSgBx6CoM3xMWl3eKB92zRmD7vkpOnb9I6eYdRlcQRCKB9BvCgXkj35IVKKZzbid\u002BRxMmYQZACtCTSYRM3ZdaXdcMgMnRMpjC/qdMSx3/qkUAPZkgKZPIZOok/2Z1HV1PGDWp8Q9ekX5HE0ldByEAgRAgpUQIgZSSyfFRvJ5pgv65hYYHcxYAvp7LeKa/GsGpiQ\u002BEQ4E0MKXqwxaMDY2FGbBvxAJwv9ZEptpN8UrodXgwWXL4Ov6eC5fKIL2dCTVG2BtCi6UWLB4N4imwYwbYWpzz7q0zWGcOfaSyagsb1luwmjO0np4Js\u002BPxG14OTvJ9NoPCZRNEfC687hn0yCwjZnv6C0BzY1VNUUFWl0ux2bOFIktWRcWesjzi0SBaLIhfifJlxiTHvmWKuG5HmK3MlCsLgD/V3FhVoyX0RlXVj/n8CtlZVmm12L5ZbeJde9fQid951bcq5C9DgUH1Ns123wAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-08-05T17:18:50.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "hl2_clientmode.cpp",
+              "DocumentMoniker": "A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\hl2_clientmode.cpp",
+              "RelativeDocumentMoniker": "game\\client\\hl2\\hl2_clientmode.cpp",
+              "ToolTip": "A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\hl2_clientmode.cpp",
+              "RelativeToolTip": "game\\client\\hl2\\hl2_clientmode.cpp",
+              "ViewState": "AgIAABsAAAAAAAAAAAAMwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-05T17:16:07.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clientmode_hlnormal.cpp",
+              "DocumentMoniker": "A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\clientmode_hlnormal.cpp",
+              "RelativeDocumentMoniker": "game\\client\\hl2\\clientmode_hlnormal.cpp",
+              "ToolTip": "A:\\#stardustalpha\\sdk-2013-deferred-master\\mp\\src\\game\\client\\hl2\\clientmode_hlnormal.cpp",
+              "RelativeToolTip": "game\\client\\hl2\\clientmode_hlnormal.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAMwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-08-05T17:16:04.814Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 2185,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{68487888-204a-11d3-87eb-00c04f7971a5}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

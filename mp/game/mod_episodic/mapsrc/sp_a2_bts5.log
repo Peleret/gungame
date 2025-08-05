@@ -1,0 +1,54 @@
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 34 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (228394 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 907 texinfos to 452
+Reduced 50 texdatas to 46 (1497 bytes to 1373)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.bsp
+1 second elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.prt
+ 335 portalclusters
+1004 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 340 visible clusters (0.00%)
+Total clusters visible: 55419
+Average clusters visible: 165
+Building PAS...
+Average clusters audible: 316
+visdatasize:29380  compressed from 32160
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.bsp
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a2_bts5.bsp

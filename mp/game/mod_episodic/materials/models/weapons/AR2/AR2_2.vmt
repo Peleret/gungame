@@ -1,0 +1,15 @@
+"vertexlitgeneric"
+{
+	"$baseTexture"	"models\weapons\AR2/ar22_dif"
+	"$bumpmap" 	"models\weapons\AR2/ar22_norm"
+	"$roughness" "models\weapons\AR2/ar22_rough"
+	"$metallic" "models\weapons\AR2/ar22_metal"
+	"$ao" "models\weapons\AR2/ar22_ao"
+	"$mraotexture" "models\weapons\AR2/ar22_mrao"
+	"$speculartexture" "models\weapons\AR2/ar22_roughness"
+
+	$model			"1"
+	"$blendTintByBaseAlpha"	"1"
+	
+	
+}

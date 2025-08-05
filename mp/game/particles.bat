@@ -1,0 +1,1 @@
+@start hl2.exe -windowed -game episodic -nop4 

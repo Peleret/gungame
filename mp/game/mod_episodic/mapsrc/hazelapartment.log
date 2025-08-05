@@ -1,0 +1,381 @@
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (7814 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 66 texinfos to 40
+Reduced 3 texdatas to 3 (79 bytes to 79)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  48 portalclusters
+ 133 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 1 visible clusters (0.00%)
+Total clusters visible: 1883
+Average clusters visible: 39
+Building PAS...
+Average clusters audible: 48
+visdatasize:965  compressed from 768
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (9206 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 70 texinfos to 42
+Reduced 3 texdatas to 3 (79 bytes to 79)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  50 portalclusters
+ 133 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 1810
+Average clusters visible: 36
+Building PAS...
+Average clusters audible: 50
+visdatasize:1116  compressed from 800
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (9206 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 79 texinfos to 47
+Reduced 3 texdatas to 3 (79 bytes to 79)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  44 portalclusters
+ 115 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 4 visible clusters (0.00%)
+Total clusters visible: 1474
+Average clusters visible: 33
+Building PAS...
+Average clusters audible: 44
+visdatasize:890  compressed from 704
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (9206 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 100 texinfos to 61
+Reduced 3 texdatas to 3 (79 bytes to 79)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  44 portalclusters
+ 115 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 4 visible clusters (0.00%)
+Total clusters visible: 1474
+Average clusters visible: 33
+Building PAS...
+Average clusters audible: 44
+visdatasize:890  compressed from 704
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (9422 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 108 texinfos to 58
+Reduced 3 texdatas to 3 (79 bytes to 79)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  41 portalclusters
+ 111 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 1531
+Average clusters visible: 37
+Building PAS...
+Average clusters audible: 41
+visdatasize:831  compressed from 656
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (13162 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 144 texinfos to 86
+Reduced 4 texdatas to 4 (110 bytes to 110)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  66 portalclusters
+ 183 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3650
+Average clusters visible: 55
+Building PAS...
+Average clusters audible: 66
+visdatasize:1746  compressed from 2112
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+"materials/glass/window_refract_warm.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (13162 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 144 texinfos to 86
+Reduced 4 texdatas to 4 (105 bytes to 105)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  66 portalclusters
+ 183 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3650
+Average clusters visible: 55
+Building PAS...
+Average clusters audible: 66
+visdatasize:1746  compressed from 2112
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+"materials/glass/window_refract_warm.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (13162 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 144 texinfos to 86
+Reduced 5 texdatas to 5 (123 bytes to 123)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+  66 portalclusters
+ 183 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 2 visible clusters (0.00%)
+Total clusters visible: 3650
+Average clusters visible: 55
+Building PAS...
+Average clusters audible: 66
+visdatasize:1746  compressed from 2112
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.vmf
+"materials/glass/window_refract_warm.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (23178 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 223 texinfos to 129
+Reduced 6 texdatas to 6 (142 bytes to 142)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.prt
+ 116 portalclusters
+ 334 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 14 visible clusters (0.00%)
+Total clusters visible: 9172
+Average clusters visible: 79
+Building PAS...
+Average clusters audible: 116
+visdatasize:4471  compressed from 3712
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\hazelapartment.bsp
+0 seconds elapsed

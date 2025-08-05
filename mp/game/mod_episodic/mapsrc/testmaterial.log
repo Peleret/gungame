@@ -1,0 +1,3389 @@
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4233 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 11
+Reduced 6 texdatas to 6 (156 bytes to 156)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+48 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 27291, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(73317, 124761, 140122)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(30433, 49340, 53839)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(8694, 13580, 14552)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(2826, 4196, 4378)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(875, 1248, 1275)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(277, 377, 376)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(87, 113, 110)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(27, 34, 32)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(9, 10, 10)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #10 added RGB(3, 3, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #11 added RGB(1, 1, 1)
+Build Patch/Sample Hash Table(s).....Done<0.0006 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 48 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                11/12288         792/884736   ( 0.1%) 
+texdata                  6/2048          192/65536    ( 0.3%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         48/8192         4800/819200   ( 0.6%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       50872/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]         329/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient        63/65536        1764/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4233/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 11
+Reduced 5 texdatas to 5 (132 bytes to 132)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+578 patches after subdivision
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 19922, max 128
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0006 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                11/12288         792/884736   ( 0.1%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       50872/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]         329/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient         4/65536         112/1835008  ( 0.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4221/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 27291, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0007 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       58800/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3383/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient         4/65536         112/1835008  ( 0.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4221/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Error! To use model "models/props_factory/roboarm.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_factory/roboarm.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 27291, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0007 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       58800/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3383/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient         4/65536         112/1835008  ( 0.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4221/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Error! To use model "models/props_factory/roboarm.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/props_factory/roboarm.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 27291, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0007 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       58800/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3383/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient         4/65536         112/1835008  ( 0.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4221/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 26542, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0007 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+670 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 26542, max 139
+transfer lists:   0.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(821, 774, 747)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(241, 218, 206)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(61, 53, 48)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(16, 13, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(4, 3, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(1, 1, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0007 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4221 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 59 texinfos to 10
+Reduced 6 texdatas to 5 (162 bytes to 149)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+18 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 239, max 16
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(39, 36, 35)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(9, 8, 7)
+Build Patch/Sample Hash Table(s).....Done<0.0006 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  5/2048          160/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       58800/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3692/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient        64/65536        1792/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/214      ( 0.5%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4221/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4204 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 60 texinfos to 10
+Reduced 7 texdatas to 6 (204 bytes to 191)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+18 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 265, max 16
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(61, 54, 48)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(14, 11, 9)
+Build Patch/Sample Hash Table(s).....Done<0.0010 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  6/2048          192/65536    ( 0.3%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       62776/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3692/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient        64/65536        1792/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4204/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4204 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 60 texinfos to 10
+Reduced 8 texdatas to 7 (223 bytes to 210)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+18 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 265, max 16
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(67, 59, 51)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(15, 11, 8)
+Build Patch/Sample Hash Table(s).....Done<0.0010 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       69440/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        3693/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient        64/65536        1792/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4204/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (4204 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 60 texinfos to 10
+Reduced 8 texdatas to 7 (220 bytes to 207)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   4 portalclusters
+   4 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 16
+Average clusters visible: 4
+Building PAS...
+Average clusters audible: 4
+visdatasize:44  compressed from 64
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+18 faces
+8523 square feet [1227392.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+18 patches before subdivision
+18 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 265, max 16
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(67, 59, 51)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(15, 11, 8)
+Build Patch/Sample Hash Table(s).....Done<0.0010 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 11/8192          132/98304    ( 0.1%) 
+brushsides              66/65536         528/524288   ( 0.1%) 
+planes                  48/65536         960/1310720  ( 0.1%) 
+vertexes                49/65536         588/786432   ( 0.1%) 
+nodes                   27/65536         864/2097152  ( 0.0%) 
+texinfos                10/12288         720/884736   ( 0.1%) 
+texdata                  7/2048          224/65536    ( 0.3%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   18/65536        1008/3670016  ( 0.0%) 
+hdr faces               18/65536        1008/3670016  ( 0.0%) 
+origfaces               10/65536         560/3670016  ( 0.0%) 
+leaves                  29/65536         928/2097152  ( 0.0%) 
+leaffaces               18/65536          36/131072   ( 0.0%) 
+leafbrushes             22/65536          44/131072   ( 0.0%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              116/512000        464/2048000  ( 0.0%) 
+edges                   77/256000        308/1024000  ( 0.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              0/32768           0/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices             0/65536           0/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]       69440/0        ( 0.0%) 
+visdata               [variable]          44/16777216 ( 0.0%) 
+entdata               [variable]        7289/0        ( 0.0%) 
+LDR ambient table       29/65536         116/262144   ( 0.0%) 
+HDR ambient table       29/65536         116/262144   ( 0.0%) 
+LDR leaf ambient        29/65536         812/1835008  ( 0.0%) 
+HDR leaf ambient        64/65536        1792/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        4204/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 40
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (6786 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 108 texinfos to 29
+Reduced 14 texdatas to 13 (377 bytes to 330)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   8 portalclusters
+   9 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 64
+Average clusters visible: 8
+Building PAS...
+Average clusters audible: 8
+visdatasize:84  compressed from 128
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+70 faces
+22801 square feet [3283456.00 square inches]
+6 Displacements
+6825 Square Feet [982912.00 Square Inches]
+70 patches before subdivision
+70 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1018, max 28
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(77, 66, 57)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(17, 13, 10)
+Build Patch/Sample Hash Table(s).....Done<0.0039 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 17/8192          204/98304    ( 0.2%) 
+brushsides             102/65536         816/524288   ( 0.2%) 
+planes                  80/65536        1600/1310720  ( 0.1%) 
+vertexes               130/65536        1560/786432   ( 0.2%) 
+nodes                   43/65536        1376/2097152  ( 0.1%) 
+texinfos                29/12288        2088/884736   ( 0.2%) 
+texdata                 13/2048          416/65536    ( 0.6%) 
+dispinfos                6/0            1056/0        ( 0.0%) 
+disp_verts             486/0            9720/0        ( 0.0%) 
+disp_tris              768/0            1536/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples       17600/0           17600/0        ( 0.0%) 
+faces                   70/65536        3920/3670016  ( 0.1%) 
+hdr faces               70/65536        3920/3670016  ( 0.1%) 
+origfaces               29/65536        1624/3670016  ( 0.0%) 
+leaves                  45/65536        1440/2097152  ( 0.1%) 
+leaffaces               64/65536         128/131072   ( 0.1%) 
+leafbrushes             46/65536          92/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              422/512000       1688/2048000  ( 0.1%) 
+edges                  251/256000       1004/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips              3/32768          30/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            36/65536          72/131072   ( 0.1%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      242252/0        ( 0.0%) 
+visdata               [variable]          84/16777216 ( 0.0%) 
+entdata               [variable]        7384/0        ( 0.0%) 
+LDR ambient table       45/65536         180/262144   ( 0.1%) 
+HDR ambient table       45/65536         180/262144   ( 0.1%) 
+LDR leaf ambient        45/65536        1260/1835008  ( 0.1%) 
+HDR leaf ambient        81/65536        2268/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74748/0        ( 0.0%) 
+physics               [variable]        6786/4194304  ( 0.2%) 
+physics terrain       [variable]         838/1048576  ( 0.1%) 
+
+Level flags = 10002
+
+Total triangle count: 166
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (6197 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 91 texinfos to 21
+Reduced 11 texdatas to 11 (280 bytes to 280)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   9 portalclusters
+  11 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 81
+Average clusters visible: 9
+Building PAS...
+Average clusters audible: 9
+visdatasize:112  compressed from 144
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+50 faces
+22578 square feet [3251298.50 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+50 patches before subdivision
+50 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1164, max 32
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(83, 71, 60)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(19, 14, 10)
+Build Patch/Sample Hash Table(s).....Done<0.0044 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 16/8192          192/98304    ( 0.2%) 
+brushsides              96/65536         768/524288   ( 0.1%) 
+planes                  84/65536        1680/1310720  ( 0.1%) 
+vertexes               119/65536        1428/786432   ( 0.2%) 
+nodes                   45/65536        1440/2097152  ( 0.1%) 
+texinfos                21/12288        1512/884736   ( 0.2%) 
+texdata                 11/2048          352/65536    ( 0.5%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   50/65536        2800/3670016  ( 0.1%) 
+hdr faces               50/65536        2800/3670016  ( 0.1%) 
+origfaces               21/65536        1176/3670016  ( 0.0%) 
+leaves                  47/65536        1504/2097152  ( 0.1%) 
+leaffaces               54/65536         108/131072   ( 0.1%) 
+leafbrushes             44/65536          88/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              310/512000       1240/2048000  ( 0.1%) 
+edges                  189/256000        756/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              2/32768          20/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            24/65536          48/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      227204/0        ( 0.0%) 
+visdata               [variable]         112/16777216 ( 0.0%) 
+entdata               [variable]        7284/0        ( 0.0%) 
+LDR ambient table       47/65536         188/262144   ( 0.1%) 
+HDR ambient table       47/65536         188/262144   ( 0.1%) 
+LDR leaf ambient        47/65536        1316/1835008  ( 0.1%) 
+HDR leaf ambient        80/65536        2240/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        6197/4194304  ( 0.1%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 126
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (6885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 103 texinfos to 23
+Reduced 12 texdatas to 12 (315 bytes to 315)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   9 portalclusters
+  11 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 81
+Average clusters visible: 9
+Building PAS...
+Average clusters audible: 9
+visdatasize:112  compressed from 144
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+51 faces
+22578 square feet [3251298.50 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+51 patches before subdivision
+51 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1214, max 32
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(83, 71, 61)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(19, 14, 10)
+Build Patch/Sample Hash Table(s).....Done<0.0030 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 18/8192          216/98304    ( 0.2%) 
+brushsides             108/65536         864/524288   ( 0.2%) 
+planes                  86/65536        1720/1310720  ( 0.1%) 
+vertexes               126/65536        1512/786432   ( 0.2%) 
+nodes                   45/65536        1440/2097152  ( 0.1%) 
+texinfos                23/12288        1656/884736   ( 0.2%) 
+texdata                 12/2048          384/65536    ( 0.6%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   51/65536        2856/3670016  ( 0.1%) 
+hdr faces               51/65536        2856/3670016  ( 0.1%) 
+origfaces               23/65536        1288/3670016  ( 0.0%) 
+leaves                  47/65536        1504/2097152  ( 0.1%) 
+leaffaces               55/65536         110/131072   ( 0.1%) 
+leafbrushes             46/65536          92/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              326/512000       1304/2048000  ( 0.1%) 
+edges                  199/256000        796/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              2/32768          20/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            24/65536          48/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      227108/0        ( 0.0%) 
+visdata               [variable]         112/16777216 ( 0.0%) 
+entdata               [variable]        7284/0        ( 0.0%) 
+LDR ambient table       47/65536         188/262144   ( 0.1%) 
+HDR ambient table       47/65536         188/262144   ( 0.1%) 
+LDR leaf ambient        47/65536        1316/1835008  ( 0.1%) 
+HDR leaf ambient        80/65536        2240/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        6885/4194304  ( 0.2%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 132
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (6885 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 103 texinfos to 23
+Reduced 12 texdatas to 12 (310 bytes to 310)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   9 portalclusters
+  11 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 81
+Average clusters visible: 9
+Building PAS...
+Average clusters audible: 9
+visdatasize:112  compressed from 144
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+51 faces
+22578 square feet [3251298.50 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+51 patches before subdivision
+51 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1214, max 32
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(97, 80, 66)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(24, 17, 12)
+Build Patch/Sample Hash Table(s).....Done<0.0038 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 18/8192          216/98304    ( 0.2%) 
+brushsides             108/65536         864/524288   ( 0.2%) 
+planes                  86/65536        1720/1310720  ( 0.1%) 
+vertexes               126/65536        1512/786432   ( 0.2%) 
+nodes                   45/65536        1440/2097152  ( 0.1%) 
+texinfos                23/12288        1656/884736   ( 0.2%) 
+texdata                 12/2048          384/65536    ( 0.6%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   51/65536        2856/3670016  ( 0.1%) 
+hdr faces               51/65536        2856/3670016  ( 0.1%) 
+origfaces               23/65536        1288/3670016  ( 0.0%) 
+leaves                  47/65536        1504/2097152  ( 0.1%) 
+leaffaces               55/65536         110/131072   ( 0.1%) 
+leafbrushes             46/65536          92/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              326/512000       1304/2048000  ( 0.1%) 
+edges                  199/256000        796/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              2/32768          20/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            24/65536          48/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      237092/0        ( 0.0%) 
+visdata               [variable]         112/16777216 ( 0.0%) 
+entdata               [variable]        7284/0        ( 0.0%) 
+LDR ambient table       47/65536         188/262144   ( 0.1%) 
+HDR ambient table       47/65536         188/262144   ( 0.1%) 
+LDR leaf ambient        47/65536        1316/1835008  ( 0.1%) 
+HDR leaf ambient        82/65536        2296/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        6885/4194304  ( 0.2%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 132
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (6896 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 103 texinfos to 23
+Reduced 13 texdatas to 12 (324 bytes to 306)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+   9 portalclusters
+  11 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 81
+Average clusters visible: 9
+Building PAS...
+Average clusters audible: 9
+visdatasize:112  compressed from 144
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+51 faces
+22578 square feet [3251298.50 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+51 patches before subdivision
+51 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1214, max 32
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(91, 67, 51)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(20, 11, 6)
+Build Patch/Sample Hash Table(s).....Done<0.0033 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 18/8192          216/98304    ( 0.2%) 
+brushsides             108/65536         864/524288   ( 0.2%) 
+planes                  86/65536        1720/1310720  ( 0.1%) 
+vertexes               126/65536        1512/786432   ( 0.2%) 
+nodes                   45/65536        1440/2097152  ( 0.1%) 
+texinfos                23/12288        1656/884736   ( 0.2%) 
+texdata                 12/2048          384/65536    ( 0.6%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   51/65536        2856/3670016  ( 0.1%) 
+hdr faces               51/65536        2856/3670016  ( 0.1%) 
+origfaces               23/65536        1288/3670016  ( 0.0%) 
+leaves                  47/65536        1504/2097152  ( 0.1%) 
+leaffaces               55/65536         110/131072   ( 0.1%) 
+leafbrushes             46/65536          92/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              326/512000       1304/2048000  ( 0.1%) 
+edges                  199/256000        796/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              2/32768          20/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            24/65536          48/131072   ( 0.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      275000/0        ( 0.0%) 
+visdata               [variable]         112/16777216 ( 0.0%) 
+entdata               [variable]        7284/0        ( 0.0%) 
+LDR ambient table       47/65536         188/262144   ( 0.1%) 
+HDR ambient table       47/65536         188/262144   ( 0.1%) 
+LDR leaf ambient        47/65536        1316/1835008  ( 0.1%) 
+HDR leaf ambient        82/65536        2296/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74446/0        ( 0.0%) 
+physics               [variable]        6896/4194304  ( 0.2%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 132
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...10**** leaked ****
+Entity env_skydome (480.83 -126.31 -207.00) leaked!
+Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (8253 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 126 texinfos to 91
+Reduced 16 texdatas to 15 (417 bytes to 371)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+LoadPortals: couldn't read a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10370 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 136 texinfos to 92
+Reduced 17 texdatas to 16 (435 bytes to 389)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 119 portalclusters
+ 372 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 9 visible clusters (0.00%)
+Total clusters visible: 10850
+Average clusters visible: 91
+Building PAS...
+Average clusters audible: 112
+visdatasize:4580  compressed from 3808
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+560 faces
+478639 square feet [68924088.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+560 patches before subdivision
+560 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 36263, max 197
+transfer lists:   0.3 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(101, 73, 54)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(22, 12, 7)
+Build Patch/Sample Hash Table(s).....Done<0.0392 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 27/8192          324/98304    ( 0.3%) 
+brushsides             162/65536        1296/524288   ( 0.2%) 
+planes                 132/65536        2640/1310720  ( 0.2%) 
+vertexes               580/65536        6960/786432   ( 0.9%) 
+nodes                  253/65536        8096/2097152  ( 0.4%) 
+texinfos                92/12288        6624/884736   ( 0.7%) 
+texdata                 16/2048          512/65536    ( 0.8%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                  560/65536       31360/3670016  ( 0.9%) 
+hdr faces              560/65536       31360/3670016  ( 0.9%) 
+origfaces              101/65536        5656/3670016  ( 0.2%) 
+leaves                 255/65536        8160/2097152  ( 0.4%) 
+leaffaces              691/65536        1382/131072   ( 1.1%) 
+leafbrushes            156/65536         312/131072   ( 0.2%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             2888/512000      11552/2048000  ( 0.6%) 
+edges                 1498/256000       5992/1024000  ( 0.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             25/32768         250/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           321/65536         642/131072   ( 0.5%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     1977656/0        ( 0.0%) 
+visdata               [variable]        4580/16777216 ( 0.0%) 
+entdata               [variable]        7760/0        ( 0.0%) 
+LDR ambient table      255/65536        1020/262144   ( 0.4%) 
+HDR ambient table      255/65536        1020/262144   ( 0.4%) 
+LDR leaf ambient       255/65536        7140/1835008  ( 0.4%) 
+HDR leaf ambient       243/65536        6804/1835008  ( 0.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10370/4194304  ( 0.2%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 1364
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1 second elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (11320 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 140 texinfos to 95
+Reduced 19 texdatas to 18 (473 bytes to 427)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 632 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 39 visible clusters (0.00%)
+Total clusters visible: 44548
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1804 faces
+2004441 square feet [288639584.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+1804 patches before subdivision
+1804 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 413496, max 730
+transfer lists:   3.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(108, 78, 59)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(24, 13, 7)
+Build Patch/Sample Hash Table(s).....Done<0.1914 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 29/8192          348/98304    ( 0.4%) 
+brushsides             174/65536        1392/524288   ( 0.3%) 
+planes                 162/65536        3240/1310720  ( 0.2%) 
+vertexes              1348/65536       16176/786432   ( 2.1%) 
+nodes                  505/65536       16160/2097152  ( 0.8%) 
+texinfos                95/12288        6840/884736   ( 0.8%) 
+texdata                 18/2048          576/65536    ( 0.9%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1804/65536      101024/3670016  ( 2.8%) 
+hdr faces             1804/65536      101024/3670016  ( 2.8%) 
+origfaces              104/65536        5824/3670016  ( 0.2%) 
+leaves                 508/65536       16256/2097152  ( 0.8%) 
+leaffaces             2005/65536        4010/131072   ( 3.1%) 
+leafbrushes            348/65536         696/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8106/512000      32424/2048000  ( 1.6%) 
+edges                 4117/256000      16468/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             44/32768         440/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           660/65536        1320/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7379460/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        7924/0        ( 0.0%) 
+LDR ambient table      508/65536        2032/262144   ( 0.8%) 
+HDR ambient table      508/65536        2032/262144   ( 0.8%) 
+LDR leaf ambient       508/65536       14224/1835008  ( 0.8%) 
+HDR leaf ambient       378/65536       10584/1835008  ( 0.6%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       11320/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 4082
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (11320 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 140 texinfos to 95
+Reduced 19 texdatas to 18 (473 bytes to 427)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 632 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 39 visible clusters (0.00%)
+Total clusters visible: 44548
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1804 faces
+2004441 square feet [288639584.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+1804 patches before subdivision
+1804 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 413496, max 730
+transfer lists:   3.2 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(108, 78, 59)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(24, 13, 7)
+Build Patch/Sample Hash Table(s).....Done<0.1942 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 29/8192          348/98304    ( 0.4%) 
+brushsides             174/65536        1392/524288   ( 0.3%) 
+planes                 162/65536        3240/1310720  ( 0.2%) 
+vertexes              1348/65536       16176/786432   ( 2.1%) 
+nodes                  505/65536       16160/2097152  ( 0.8%) 
+texinfos                95/12288        6840/884736   ( 0.8%) 
+texdata                 18/2048          576/65536    ( 0.9%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1804/65536      101024/3670016  ( 2.8%) 
+hdr faces             1804/65536      101024/3670016  ( 2.8%) 
+origfaces              104/65536        5824/3670016  ( 0.2%) 
+leaves                 508/65536       16256/2097152  ( 0.8%) 
+leaffaces             2005/65536        4010/131072   ( 3.1%) 
+leafbrushes            348/65536         696/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8106/512000      32424/2048000  ( 1.6%) 
+edges                 4117/256000      16468/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             44/32768         440/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           660/65536        1320/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7379460/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        7924/0        ( 0.0%) 
+LDR ambient table      508/65536        2032/262144   ( 0.8%) 
+HDR ambient table      508/65536        2032/262144   ( 0.8%) 
+LDR leaf ambient       508/65536       14224/1835008  ( 0.8%) 
+HDR leaf ambient       378/65536       10584/1835008  ( 0.6%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       11320/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 4082
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10762 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 134 texinfos to 89
+Reduced 18 texdatas to 17 (454 bytes to 408)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 632 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 39 visible clusters (0.00%)
+Total clusters visible: 44548
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1798 faces
+1952223 square feet [281120224.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+1798 patches before subdivision
+1798 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 412313, max 730
+transfer lists:   3.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(108, 78, 59)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(24, 13, 7)
+Build Patch/Sample Hash Table(s).....Done<0.1904 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 28/8192          336/98304    ( 0.3%) 
+brushsides             168/65536        1344/524288   ( 0.3%) 
+planes                 154/65536        3080/1310720  ( 0.2%) 
+vertexes              1340/65536       16080/786432   ( 2.0%) 
+nodes                  499/65536       15968/2097152  ( 0.8%) 
+texinfos                89/12288        6408/884736   ( 0.7%) 
+texdata                 17/2048          544/65536    ( 0.8%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1798/65536      100688/3670016  ( 2.7%) 
+hdr faces             1798/65536      100688/3670016  ( 2.7%) 
+origfaces               98/65536        5488/3670016  ( 0.1%) 
+leaves                 501/65536       16032/2097152  ( 0.8%) 
+leaffaces             1999/65536        3998/131072   ( 3.1%) 
+leafbrushes            347/65536         694/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8058/512000      32232/2048000  ( 1.6%) 
+edges                 4093/256000      16372/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             44/32768         440/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           660/65536        1320/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7379460/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        7762/0        ( 0.0%) 
+LDR ambient table      501/65536        2004/262144   ( 0.8%) 
+HDR ambient table      501/65536        2004/262144   ( 0.8%) 
+LDR leaf ambient       501/65536       14028/1835008  ( 0.8%) 
+HDR leaf ambient       364/65536       10192/1835008  ( 0.6%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10762/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 4070
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+"materials/deferred/lightpass_point_v.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10774 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 134 texinfos to 89
+Reduced 20 texdatas to 19 (497 bytes to 451)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 631 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 41 visible clusters (0.00%)
+Total clusters visible: 44590
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1796 faces
+1952223 square feet [281120224.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+1796 patches before subdivision
+101702 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+81 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 14268097, max 1007
+transfer lists: 108.9 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(23197, 12764, 6838)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(4186, 1495, 563)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(853, 205, 68)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(180, 30, 10)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(39, 5, 2)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(9, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 0, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.1968 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+16 of 80 (20% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 28/8192          336/98304    ( 0.3%) 
+brushsides             168/65536        1344/524288   ( 0.3%) 
+planes                 154/65536        3080/1310720  ( 0.2%) 
+vertexes              1339/65536       16068/786432   ( 2.0%) 
+nodes                  501/65536       16032/2097152  ( 0.8%) 
+texinfos                89/12288        6408/884736   ( 0.7%) 
+texdata                 19/2048          608/65536    ( 0.9%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1796/65536      100576/3670016  ( 2.7%) 
+hdr faces             1796/65536      100576/3670016  ( 2.7%) 
+origfaces               98/65536        5488/3670016  ( 0.1%) 
+leaves                 503/65536       16096/2097152  ( 0.8%) 
+leaffaces             1999/65536        3998/131072   ( 3.1%) 
+leafbrushes            347/65536         694/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8052/512000      32208/2048000  ( 1.6%) 
+edges                 4090/256000      16360/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         81/8192         8100/819200   ( 1.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             46/32768         460/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           684/65536        1368/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7353508/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        8804/0        ( 0.0%) 
+LDR ambient table      503/65536        2012/262144   ( 0.8%) 
+HDR ambient table      503/65536        2012/262144   ( 0.8%) 
+LDR leaf ambient       503/65536       14084/1835008  ( 0.8%) 
+HDR leaf ambient       611/65536       17108/1835008  ( 0.9%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10774/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 4068
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+6 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+"materials/deferred/lightpass_point_v.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10774 bytes)
+Error! To use model "models/shadertest/shaderslab3.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab3.mdl"!
+Error! To use model "models/shadertest/shaderslab5.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab5.mdl"!
+Error! To use model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"!
+Error! To use model "models/shadertest/predator.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/predator.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 134 texinfos to 89
+Reduced 20 texdatas to 19 (497 bytes to 451)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1 second elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 631 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 41 visible clusters (0.00%)
+Total clusters visible: 44590
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1796 faces
+1952223 square feet [281120224.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+3 direct lights
+0...1...2...3...4...5...6...7...8...9...10Build Patch/Sample Hash Table(s).....Done<0.1950 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 2 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 28/8192          336/98304    ( 0.3%) 
+brushsides             168/65536        1344/524288   ( 0.3%) 
+planes                 154/65536        3080/1310720  ( 0.2%) 
+vertexes              1339/65536       16068/786432   ( 2.0%) 
+nodes                  501/65536       16032/2097152  ( 0.8%) 
+texinfos                89/12288        6408/884736   ( 0.7%) 
+texdata                 19/2048          608/65536    ( 0.9%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1796/65536      100576/3670016  ( 2.7%) 
+hdr faces             1796/65536      100576/3670016  ( 2.7%) 
+origfaces               98/65536        5488/3670016  ( 0.1%) 
+leaves                 503/65536       16096/2097152  ( 0.8%) 
+leaffaces             1999/65536        3998/131072   ( 3.1%) 
+leafbrushes            347/65536         694/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8052/512000      32208/2048000  ( 1.6%) 
+edges                 4090/256000      16360/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          3/8192          300/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             46/32768         460/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           684/65536        1368/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7353508/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        8804/0        ( 0.0%) 
+LDR ambient table      503/65536        2012/262144   ( 0.8%) 
+HDR ambient table      503/65536        2012/262144   ( 0.8%) 
+LDR leaf ambient       503/65536       14084/1835008  ( 0.8%) 
+HDR leaf ambient       463/65536       12964/1835008  ( 0.7%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/830      ( 0.1%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10774/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10000
+
+Total triangle count: 4068
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10762 bytes)
+Error! To use model "models/shadertest/shaderslab3.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab3.mdl"!
+Error! To use model "models/shadertest/shaderslab5.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab5.mdl"!
+Error! To use model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"!
+Error! To use model "models/shadertest/predator.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/predator.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 134 texinfos to 89
+Reduced 18 texdatas to 17 (454 bytes to 408)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1 second elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 631 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 41 visible clusters (0.00%)
+Total clusters visible: 44590
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1798 faces
+1952223 square feet [281120224.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...10Build Patch/Sample Hash Table(s).....Done<0.2026 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 28/8192          336/98304    ( 0.3%) 
+brushsides             168/65536        1344/524288   ( 0.3%) 
+planes                 154/65536        3080/1310720  ( 0.2%) 
+vertexes              1340/65536       16080/786432   ( 2.0%) 
+nodes                  501/65536       16032/2097152  ( 0.8%) 
+texinfos                89/12288        6408/884736   ( 0.7%) 
+texdata                 17/2048          544/65536    ( 0.8%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1798/65536      100688/3670016  ( 2.7%) 
+hdr faces             1798/65536      100688/3670016  ( 2.7%) 
+origfaces               98/65536        5488/3670016  ( 0.1%) 
+leaves                 503/65536       16096/2097152  ( 0.8%) 
+leaffaces             2001/65536        4002/131072   ( 3.1%) 
+leafbrushes            347/65536         694/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8058/512000      32232/2048000  ( 1.6%) 
+edges                 4093/256000      16372/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             44/32768         440/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           660/65536        1320/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7381140/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        8804/0        ( 0.0%) 
+LDR ambient table      503/65536        2012/262144   ( 0.8%) 
+HDR ambient table      503/65536        2012/262144   ( 0.8%) 
+LDR leaf ambient       503/65536       14084/1835008  ( 0.8%) 
+HDR leaf ambient       343/65536        9604/1835008  ( 0.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/830      ( 0.1%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10762/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10000
+
+Total triangle count: 4070
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10762 bytes)
+Error! To use model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"!
+Error! To use model "models/shadertest/predator.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/predator.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 134 texinfos to 89
+Reduced 18 texdatas to 17 (454 bytes to 408)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1 second elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 227 portalclusters
+ 631 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 41 visible clusters (0.00%)
+Total clusters visible: 44590
+Average clusters visible: 196
+Building PAS...
+Average clusters audible: 219
+visdatasize:14906  compressed from 14528
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1798 faces
+1952223 square feet [281120224.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+1 direct lights
+0...1...2...3...4...5...6...7...8...9...10Build Patch/Sample Hash Table(s).....Done<0.1980 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 28/8192          336/98304    ( 0.3%) 
+brushsides             168/65536        1344/524288   ( 0.3%) 
+planes                 154/65536        3080/1310720  ( 0.2%) 
+vertexes              1340/65536       16080/786432   ( 2.0%) 
+nodes                  501/65536       16032/2097152  ( 0.8%) 
+texinfos                89/12288        6408/884736   ( 0.7%) 
+texdata                 17/2048          544/65536    ( 0.8%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                 1798/65536      100688/3670016  ( 2.7%) 
+hdr faces             1798/65536      100688/3670016  ( 2.7%) 
+origfaces               98/65536        5488/3670016  ( 0.1%) 
+leaves                 503/65536       16096/2097152  ( 0.8%) 
+leaffaces             2001/65536        4002/131072   ( 3.1%) 
+leafbrushes            347/65536         694/131072   ( 0.5%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges             8058/512000      32232/2048000  ( 1.6%) 
+edges                 4093/256000      16372/1024000  ( 1.6%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          1/8192          100/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             44/32768         440/327680   ( 0.1%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           660/65536        1320/131072   ( 1.0%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7381140/0        ( 0.0%) 
+visdata               [variable]       14906/16777216 ( 0.1%) 
+entdata               [variable]        8804/0        ( 0.0%) 
+LDR ambient table      503/65536        2012/262144   ( 0.8%) 
+HDR ambient table      503/65536        2012/262144   ( 0.8%) 
+LDR leaf ambient       503/65536       14084/1835008  ( 0.8%) 
+HDR leaf ambient       343/65536        9604/1835008  ( 0.5%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/1034     ( 0.1%) 
+pakfile               [variable]       74745/0        ( 0.0%) 
+physics               [variable]       10762/4194304  ( 0.3%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10000
+
+Total triangle count: 4070
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.vmf
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+Failed to load $include VMT file (materials/models/props_map_editor/item_lighting_common.vmt)
+"materials/bee2/models/props_map_editor/toolsblack.vtf": cached version doesn't exist
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+error: material PBR/REGRESSION_PBR doesn't have a $bottommaterial
+done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (10776 bytes)
+Error! To use model "models/shadertest/shaderslab3.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab3.mdl"!
+Error! To use model "models/shadertest/shaderslab5.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/shaderslab5.mdl"!
+Error! To use model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/vertexlittranslucentbumpmappedtexture.mdl"!
+Error! To use model "models/shadertest/predator.mdl"
+      with prop_static, it must be compiled with $staticprop!
+Error loading studio model "models/shadertest/predator.mdl"!
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 133 texinfos to 88
+Reduced 19 texdatas to 18 (479 bytes to 432)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+1 second elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.prt
+ 230 portalclusters
+ 636 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 47 visible clusters (0.00%)
+Total clusters visible: 45611
+Average clusters visible: 198
+Building PAS...
+Average clusters audible: 223
+visdatasize:15162  compressed from 14720
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testmaterial.bsp
+0 seconds elapsed

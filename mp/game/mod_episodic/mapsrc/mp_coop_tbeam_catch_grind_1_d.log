@@ -1,0 +1,24 @@
+19:09:56.842 INFO  Loading C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_tbeam_catch_grind_1.bsp
+19:09:56.915 INFO  Using 'DStaticPropV9' for sprp version 9
+19:09:56.917 WARN  Lump LUMP_CLIPPORTALVERTS is empty
+19:09:56.917 WARN  Lump LUMP_DISPINFO is empty
+19:09:56.917 WARN  Lump LUMP_DISP_VERTS is empty
+19:09:56.917 WARN  Lump LUMP_DISP_TRIS is empty
+19:09:56.917 WARN  Lump LUMP_DISP_MULTIBLEND is empty
+19:09:56.918 INFO  BSP version: 21
+19:09:56.918 INFO  Game: Portal 2
+19:09:56.919 INFO  No areaportals to reallocate...
+19:09:56.919 INFO  No occluders to reallocate...
+19:09:56.943 INFO  1614 (21.6%) exact brushside->origface matches
+19:09:56.943 INFO  0/0 (nondisp/disp) original faces left after exact brushside->origface matching
+19:09:56.955 INFO  144 (1.9%) partial brushside->origface matches
+19:09:56.955 INFO  Writing brushes and planes
+19:09:57.034 INFO  Writing displacements
+19:09:57.034 INFO  Writing entities
+19:09:57.067 INFO  Writing func_details
+19:09:57.131 INFO  Writing func_viscluster
+19:09:57.131 INFO  Writing info_overlays
+19:09:57.132 INFO  Writing prop_statics
+19:09:57.143 INFO  Writing env_cubemaps
+19:09:57.144 INFO  Writing func_ladders
+19:09:57.144 INFO  Finished decompiling C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_tbeam_catch_grind_1.bsp.

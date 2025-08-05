@@ -1,0 +1,24 @@
+19:09:56.321 INFO  Loading C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_infinifling_train.bsp
+19:09:56.349 INFO  Using 'DStaticPropV9' for sprp version 9
+19:09:56.353 WARN  Lump LUMP_CLIPPORTALVERTS is empty
+19:09:56.353 WARN  Lump LUMP_DISPINFO is empty
+19:09:56.353 WARN  Lump LUMP_DISP_VERTS is empty
+19:09:56.353 WARN  Lump LUMP_DISP_TRIS is empty
+19:09:56.353 WARN  Lump LUMP_DISP_MULTIBLEND is empty
+19:09:56.355 INFO  BSP version: 21
+19:09:56.355 INFO  Game: Portal 2
+19:09:56.358 INFO  No areaportals to reallocate...
+19:09:56.358 INFO  No occluders to reallocate...
+19:09:56.385 INFO  1190 (18.7%) exact brushside->origface matches
+19:09:56.385 INFO  1/0 (nondisp/disp) original faces left after exact brushside->origface matching
+19:09:56.399 INFO  144 (2.3%) partial brushside->origface matches
+19:09:56.399 INFO  Writing brushes and planes
+19:09:56.449 INFO  Writing displacements
+19:09:56.449 INFO  Writing entities
+19:09:56.468 INFO  Writing func_details
+19:09:56.549 INFO  Writing func_viscluster
+19:09:56.549 INFO  Writing info_overlays
+19:09:56.551 INFO  Writing prop_statics
+19:09:56.553 INFO  Writing env_cubemaps
+19:09:56.553 INFO  Writing func_ladders
+19:09:56.554 INFO  Finished decompiling C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_infinifling_train.bsp.

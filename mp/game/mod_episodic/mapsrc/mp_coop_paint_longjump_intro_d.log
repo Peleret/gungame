@@ -1,0 +1,20 @@
+19:09:56.427 INFO  Loading C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_paint_longjump_intro.bsp
+19:09:56.503 INFO  Using 'DStaticPropV9' for sprp version 9
+19:09:56.546 WARN  Lump LUMP_DISP_MULTIBLEND is empty
+19:09:56.558 INFO  BSP version: 21
+19:09:56.559 INFO  Game: Portal 2
+19:09:56.560 INFO  Equal amount of areaporal entities and areaportal brushes. Using 'Ordered' method
+19:09:56.560 INFO  No occluders to reallocate...
+19:09:56.595 INFO  3012 (33.3%) exact brushside->origface matches
+19:09:56.595 INFO  6/18 (nondisp/disp) original faces left after exact brushside->origface matching
+19:09:56.619 INFO  360 (4.0%) partial brushside->origface matches
+19:09:56.619 INFO  Writing brushes and planes
+19:09:56.711 INFO  Writing displacements
+19:09:56.714 INFO  Writing entities
+19:09:56.741 INFO  Writing func_details
+19:09:56.778 INFO  Writing func_viscluster
+19:09:56.779 INFO  Writing info_overlays
+19:09:56.781 INFO  Writing prop_statics
+19:09:56.798 INFO  Writing env_cubemaps
+19:09:56.798 INFO  Writing func_ladders
+19:09:56.799 INFO  Finished decompiling C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\maps\mp_coop_paint_longjump_intro.bsp.

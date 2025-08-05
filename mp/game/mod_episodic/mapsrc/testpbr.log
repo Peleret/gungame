@@ -1,0 +1,165 @@
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.vmf
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...10**** leaked ****
+Entity info_player_start (416.00 -128.00 65.00) leaked!
+Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (8003 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 43 texinfos to 35
+Reduced 5 texdatas to 4 (118 bytes to 81)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.prt
+LoadPortals: couldn't read a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.prt
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.vmf
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Error! Variable "$abovewater" is multiply defined in material "dev/dev_water2"!
+Could not locate GameData file portal2.fgd
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (7987 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Water found with no water_lod_control entity, creating a default one.
+Compacting texture/material tables...
+Reduced 43 texinfos to 14
+Reduced 5 texdatas to 4 (118 bytes to 81)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+0 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.prt
+  15 portalclusters
+  20 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 225
+Average clusters visible: 15
+Building PAS...
+Average clusters audible: 15
+visdatasize:184  compressed from 240
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+63 faces
+9898 square feet [1425408.00 square inches]
+0 Displacements
+0 Square Feet [0.00 Square Inches]
+63 patches before subdivision
+63 patches after subdivision
+0 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1281, max 33
+transfer lists:   0.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0015 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   1/1024           48/49152    ( 0.1%) 
+brushes                 21/8192          252/98304    ( 0.3%) 
+brushsides             126/65536        1008/524288   ( 0.2%) 
+planes                  56/65536        1120/1310720  ( 0.1%) 
+vertexes               171/65536        2052/786432   ( 0.3%) 
+nodes                   56/65536        1792/2097152  ( 0.1%) 
+texinfos                14/12288        1008/884736   ( 0.1%) 
+texdata                  4/2048          128/65536    ( 0.2%) 
+dispinfos                0/0               0/0        ( 0.0%) 
+disp_verts               0/0               0/0        ( 0.0%) 
+disp_tris                0/0               0/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples           0/0               0/0        ( 0.0%) 
+faces                   63/65536        3528/3670016  ( 0.1%) 
+hdr faces               63/65536        3528/3670016  ( 0.1%) 
+origfaces               35/65536        1960/3670016  ( 0.1%) 
+leaves                  58/65536        1856/2097152  ( 0.1%) 
+leaffaces               73/65536         146/131072   ( 0.1%) 
+leafbrushes             52/65536         104/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              422/512000       1688/2048000  ( 0.1%) 
+edges                  270/256000       1080/1024000  ( 0.1%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights          0/8192            0/819200   ( 0.0%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips             11/32768         110/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices           153/65536         306/131072   ( 0.2%) 
+cubemapsamples           0/1024            0/16384    ( 0.0%) 
+overlays                 0/512             0/180224   ( 0.0%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]      138844/0        ( 0.0%) 
+visdata               [variable]         184/16777216 ( 0.0%) 
+entdata               [variable]        4864/0        ( 0.0%) 
+LDR ambient table       58/65536         232/262144   ( 0.1%) 
+HDR ambient table       58/65536         232/262144   ( 0.1%) 
+LDR leaf ambient        58/65536        1624/1835008  ( 0.1%) 
+HDR leaf ambient        15/65536         420/1835008  ( 0.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/12       ( 8.3%) 
+pakfile               [variable]       74703/0        ( 0.0%) 
+physics               [variable]        7987/4194304  ( 0.2%) 
+physics terrain       [variable]           2/1048576  ( 0.0%) 
+
+Level flags = 10002
+
+Total triangle count: 156
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\testpbr.bsp
+0 seconds elapsed

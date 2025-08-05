@@ -1,0 +1,465 @@
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.vmf
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+Could not locate GameData file portal2.fgd
+Patching WVT material: maps/sp_a1_wakeup/metal/blendblackfloormetal_dirt02_wvt_patch
+Patching WVT material: maps/sp_a1_wakeup/nature/blenddirt_rust01_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 406 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (446614 bytes)
+Encountered obsolete static prop option to do its fade in screen space @ 9226.92 930.52 498.58
+Encountered obsolete static prop option to do its fade in screen space @ 8737.00 1130.00 576.49
+Encountered obsolete static prop option to do its fade in screen space @ 8942.00 1420.00 618.00
+Encountered obsolete static prop option to do its fade in screen space @ 9114.53 1459.56 656.17
+Encountered obsolete static prop option to do its fade in screen space @ 9216.00 608.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9579.84 520.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9726.98 1219.76 471.75
+Encountered obsolete static prop option to do its fade in screen space @ 9792.00 1139.00 604.00
+Encountered obsolete static prop option to do its fade in screen space @ 8489.00 1334.21 522.63
+Encountered obsolete static prop option to do its fade in screen space @ 9035.00 1379.00 387.71
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 960.00 429.79
+Encountered obsolete static prop option to do its fade in screen space @ 9600.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 10600.00 1344.00 -336.00
+Encountered obsolete static prop option to do its fade in screen space @ 8656.00 1299.00 469.95
+Encountered obsolete static prop option to do its fade in screen space @ 8923.00 1452.00 428.00
+Encountered obsolete static prop option to do its fade in screen space @ 8838.35 1404.71 440.58
+Encountered obsolete static prop option to do its fade in screen space @ 9504.00 560.00 388.00
+Encountered obsolete static prop option to do its fade in screen space @ 9856.00 600.00 389.95
+Encountered obsolete static prop option to do its fade in screen space @ 8417.00 1137.00 489.00
+Encountered obsolete static prop option to do its fade in screen space @ 9024.00 700.00 426.73
+Encountered obsolete static prop option to do its fade in screen space @ 10144.00 1280.00 425.00
+Encountered obsolete static prop option to do its fade in screen space @ 8532.00 1054.00 451.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 496.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9014.00 926.00 444.20
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 7024.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6992.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6928.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6960.00 560.00 512.00
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2339 texinfos to 1095
+Reduced 73 texdatas to 66 (2391 bytes to 2137)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+2 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt
+ 469 portalclusters
+1461 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 322 visible clusters (0.00%)
+Total clusters visible: 78649
+Average clusters visible: 167
+Building PAS...
+Average clusters audible: 330
+visdatasize:52500  compressed from 60032
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+2 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.vmf
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+Could not locate GameData file portal2.fgd
+Patching WVT material: maps/sp_a1_wakeup/metal/blendblackfloormetal_dirt02_wvt_patch
+Patching WVT material: maps/sp_a1_wakeup/nature/blenddirt_rust01_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 406 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (446614 bytes)
+Encountered obsolete static prop option to do its fade in screen space @ 9226.92 930.52 498.58
+Encountered obsolete static prop option to do its fade in screen space @ 8737.00 1130.00 576.49
+Encountered obsolete static prop option to do its fade in screen space @ 8942.00 1420.00 618.00
+Encountered obsolete static prop option to do its fade in screen space @ 9114.53 1459.56 656.17
+Encountered obsolete static prop option to do its fade in screen space @ 9216.00 608.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9579.84 520.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9726.98 1219.76 471.75
+Encountered obsolete static prop option to do its fade in screen space @ 9792.00 1139.00 604.00
+Encountered obsolete static prop option to do its fade in screen space @ 8489.00 1334.21 522.63
+Encountered obsolete static prop option to do its fade in screen space @ 9035.00 1379.00 387.71
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 960.00 429.79
+Encountered obsolete static prop option to do its fade in screen space @ 9600.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 10600.00 1344.00 -336.00
+Encountered obsolete static prop option to do its fade in screen space @ 8656.00 1299.00 469.95
+Encountered obsolete static prop option to do its fade in screen space @ 8923.00 1452.00 428.00
+Encountered obsolete static prop option to do its fade in screen space @ 8838.35 1404.71 440.58
+Encountered obsolete static prop option to do its fade in screen space @ 9504.00 560.00 388.00
+Encountered obsolete static prop option to do its fade in screen space @ 9856.00 600.00 389.95
+Encountered obsolete static prop option to do its fade in screen space @ 8417.00 1137.00 489.00
+Encountered obsolete static prop option to do its fade in screen space @ 9024.00 700.00 426.73
+Encountered obsolete static prop option to do its fade in screen space @ 10144.00 1280.00 425.00
+Encountered obsolete static prop option to do its fade in screen space @ 8532.00 1054.00 451.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 496.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9014.00 926.00 444.20
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 7024.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6992.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6928.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6960.00 560.00 512.00
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2339 texinfos to 1095
+Reduced 73 texdatas to 66 (2391 bytes to 2137)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+2 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt
+ 469 portalclusters
+1461 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 322 visible clusters (0.00%)
+Total clusters visible: 78649
+Average clusters visible: 167
+Building PAS...
+Average clusters audible: 330
+visdatasize:52500  compressed from 60032
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+3 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+3173 faces
+3 degenerate faces
+1239014 square feet [178418096.00 square inches]
+22 Displacements
+126808 Square Feet [18260406.00 Square Inches]
+3170 patches before subdivision
+35550 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+23 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1705721, max 402
+transfer lists:  13.0 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(2664, 3105, 3254)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(719, 765, 675)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(196, 197, 149)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(67, 64, 41)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(22, 21, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(8, 7, 4)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(3, 3, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #9 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0064 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+8 of 8 (100% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1156/8192        13872/98304    (14.1%) 
+brushsides           13614/65536      108912/524288   (20.8%) 
+planes               14998/65536      299960/1310720  (22.9%) 
+vertexes              6255/65536       75060/786432   ( 9.5%) 
+nodes                 1657/65536       53024/2097152  ( 2.5%) 
+texinfos              1095/12288       78840/884736   ( 8.9%) 
+texdata                 66/2048         2112/65536    ( 3.2%) 
+dispinfos               22/0            3872/0        ( 0.0%) 
+disp_verts            3654/0           73080/0        ( 0.0%) 
+disp_tris             6272/0           12544/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples       97579/0           97579/0        ( 0.0%) 
+faces                 3173/65536      177688/3670016  ( 4.8%) 
+hdr faces             3173/65536      177688/3670016  ( 4.8%) 
+origfaces             2360/65536      132160/3670016  ( 3.6%) 
+leaves                1734/65536       55488/2097152  ( 2.6%) 
+leaffaces             4799/65536        9598/131072   ( 7.3%) 
+leafbrushes           4092/65536        8184/131072   ( 6.2%) 
+areas                   11/256            88/2048     ( 4.3%) 
+surfedges            24202/512000      96808/2048000  ( 4.7%) 
+edges                15352/256000      61408/1024000  ( 6.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         23/8192         2300/819200   ( 0.3%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips            324/32768        3240/327680   ( 1.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          5424/65536       10848/131072   ( 8.3%) 
+cubemapsamples          31/1024          496/16384    ( 3.0%) 
+overlays                31/512         10912/180224   ( 6.1%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     3183992/0        ( 0.0%) 
+visdata               [variable]       52500/16777216 ( 0.3%) 
+entdata               [variable]      137737/0        ( 0.0%) 
+LDR ambient table     1734/65536        6936/262144   ( 2.6%) 
+HDR ambient table     1734/65536        6936/262144   ( 2.6%) 
+LDR leaf ambient      1734/65536       48552/1835008  ( 2.6%) 
+HDR leaf ambient      3875/65536      108500/1835008  ( 5.9%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob        [variable]           0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/59046    ( 0.0%) 
+pakfile               [variable]     8253326/0        ( 0.0%) 
+physics               [variable]      446614/4194304  (10.6%) 
+physics terrain       [variable]       11909/1048576  ( 1.1%) 
+
+Level flags = 2
+
+Total triangle count: 8364
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+56 seconds elapsed
+
+
+
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\Portal 2\portal2\materials
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.vmf
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttexture in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refractamount in nature/water_glados_01
+unrecognized conditional test !gameconsole?$refracttint in nature/water_glados_01
+unrecognized conditional test gameconsole?$pseudotranslucent in nature/water_glados_01
+unrecognized conditional test gameconsole?$waterblendfactor in nature/water_glados_01
+Could not locate GameData file portal2.fgd
+Patching WVT material: maps/sp_a1_wakeup/metal/blendblackfloormetal_dirt02_wvt_patch
+Patching WVT material: maps/sp_a1_wakeup/nature/blenddirt_rust01_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 406 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (446614 bytes)
+Encountered obsolete static prop option to do its fade in screen space @ 9226.92 930.52 498.58
+Encountered obsolete static prop option to do its fade in screen space @ 8737.00 1130.00 576.49
+Encountered obsolete static prop option to do its fade in screen space @ 8942.00 1420.00 618.00
+Encountered obsolete static prop option to do its fade in screen space @ 9114.53 1459.56 656.17
+Encountered obsolete static prop option to do its fade in screen space @ 9216.00 608.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9579.84 520.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9726.98 1219.76 471.75
+Encountered obsolete static prop option to do its fade in screen space @ 9792.00 1139.00 604.00
+Encountered obsolete static prop option to do its fade in screen space @ 8489.00 1334.21 522.63
+Encountered obsolete static prop option to do its fade in screen space @ 9035.00 1379.00 387.71
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 960.00 429.79
+Encountered obsolete static prop option to do its fade in screen space @ 9600.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 10600.00 1344.00 -336.00
+Encountered obsolete static prop option to do its fade in screen space @ 8656.00 1299.00 469.95
+Encountered obsolete static prop option to do its fade in screen space @ 8923.00 1452.00 428.00
+Encountered obsolete static prop option to do its fade in screen space @ 8838.35 1404.71 440.58
+Encountered obsolete static prop option to do its fade in screen space @ 9504.00 560.00 388.00
+Encountered obsolete static prop option to do its fade in screen space @ 9856.00 600.00 389.95
+Encountered obsolete static prop option to do its fade in screen space @ 8417.00 1137.00 489.00
+Encountered obsolete static prop option to do its fade in screen space @ 9024.00 700.00 426.73
+Encountered obsolete static prop option to do its fade in screen space @ 10144.00 1280.00 425.00
+Encountered obsolete static prop option to do its fade in screen space @ 8532.00 1054.00 451.00
+Encountered obsolete static prop option to do its fade in screen space @ 9616.00 496.00 477.95
+Encountered obsolete static prop option to do its fade in screen space @ 9014.00 926.00 444.20
+Encountered obsolete static prop option to do its fade in screen space @ 9344.00 1216.00 960.00
+Encountered obsolete static prop option to do its fade in screen space @ 7024.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6992.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6928.00 560.00 512.00
+Encountered obsolete static prop option to do its fade in screen space @ 6960.00 560.00 512.00
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2340 texinfos to 1096
+Reduced 74 texdatas to 67 (2436 bytes to 2182)
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+2 seconds elapsed
+
+
+
+32 threads
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+reading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.prt
+ 469 portalclusters
+1461 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 322 visible clusters (0.00%)
+Total clusters visible: 78649
+Average clusters visible: 167
+Building PAS...
+Average clusters audible: 330
+visdatasize:52500  compressed from 60032
+writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+2 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[59 texlights parsed from 'lights.rad']
+
+Loading a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+3173 faces
+3 degenerate faces
+1239014 square feet [178418096.00 square inches]
+22 Displacements
+126808 Square Feet [18260406.00 Square Inches]
+3170 patches before subdivision
+3170 patches after subdivision
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred_global"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+unsupported light entity: "light_deferred"
+19 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 190829, max 387
+transfer lists:   1.5 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(755, 932, 1051)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(137, 160, 168)
+Build Patch/Sample Hash Table(s).....Done<0.0072 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+4 of 4 (100% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  76/1024         3648/49152    ( 7.4%) 
+brushes               1156/8192        13872/98304    (14.1%) 
+brushsides           13614/65536      108912/524288   (20.8%) 
+planes               14998/65536      299960/1310720  (22.9%) 
+vertexes              6255/65536       75060/786432   ( 9.5%) 
+nodes                 1657/65536       53024/2097152  ( 2.5%) 
+texinfos              1096/12288       78912/884736   ( 8.9%) 
+texdata                 67/2048         2144/65536    ( 3.3%) 
+dispinfos               22/0            3872/0        ( 0.0%) 
+disp_verts            3654/0           73080/0        ( 0.0%) 
+disp_tris             6272/0           12544/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples       97579/0           97579/0        ( 0.0%) 
+faces                 3173/65536      177688/3670016  ( 4.8%) 
+hdr faces             3173/65536      177688/3670016  ( 4.8%) 
+origfaces             2360/65536      132160/3670016  ( 3.6%) 
+leaves                1734/65536       55488/2097152  ( 2.6%) 
+leaffaces             4799/65536        9598/131072   ( 7.3%) 
+leafbrushes           4092/65536        8184/131072   ( 6.2%) 
+areas                   11/256            88/2048     ( 4.3%) 
+surfedges            24202/512000      96808/2048000  ( 4.7%) 
+edges                15352/256000      61408/1024000  ( 6.0%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         19/8192         1900/819200   ( 0.2%) 
+leafwaterdata            1/32768          12/393216   ( 0.0%) 
+waterstrips            324/32768        3240/327680   ( 1.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          5424/65536       10848/131072   ( 8.3%) 
+cubemapsamples          31/1024          496/16384    ( 3.0%) 
+overlays                31/512         10912/180224   ( 6.1%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     2403892/0        ( 0.0%) 
+visdata               [variable]       52500/16777216 ( 0.3%) 
+entdata               [variable]      141735/393216   (36.0%) 
+LDR ambient table     1734/65536        6936/262144   ( 2.6%) 
+HDR ambient table     1734/65536        6936/262144   ( 2.6%) 
+LDR leaf ambient      1734/65536       48552/1835008  ( 2.6%) 
+HDR leaf ambient      3948/65536      110544/1835008  ( 6.0%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+Prop Hull Verts          0/0               0/0        ( 0.0%) 
+Prop Hull Blob           0/0               0/0        ( 0.0%) 
+Prop Hull Lists          0/0               0/0        ( 0.0%) 
+Prop Hulls               0/0               0/0        ( 0.0%) 
+Prop Hull trilist        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/59046    ( 0.0%) 
+pakfile               [variable]     2386690/0        ( 0.0%) 
+physics               [variable]      446614/4194304  (10.6%) 
+physics terrain       [variable]       11909/1048576  ( 1.1%) 
+
+Level flags = 2
+
+Total triangle count: 8364
+Writing a:\#portal2remastered\p2asw\game\portal2asw\mapsrc\sp_a1_wakeup.bsp
+24 seconds elapsed
