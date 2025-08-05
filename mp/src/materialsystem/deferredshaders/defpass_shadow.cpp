@@ -122,17 +122,17 @@ void DrawPassShadowPass( const defParms_shadow &info, CBaseVSShader *pShader, IM
 
                 tmpBuf.SetPixelShaderConstant1( 0, PARM_FLOAT( info.iAlphatestRef ) );
 #ifndef DEFCFG_ENABLE_RADIOSITY
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER0, info.iAlbedo );
+                tmpBuf.BindTexture( SHADER_SAMPLER0, info.iAlbedo );
 #endif
             }
 
 #if DEFCFG_ENABLE_RADIOSITY
             if ( bAlbedo )
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER0, info.iAlbedo );
+                tmpBuf.BindTexture( SHADER_SAMPLER0, info.iAlbedo );
             else
                 tmpBuf.BindStandardTexture( SHADER_SAMPLER0, TEXTURE_WHITE );
 
-            if ( bAlbedo2 ) tmpBuf.BindTexture( pShader, SHADER_SAMPLER1, info.iAlbedo2 );
+            if ( bAlbedo2 ) tmpBuf.BindTexture( SHADER_SAMPLER1, info.iAlbedo2 );
 #endif
 
             if ( bTreeSway )

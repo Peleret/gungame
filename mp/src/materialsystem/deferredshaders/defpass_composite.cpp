@@ -240,7 +240,7 @@ void DrawPassComposite( const defParms_composite &info, CBaseVSShader *pShader, 
             }
 
             if ( bAlbedo )
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER0, info.iAlbedo );
+                tmpBuf.BindTexture( SHADER_SAMPLER0, info.iAlbedo );
             else
                 tmpBuf.BindStandardTexture( SHADER_SAMPLER0, TEXTURE_GREY );
 
@@ -251,18 +251,18 @@ void DrawPassComposite( const defParms_composite &info, CBaseVSShader *pShader, 
                 else
                 {
                     if ( PARM_TEX( info.iEnvmap ) && !bModel )
-                        tmpBuf.BindTexture( pShader, SHADER_SAMPLER3, info.iEnvmap );
+                        tmpBuf.BindTexture( SHADER_SAMPLER3, info.iEnvmap );
                     else
                         // tmpBuf.BindStandardTexture( SHADER_SAMPLER3, TEXTURE_LOCAL_ENV_CUBEMAP );
                         tmpBuf.BindStandardTexture( SHADER_SAMPLER3, TEXTURE_BLACK );
                 }
 
-                if ( bEnvmapMask ) tmpBuf.BindTexture( pShader, SHADER_SAMPLER4, info.iEnvmapMask );
+                if ( bEnvmapMask ) tmpBuf.BindTexture(  SHADER_SAMPLER4, info.iEnvmapMask );
 
                 if ( bAlbedo2 )
                 {
                     if ( bEnvmapMask2 )
-                        tmpBuf.BindTexture( pShader, SHADER_SAMPLER7, info.iEnvmapMask2 );
+                        tmpBuf.BindTexture( SHADER_SAMPLER7, info.iEnvmapMask2 );
                     else
                         tmpBuf.BindStandardTexture( SHADER_SAMPLER7, TEXTURE_WHITE );
                 }
@@ -290,19 +290,19 @@ void DrawPassComposite( const defParms_composite &info, CBaseVSShader *pShader, 
 
             if ( bAlbedo2 )
             {
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER5, info.iAlbedo2 );
+                tmpBuf.BindTexture( SHADER_SAMPLER5, info.iAlbedo2 );
 
                 if ( bBlendmodulate )
                 {
                     tmpBuf.SetVertexShaderTextureTransform( VERTEX_SHADER_SHADER_SPECIFIC_CONST_1,
                                                             info.iBlendmodulateTransform );
-                    tmpBuf.BindTexture( pShader, SHADER_SAMPLER6, info.iBlendmodulate );
+                    tmpBuf.BindTexture( SHADER_SAMPLER6, info.iBlendmodulate );
                 }
             }
 
             if ( bSelfIllum && bSelfIllumMask )
             {
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER4, info.iSelfIllumMask );
+                tmpBuf.BindTexture( SHADER_SAMPLER4, info.iSelfIllumMask );
             }
 
             ShaderViewport_t viewport;

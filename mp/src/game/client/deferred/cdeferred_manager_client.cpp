@@ -582,9 +582,7 @@ void CDeferredManagerClient::LevelInitPreEntity()
 	if ( !success )
 		return;
 	const bool bHasGlobalLight = buffer.GetUnsignedChar();
-
 	def_lump_light_global_t globalLight;
-
 	buffer.GetObjects( &globalLight );
 	const int numLights = buffer.GetInt();
 	CUtlVector<def_lump_light_t> lumpLights;

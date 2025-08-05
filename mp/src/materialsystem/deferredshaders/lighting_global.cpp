@@ -82,9 +82,9 @@ SHADER_DRAW
         pShaderAPI->SetPixelShaderConstant( 17, data.ambh.Base() );
         pShaderAPI->SetPixelShaderConstant( 18, MakeHalfAmbient( data.ambl, data.ambh ).Base() );
 
-        BindTexture( SHADER_SAMPLER4, GetDeferredExt()->GetTexture_Lightmap() );
-        float lightmapScale = pShaderAPI->GetLightMapScaleFactor();
-        pShaderAPI->SetPixelShaderConstant( 19, &lightmapScale );
+        //BindTexture( SHADER_SAMPLER4, GetDeferredExt()->GetTexture_Lightmap() );
+        //float lightmapScale = pShaderAPI->GetLightMapScaleFactor();
+        //pShaderAPI->SetPixelShaderConstant( 19, &lightmapScale );
     }
 
     Draw();

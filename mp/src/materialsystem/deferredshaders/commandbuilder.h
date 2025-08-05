@@ -1,6 +1,6 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
-// Purpose:
+// Purpose: 
 //
 // $NoKeywords: $
 // Utility class for building command buffers into memory
@@ -20,18 +20,18 @@
 #pragma once
 #endif
 
-extern ConVar	mat_fullbright;
+extern ConVar	my_mat_fullbright;
 
 template<int N> class CFixedCommandStorageBuffer
 {
 public:
-	uint8 m_Data[N];
+	alignas( 8 ) uint8 m_Data[N];
 
 	uint8 *m_pDataOut;
 #ifdef DBGFLAG_ASSERT
 	size_t m_nNumBytesRemaining;
 #endif
-
+	
 	FORCEINLINE CFixedCommandStorageBuffer( void )
 	{
 		m_pDataOut = m_Data;
@@ -246,7 +246,7 @@ public:
 			transformation[0].Init( 1.0f, 0.0f, 0.0f, 0.0f );
 			transformation[1].Init( 0.0f, 1.0f, 0.0f, 0.0f );
 		}
-		SetVertexShaderConstant( vertexReg, transformation[0].Base(), 2 );
+		SetVertexShaderConstant( vertexReg, transformation[0].Base(), 2 ); 
 	}
 
 
@@ -283,12 +283,12 @@ public:
 		transformation[1][1] *= scale[1];
 		transformation[0][3] *= scale[0];
 		transformation[1][3] *= scale[1];
-		SetVertexShaderConstant( vertexReg, transformation[0].Base(), 2 );
+		SetVertexShaderConstant( vertexReg, transformation[0].Base(), 2 ); 
 	}
 
 	FORCEINLINE void SetEnvMapTintPixelShaderDynamicState( int pixelReg, int tintVar )
 	{
-		if( g_pConfig->bShowSpecular && mat_fullbright.GetInt() != 2 )
+		if( g_pConfig->bShowSpecular && my_mat_fullbright.GetInt() != 2 )
 		{
 			SetPixelShaderConstant( pixelReg, Param( tintVar)->GetVecValue() );
 		}
@@ -300,7 +300,7 @@ public:
 
 	FORCEINLINE void SetEnvMapTintPixelShaderDynamicStateGammaToLinear( int pixelReg, int tintVar, float flAlphaValue = 1.0 )
 	{
-		if( ( tintVar != -1 ) && g_pConfig->bShowSpecular && mat_fullbright.GetInt() != 2 )
+		if( ( tintVar != -1 ) && g_pConfig->bShowSpecular && my_mat_fullbright.GetInt() != 2 )
 		{
 			float color[4];
 			color[3] = flAlphaValue;
@@ -357,11 +357,11 @@ public:
 		{
 			m_Storage.PutInt( CBCMD_BIND_SHADERAPI_TEXTURE_HANDLE );
 			m_Storage.PutInt( nSampler );
-			m_Storage.PutInt( hTexture );
+			m_Storage.Put( hTexture );
 		}
 	}
 
-	FORCEINLINE void BindTexture( CBaseVSShader *pShader, Sampler_t nSampler, int nTextureVar, int nFrameVar = -1 )
+	FORCEINLINE void BindTexture( CBaseVSShader *pShader, Sampler_t nSampler, int nTextureVar, int nFrameVar )
 	{
 		ShaderAPITextureHandle_t hTexture = pShader->GetShaderAPITextureBindHandle( nTextureVar, nFrameVar );
 		BindTexture( nSampler, hTexture );

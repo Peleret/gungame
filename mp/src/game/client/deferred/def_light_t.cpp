@@ -569,10 +569,10 @@ void def_light_t::UpdateXForms()
 		break;
 	}
 
-	if ( ( bounds_max - bounds_min ).LengthSqr() < 1 )
+	if ((bounds_max - bounds_min).LengthSqr() < 1)
 	{
-		//bounds_max = pos + __ND1;
-		//bounds_min = pos - __ND1;
+		bounds_max = pos + Vector(__ND1, __ND1, __ND1);
+		bounds_min = pos - Vector(__ND1, __ND1, __ND1);
 	}
 
 	QAngle worldAng = ang;

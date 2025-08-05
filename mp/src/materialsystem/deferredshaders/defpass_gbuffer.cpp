@@ -203,15 +203,15 @@ void DrawPassGBuffer( const defParms_gBuffer &info, CBaseVSShader *pShader, IMat
             if ( bAlphatest || bDeferredShading )
             {
                 if ( bAlbedo )
-                    tmpBuf.BindTexture( pShader, SHADER_SAMPLER0, info.iAlbedo );
+                    tmpBuf.BindTexture( SHADER_SAMPLER0, info.iAlbedo );
                 else
                     tmpBuf.BindStandardTexture( SHADER_SAMPLER0, TEXTURE_GREY );
             }
 
-            if ( bBumpmap ) tmpBuf.BindTexture( pShader, SHADER_SAMPLER1, info.iBumpmap );
+            if ( bBumpmap ) tmpBuf.BindTexture( SHADER_SAMPLER1, info.iBumpmap );
 
             if ( bPhongmap )
-                tmpBuf.BindTexture( pShader, SHADER_SAMPLER2, info.iPhongmap );
+                tmpBuf.BindTexture( SHADER_SAMPLER2, info.iPhongmap );
             else
             {
                 float flPhongExp[2] = { 0 };
@@ -231,12 +231,12 @@ void DrawPassGBuffer( const defParms_gBuffer &info, CBaseVSShader *pShader, IMat
             if ( bAlbedo2 || bBumpmap2 )
             {
                 if ( bBumpmap2 )
-                    tmpBuf.BindTexture( pShader, SHADER_SAMPLER3, info.iBumpmap2 );
+                    tmpBuf.BindTexture( SHADER_SAMPLER3, info.iBumpmap2 );
                 else
                     tmpBuf.BindStandardTexture( SHADER_SAMPLER3, TEXTURE_NORMALMAP_FLAT );
 
                 if ( bAlbedo2 )
-                    tmpBuf.BindTexture( pShader, SHADER_SAMPLER9, info.iAlbedo2 );
+                    tmpBuf.BindTexture( SHADER_SAMPLER9, info.iAlbedo2 );
                 else
                     tmpBuf.BindStandardTexture( SHADER_SAMPLER9, TEXTURE_GREY );
 
@@ -244,7 +244,7 @@ void DrawPassGBuffer( const defParms_gBuffer &info, CBaseVSShader *pShader, IMat
                 {
                     tmpBuf.SetVertexShaderTextureTransform( VERTEX_SHADER_SHADER_SPECIFIC_CONST_3,
                                                             info.iBlendmodulateTransform );
-                    tmpBuf.BindTexture( pShader, SHADER_SAMPLER4, info.iBlendmodulate );
+                    tmpBuf.BindTexture(  SHADER_SAMPLER4, info.iBlendmodulate );
                 }
             }
 

@@ -155,7 +155,7 @@ public:
 	void SetColorPixelShaderConstant( int nPixelReg, int colorVar, int alphaVar );
 
 
-#ifndef GAME_SHADER_DLL
+
 	//
 	// Standard shader passes!
 	//
@@ -197,12 +197,12 @@ public:
 											   int envMapContrastVar, int envMapSaturationVar,
 											   int bumpTransformVar,
 											   bool bBlendSpecular, bool bNoWriteZ = false );
-	void DrawWorldBumpedSpecularLighting( int bumpmapVar, int envmapVar,
+	/*void DrawWorldBumpedSpecularLighting( int bumpmapVar, int envmapVar,
 											   int bumpFrameVar, int envmapFrameVar,
 											   int envmapTintVar, int alphaVar,
 											   int envmapContrastVar, int envmapSaturationVar,
 											   int bumpTransformVar, int fresnelReflectionVar,
-											   bool bBlend, bool bNoWriteZ = false );
+											   bool bBlend, bool bNoWriteZ = false );*/
 
 	const char *UnlitGeneric_ComputeVertexShaderName( bool bMask,
 													  bool bEnvmap,
@@ -221,26 +221,26 @@ public:
 													 bool bMultiplyDetail,
 													 bool bMaskBaseByDetailAlpha );
 
-	void DrawWorldBaseTexture( int baseTextureVar, int baseTextureTransformVar, int frameVar, int colorVar, int alphaVar );
-	void DrawWorldBumpedDiffuseLighting( int bumpmapVar, int bumpFrameVar,
-		int bumpTransformVar, bool bMultiply, bool bSSBump  );
-	void DrawWorldBumpedSpecularLighting( int envmapMaskVar, int envmapMaskFrame,
+	//void DrawWorldBaseTexture( int baseTextureVar, int baseTextureTransformVar, int frameVar, int colorVar, int alphaVar );
+	/*void DrawWorldBumpedDiffuseLighting( int bumpmapVar, int bumpFrameVar,
+		int bumpTransformVar, bool bMultiply, bool bSSBump  );*/
+	/*void DrawWorldBumpedSpecularLighting( int envmapMaskVar, int envmapMaskFrame,
 		int bumpmapVar, int envmapVar,
 		int bumpFrameVar, int envmapFrameVar,
 		int envmapTintVar, int alphaVar,
 		int envmapContrastVar, int envmapSaturationVar,
 		int bumpTransformVar,  int fresnelReflectionVar,
-		bool bBlend );
-	void DrawBaseTextureBlend( int baseTextureVar, int baseTextureTransformVar, 
+		bool bBlend );*/
+	/*void DrawBaseTextureBlend( int baseTextureVar, int baseTextureTransformVar, 
 		int baseTextureFrameVar,
 		int baseTexture2Var, int baseTextureTransform2Var, 
-		int baseTextureFrame2Var, int colorVar, int alphaVar );
+		int baseTextureFrame2Var, int colorVar, int alphaVar );*/
 	void DrawWorldBumpedDiffuseLighting_Base_ps14( int bumpmapVar, int bumpFrameVar,
 		int bumpTransformVar, int baseTextureVar, int baseTextureTransformVar, int frameVar );
 	void DrawWorldBumpedDiffuseLighting_Blend_ps14( int bumpmapVar, int bumpFrameVar, int bumpTransformVar, 
 		int baseTextureVar, int baseTextureTransformVar, int baseTextureFrameVar, 
 		int baseTexture2Var, int baseTextureTransform2Var, int baseTextureFrame2Var);
-	void DrawWorldBumpedUsingVertexShader( int baseTextureVar, int baseTextureTransformVar,
+	/*void DrawWorldBumpedUsingVertexShader( int baseTextureVar, int baseTextureTransformVar,
 										   int bumpmapVar, int bumpFrameVar, 
 										   int bumpTransformVar,
 										   int envmapMaskVar, int envmapMaskFrame,
@@ -253,12 +253,11 @@ public:
 										   int baseTextureTransform2Var,
 										   int baseTextureFrame2Var,
 										   bool bSSBump
-		);
-#endif
+		);*/
+	
 	// Sets up hw morphing state for the vertex shader
 	void SetHWMorphVertexShaderState( int nDimConst, int nSubrectConst, VertexTextureSampler_t morphSampler );
-	
-#ifndef GAME_SHADER_DLL
+
 	// Computes the shader index for vertex lit materials
 	int ComputeVertexLitShaderIndex( bool bVertexLitGeneric, bool hasBump, bool hasEnvmap, bool hasVertexColor, bool bHasNormal ) const;
 
@@ -314,7 +313,7 @@ public:
 	};
 	void DrawFlashlight_dx90( IMaterialVar** params, 
 		IShaderDynamicAPI *pShaderAPI, IShaderShadow* pShaderShadow, DrawFlashlight_dx90_Vars_t &vars );
-#endif // GAME_SHADER_DLL
+
 
 	BlendType_t EvaluateBlendRequirements( int textureVar, bool isBaseTexture, int detailTextureVar = -1 );
 
