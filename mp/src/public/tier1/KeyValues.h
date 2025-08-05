@@ -178,7 +178,6 @@ public:
 	void *GetPtr( const char *keyName = NULL, void *defaultValue = (void*)0 );
 	bool GetBool( const char *keyName = NULL, bool defaultValue = false, bool* optGotDefault = NULL );
 	Color GetColor( const char *keyName = NULL /* default value is all black */);
-	Color GetColor( const char *keyName, Color defaultValue);
 	bool  IsEmpty(const char *keyName = NULL);
 
 	// Data access
@@ -257,10 +256,14 @@ public:
 	bool ProcessResolutionKeys( const char *pResString );
 
 	// Dump keyvalues recursively into a dump context
-	bool Dump( class IKeyValuesDumpContext *pDump, int nIndentLevel = 0 );
+	bool Dump( class IKeyValuesDumpContext *pDump, int nIndentLevel = 0, bool bSorted = false );
 		
 	// Merge in another KeyValues, keeping "our" settings
 	void RecursiveMergeKeyValues( KeyValues *baseKV );
+
+	void AddSubkeyUsingKnownLastChild( KeyValues *pSubKey, KeyValues *pLastChild );
+
+	KeyValues* CreateKey( const char *keyName );
 
 private:
 	KeyValues( KeyValues& );	// prevent copy constructor being used
@@ -268,14 +271,12 @@ private:
 	// prevent delete being called except through deleteThis()
 	~KeyValues();
 
-	KeyValues* CreateKey( const char *keyName );
 
 	/// Create a child key, given that we know which child is currently the last child.
 	/// This avoids the O(N^2) behaviour when adding children in sequence to KV,
 	/// when CreateKey() wil have to re-locate the end of the list each time.  This happens,
 	/// for example, every time we load any KV file whatsoever.
 	KeyValues* CreateKeyUsingKnownLastChild( const char *keyName, KeyValues *pLastChild );
-	void AddSubkeyUsingKnownLastChild( KeyValues *pSubKey, KeyValues *pLastChild );
 
 	void CopyKeyValuesFromRecursive( const KeyValues& src );
 	void CopyKeyValue( const KeyValues& src, size_t tmpBufferSizeB, char* tmpBuffer );
@@ -427,6 +428,8 @@ inline bool  KeyValues::IsEmpty( int keySymbol )
 	KeyValues *dat = FindKey( keySymbol );
 	return dat ? dat->IsEmpty( ) : true;
 }
+
+bool IsSteamDeck( bool bTrulyHardwareOnly = false );
 
 bool EvaluateConditional( const char *str );
 

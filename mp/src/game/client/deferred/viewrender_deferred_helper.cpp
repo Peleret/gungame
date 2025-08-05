@@ -13,7 +13,7 @@
 #include <dlfcn.h>
 #include <libgen.h>
 #else
-#include "subhook.h"
+#include "C:\stardust-sdk\source-sdk-2013\src\thirdparty\subhook\subhook.h"
 #include "Psapi.h"
 #pragma comment(lib, "Psapi.lib")
 #endif
@@ -46,7 +46,7 @@ namespace Memory
 
 			if ( isxdigit( *input ) )
 			{
-				ret.Bytes.push_back( { strtol( input, NULL, 16 ), false } );
+				//ret.Bytes.push_back( { strtol( input, NULL, 16 ), false } );
 
 				input += 2;
 			}

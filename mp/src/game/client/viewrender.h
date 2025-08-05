@@ -1,6 +1,6 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
-// Purpose:
+// Purpose: 
 //
 //===========================================================================//
 
@@ -28,6 +28,7 @@ class C_EnvProjectedTexture;
 class IScreenSpaceEffect;
 class CClientViewSetup;
 class CViewRender;
+struct ClientWorldListInfo_t;
 class C_BaseEntity;
 struct WriteReplayScreenshotParams_t;
 class CReplayScreenshotTaker;
@@ -100,14 +101,14 @@ public:
 
 
 //-----------------------------------------------------------------------------
-//
+// 
 //-----------------------------------------------------------------------------
 struct ViewCustomVisibility_t
 {
 	ViewCustomVisibility_t()
 	{
 		m_nNumVisOrigins = 0;
-		m_VisData.m_fDistToAreaPortalTolerance = FLT_MAX;
+		m_VisData.m_fDistToAreaPortalTolerance = FLT_MAX; 
 		m_iForceViewLeaf = -1;
 	}
 
@@ -149,7 +150,7 @@ struct ViewCustomVisibility_t
 };
 
 //-----------------------------------------------------------------------------
-//
+// 
 //-----------------------------------------------------------------------------
 struct WaterRenderInfo_t
 {
@@ -163,7 +164,7 @@ struct WaterRenderInfo_t
 };
 
 //-----------------------------------------------------------------------------
-//
+// 
 //-----------------------------------------------------------------------------
 class CBase3dView : public CRefCounted<>,
 					protected CViewSetup
@@ -183,34 +184,6 @@ protected:
 	// @MULTICORE (toml 8/11/2006): need to have per-view frustum. Change when move view stack to client
 	VPlane			*m_Frustum;
 	CViewRender *m_pMainView;
-};
-
-//-----------------------------------------------------------------------------
-// Describes a pruned set of leaves to be rendered this view. Reference counted
-// because potentially shared by a number of views
-//-----------------------------------------------------------------------------
-struct ClientWorldListInfo_t : public CRefCounted1<WorldListInfo_t>
-{
-	ClientWorldListInfo_t()
-	{
-		memset( (WorldListInfo_t *)this, 0, sizeof(WorldListInfo_t) );
-		m_pActualLeafIndex = NULL;
-		m_bPooledAlloc = false;
-	}
-
-	// Allocate a list intended for pruning
-	static ClientWorldListInfo_t *AllocPooled( const ClientWorldListInfo_t &exemplar );
-
-	// Because we remap leaves to eliminate unused leaves, we need a remap
-	// when drawing translucent surfaces, which requires the *original* leaf index
-	// using m_pActualLeafMap[ remapped leaf index ] == actual leaf index
-	LeafIndex_t *m_pActualLeafIndex;
-
-private:
-	virtual bool OnFinalRelease();
-
-	bool m_bPooledAlloc;
-	static CObjectPool<ClientWorldListInfo_t> gm_Pool;
 };
 
 //-----------------------------------------------------------------------------
@@ -292,7 +265,7 @@ protected:
 
 
 //-----------------------------------------------------------------------------
-//
+// 
 //-----------------------------------------------------------------------------
 
 class CRenderExecutor
@@ -308,7 +281,7 @@ protected:
 };
 
 //-----------------------------------------------------------------------------
-//
+// 
 //-----------------------------------------------------------------------------
 
 class CSimpleRenderExecutor : public CRenderExecutor
@@ -409,7 +382,7 @@ public:
 	bool			ShouldDrawBrushModels( void );
 
 	const CViewSetup *GetViewSetup( ) const;
-
+	
 	void			DisableVis( void );
 
 	// Sets up the view model position relative to the local player
@@ -454,7 +427,47 @@ public:
 	{
 		m_UnderWaterOverlayMaterial.Init( pMaterial );
 	}
-protected:
+
+	// Sets up, cleans up the main 3D view
+	void			SetupMain3DView(const CViewSetup& view, int& nClearFlags);
+	void			CleanupMain3DView(const CViewSetup& view);
+
+	void DrawUnderwaterOverlay(void);
+
+	// Determines what kind of water we're going to use
+	void			DetermineWaterRenderInfo(const VisibleFogVolumeInfo_t& fogVolumeInfo, WaterRenderInfo_t& info);
+
+	void			DrawRenderablesInList(CUtlVector< IClientRenderable* >& list, int flags = 0);
+
+
+
+
+	int					m_BaseDrawFlags;	// Set in ViewDrawScene and OR'd into m_DrawFlags as it goes.
+	bool				m_bDrawOverlay;
+
+
+	// This stores the current view
+	CViewSetup		m_CurrentView;
+
+	CMaterialReference	m_ModulateSingleColor;
+
+	int					m_OverlayClearFlags;
+	CViewSetup			m_OverlayViewSetup;
+
+	int					m_OverlayDrawFlags;
+
+	CMaterialReference	m_TranslucentSingleColor;
+	CMaterialReference m_UnderWaterOverlayMaterial;
+
+
+	void			PerformScreenSpaceEffects(int x, int y, int w, int h);
+
+	void			PerformScreenOverlay(int x, int y, int w, int h);
+
+	bool			ShouldDrawViewModel(bool drawViewmodel);
+
+	bool			UpdateRefractIfNeededByList(CUtlVector< IClientRenderable* >& list);
+private:
 	int				m_BuildWorldListsNumber;
 
 
@@ -464,71 +477,64 @@ protected:
 
 	void			DrawMonitors( const CViewSetup &cameraView );
 
-	bool			DrawOneMonitor( ITexture *pRenderTarget, int cameraNum, C_PointCamera *pCameraEnt, const CViewSetup &cameraView, C_BasePlayer *localPlayer,
+	bool			DrawOneMonitor( ITexture *pRenderTarget, int cameraNum, C_PointCamera *pCameraEnt, const CViewSetup &cameraView, C_BasePlayer *localPlayer, 
 						int x, int y, int width, int height );
 
 	// Drawing primitives
-	bool			ShouldDrawViewModel( bool drawViewmodel );
+	
 	void			DrawViewModels( const CViewSetup &view, bool drawViewmodel );
-
-	void			PerformScreenSpaceEffects( int x, int y, int w, int h );
 
 	// Overlays
 	void			SetScreenOverlayMaterial( IMaterial *pMaterial );
 	IMaterial		*GetScreenOverlayMaterial( );
-	void			PerformScreenOverlay( int x, int y, int w, int h );
 
-	void DrawUnderwaterOverlay( void );
+
+	
 
 	// Water-related methods
 	void			DrawWorldAndEntities( bool drawSkybox, const CViewSetup &view, int nClearFlags, ViewCustomVisibility_t *pCustomVisibility = NULL );
 
 	virtual void			ViewDrawScene_Intro( const CViewSetup &view, int nClearFlags, const IntroData_t &introData );
 
-#ifdef PORTAL
+#ifdef PORTAL 
 	// Intended for use in the middle of another ViewDrawScene call, this allows stencils to be drawn after opaques but before translucents are drawn in the main view.
 	void			ViewDrawScene_PortalStencil( const CViewSetup &view, ViewCustomVisibility_t *pCustomVisibility );
 	void			Draw3dSkyboxworld_Portal( const CViewSetup &view, int &nClearFlags, bool &bDrew3dSkybox, SkyboxVisibility_t &nSkyboxVisible, ITexture *pRenderTarget = NULL );
 #endif // PORTAL
 
-	// Determines what kind of water we're going to use
-	void			DetermineWaterRenderInfo( const VisibleFogVolumeInfo_t &fogVolumeInfo, WaterRenderInfo_t &info );
-
-	bool			UpdateRefractIfNeededByList( CUtlVector< IClientRenderable * > &list );
-	void			DrawRenderablesInList( CUtlVector< IClientRenderable * > &list, int flags = 0 );
-
-	// Sets up, cleans up the main 3D view
-	void			SetupMain3DView( const CViewSetup &view, int &nClearFlags );
-	void			CleanupMain3DView( const CViewSetup &view );
+	
 
 
-	// This stores the current view
- 	CViewSetup		m_CurrentView;
+
+	
+
+
+	
 
 	// VIS Overrides
 	// Set to true to turn off client side vis ( !!!! rendering will be slow since everything will draw )
-	bool			m_bForceNoVis;
+	bool			m_bForceNoVis;	
 
 	// Some cvars needed by this system
 	const ConVar	*m_pDrawEntities;
 	const ConVar	*m_pDrawBrushModels;
 
 	// Some materials used...
-	CMaterialReference	m_TranslucentSingleColor;
-	CMaterialReference	m_ModulateSingleColor;
+	
 	CMaterialReference	m_ScreenOverlayMaterial;
-	CMaterialReference m_UnderWaterOverlayMaterial;
+
+
+	CMaterialReference	m_ScriptOverlayMaterial;
+	char m_szCurrentScriptMaterialName[ MAX_PATH ];
 
 	Vector			m_vecLastFacing;
 	float			m_flCheapWaterStartDistance;
 	float			m_flCheapWaterEndDistance;
 
-	CViewSetup			m_OverlayViewSetup;
-	int					m_OverlayClearFlags;
-	int					m_OverlayDrawFlags;
-	bool				m_bDrawOverlay;
+	
+	
 
-	int					m_BaseDrawFlags;	// Set in ViewDrawScene and OR'd into m_DrawFlags as it goes.
+
 	C_BaseEntity		*m_pCurrentlyDrawingEntity;
 
 #if defined( CSTRIKE_DLL )

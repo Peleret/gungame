@@ -19,8 +19,6 @@
 #include "fx_line.h"
 #include "fx_water.h"
 
-#include "deferred/deferred_shared_common.h"
-
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
 
@@ -174,14 +172,16 @@ void C_BaseExplosionEffect::Create( const Vector &position, float force, float s
 {
 	m_vecOrigin = position;
 	m_fFlags	= flags;
-	m_flScale	= scale;
 
 	//Find the force of the explosion
 	GetForceDirection( m_vecOrigin, force, &m_vecDirection, &m_flForce );
 
 #if __EXPLOSION_DEBUG
-	debugoverlay->AddBoxOverlay( m_vecOrigin, -Vector(32,32,32), Vector(32,32,32), vec3_angle, 255, 0, 0, 64, 5.0f );
-	debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin+(m_vecDirection*force*m_flForce), 0, 0, 255, false, 3 );
+	if ( debugoverlay )
+	{
+		debugoverlay->AddBoxOverlay( m_vecOrigin, -Vector(32,32,32), Vector(32,32,32), vec3_angle, 255, 0, 0, 64, 5.0f );
+		debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin+(m_vecDirection*force*m_flForce), 0, 0, 255, false, 3 );
+	}
 #endif
 
 	PlaySound();
@@ -293,7 +293,10 @@ void C_BaseExplosionEffect::CreateCore( void )
 				pParticle->m_vecVelocity *= fForce;
 				
 				#if __EXPLOSION_DEBUG
-				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				if ( debugoverlay )
+				{
+					debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				}
 				#endif
 
 				int nColor = random->RandomInt( luminosity*0.5f, luminosity );
@@ -349,7 +352,10 @@ void C_BaseExplosionEffect::CreateCore( void )
 				pParticle->m_vecVelocity *= fForce;
 				
 				#if __EXPLOSION_DEBUG
-				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				if ( debugoverlay )
+				{
+					debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				}
 				#endif
 
 				int nColor = random->RandomInt( luminosity*0.5f, luminosity );
@@ -414,7 +420,10 @@ void C_BaseExplosionEffect::CreateCore( void )
 				pParticle->m_vecVelocity *= fForce;
 				
 				#if __EXPLOSION_DEBUG
-				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				if ( debugoverlay )
+				{
+					debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+				}
 				#endif
 
 				int nColor = random->RandomInt( luminosity*0.5f, luminosity );
@@ -476,7 +485,10 @@ void C_BaseExplosionEffect::CreateCore( void )
 			pParticle->m_vecVelocity *= fForce * ( 16.0f * (vDev*vDev*0.5f) );
 			
 			#if __EXPLOSION_DEBUG
-			debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			if ( debugoverlay )
+			{
+				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			}
 			#endif
 
 			int nColor = random->RandomInt( 192, 255 );
@@ -537,7 +549,10 @@ void C_BaseExplosionEffect::CreateCore( void )
 			pParticle->m_vecVelocity *= fForce * ( 16.0f * (vDev*vDev*0.5f) );
 
 			#if __EXPLOSION_DEBUG
-			debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			if ( debugoverlay )
+			{
+				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			}
 			#endif
 
 			int nColor = random->RandomInt( 128, 255 );
@@ -703,7 +718,7 @@ void C_BaseExplosionEffect::CreateDynamicLight( void )
 	if ( m_fFlags & TE_EXPLFLAG_NODLIGHTS )
 		return;
 
-	/*dlight_t *dl = effects->CL_AllocDlight( 0 );
+	dlight_t *dl = effects->CL_AllocDlight( 0 );
 	
 	VectorCopy (m_vecOrigin, dl->origin);
 	
@@ -712,29 +727,7 @@ void C_BaseExplosionEffect::CreateDynamicLight( void )
 	dl->color.r = 255;
 	dl->color.g = 220;
 	dl->color.b = 128;
-	dl->die		= gpGlobals->curtime + 0.1f;*/
-
-	def_light_temp_t *l = new def_light_temp_t( 0.3f );
-
-	l->ang = vec3_angle;
-	l->pos = m_vecOrigin;
-	l->pos.z += 64.0f;
-
-	l->col_diffuse.Init( 0.964705882f, 0.82745098f, 0.403921569f );
-
-	l->flRadius = m_flScale * 512.f;
-	l->flFalloffPower = 1.0f;
-
-	l->iVisible_Dist = 1024.0f;
-	l->iVisible_Range = 1024.0f;
-	l->iShadow_Dist = 512.0f;
-	l->iShadow_Range = 512.0f;
-
-	l->iFlags >>= DEFLIGHTGLOBAL_FLAGS_MAX_SHARED_BITS;
-	l->iFlags <<= DEFLIGHTGLOBAL_FLAGS_MAX_SHARED_BITS;
-	l->iFlags |= DEFLIGHT_SHADOW_ENABLED;
-
-	GetLightingManager()->AddTempLight( l );
+	dl->die		= gpGlobals->curtime + 0.1f;
 }
 
 //-----------------------------------------------------------------------------
@@ -769,7 +762,10 @@ float C_BaseExplosionEffect::Probe( const Vector &origin, Vector *vecDirection, 
 	(*vecDirection) = -(*vecDirection) * (1.0f-tr.fraction);
 
 #if __EXPLOSION_DEBUG
-	debugoverlay->AddLineOverlay( m_vecOrigin, endpos, (255*(1.0f-tr.fraction)), (255*tr.fraction), 0, false, 3 );
+	if ( debugoverlay )
+	{
+		debugoverlay->AddLineOverlay( m_vecOrigin, endpos, (255*(1.0f-tr.fraction)), (255*tr.fraction), 0, false, 3 );
+	}
 #endif
 
 	assert(( 1.0f - tr.fraction ) >= 0.0f );
@@ -1157,7 +1153,10 @@ void C_WaterExplosionEffect::CreateDebris( void )
 			pParticle->m_vecVelocity *= fForce;
 			
 			#if __EXPLOSION_DEBUG
-			debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			if ( debugoverlay )
+			{
+				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			}
 			#endif
 
 			pParticle->m_uchColor[0] = m_vecColor.x * 255;
@@ -1410,7 +1409,10 @@ void C_MegaBombExplosionEffect::CreateCore( void )
 			pParticle->m_vecVelocity *= fForce * ( 16.0f * (vDev*vDev*0.5f) );
 
 			#if __EXPLOSION_DEBUG
-			debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			if ( debugoverlay )
+			{
+				debugoverlay->AddLineOverlay( m_vecOrigin, m_vecOrigin + pParticle->m_vecVelocity, 255, 0, 0, false, 3 );
+			}
 			#endif
 
 			int nColor = random->RandomInt( 128, 255 );

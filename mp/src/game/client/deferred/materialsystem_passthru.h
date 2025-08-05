@@ -358,6 +358,23 @@ public:
 		return m_pBaseMaterialsPassThru->CreateNamedTextureFromBitsEx( pName, pTextureGroupName, w, h, mips, fmt, srcBufferSize, srcBits, nFlags );
 	}
 
+	//HAZEL MAKE SURE TO CREATE RETURN VALUES
+
+
+	// Creates a texture compositor template for use in later code. 
+	virtual bool				AddTextureCompositorTemplate(const char* pName, KeyValues* pTmplDesc, int nTexCompositeTemplateFlags = 0) { return m_pBaseMaterialsPassThru->AddTextureCompositorTemplate(pName, null); }
+
+	// Performs final verification of all compositor templates (after they've all been initially loaded).
+	virtual bool				VerifyTextureCompositorTemplates() { return m_pBaseMaterialsPassThru->VerifyTextureCompositorTemplates(); }
+
+	virtual RenderBackend_t		GetRenderBackend() const { return m_pBaseMaterialsPassThru->GetRenderBackend(); }
+
+	// Stop attempting to stream in textures in response to usage.  Useful for phases such as loading or other explicit
+	// operations that shouldn't take usage of textures as a signal to stream them in at full rez.
+	virtual void				SuspendTextureStreaming() { return m_pBaseMaterialsPassThru->SuspendTextureStreaming(); }
+	virtual void				ResumeTextureStreaming() { return m_pBaseMaterialsPassThru->ResumeTextureStreaming(); }
+
+
 protected:
 	IMaterialSystem * m_pBaseMaterialsPassThru;
 };
@@ -378,8 +395,10 @@ public:
 	IMaterial* FindProceduralMaterial( const char* pMaterialName, const char* pTextureGroupName, KeyValues* pVMTKeyValues ) OVERRIDE;
 
 	IMaterial* CreateMaterial( const char* pMaterialName, KeyValues* pVMTKeyValues ) OVERRIDE;
+
 private:
 	IMaterial * ReplaceMaterialInternal( IMaterial* pMat ) const;
+	
 };
 
 #endif // WARS_MATERIALSYSTEM_PASSTHRU_H

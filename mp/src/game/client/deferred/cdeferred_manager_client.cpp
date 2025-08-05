@@ -12,6 +12,9 @@
 
 #include "tier0/memdbgon.h"
 
+datamap_t def_lump_light_global_t::m_DataMap;
+datamap_t def_lump_light_t::m_DataMap;
+
 static CDeferredManagerClient __g_defmanager;
 CDeferredManagerClient *GetDeferredManager()
 {
@@ -579,7 +582,9 @@ void CDeferredManagerClient::LevelInitPreEntity()
 	if ( !success )
 		return;
 	const bool bHasGlobalLight = buffer.GetUnsignedChar();
+
 	def_lump_light_global_t globalLight;
+
 	buffer.GetObjects( &globalLight );
 	const int numLights = buffer.GetInt();
 	CUtlVector<def_lump_light_t> lumpLights;

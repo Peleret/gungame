@@ -1197,30 +1197,37 @@ bool CClientLeafSystem::EnumerateLeaf( int leaf, int context )
 	return true;
 }
 
-void CClientLeafSystem::InsertIntoTree( ClientRenderHandle_t &handle )
+void CClientLeafSystem::InsertIntoTree(ClientRenderHandle_t& handle)
 {
-	if ( ThreadInMainThread() )
-	{
-		// When we insert into the tree, increase the shadow enumerator
-		// to make sure each shadow is added exactly once to each renderable
-		m_ShadowEnum++;
+	if (!m_Renderables.IsValidIndex(handle)) {
+		AssertMsg(false, "InsertIntoTree: Invalid renderable handle %d", handle);
+		return;
+	}
+
+	IClientRenderable* pRenderable = m_Renderables[handle].m_pRenderable;
+	if (!pRenderable) {
+		AssertMsg(false, "InsertIntoTree: m_pRenderable is null for handle %d", handle);
+		return;
+	}
+
+	Vector absMins, absMaxs;
+	CalcRenderableWorldSpaceAABB_Fast(pRenderable, absMins, absMaxs);
+	if (!absMins.IsValid() || !absMaxs.IsValid()) {
+		AssertMsg(false, "InsertIntoTree: Invalid AABB for handle %d", handle);
+		return;
+	}
+
+	ISpatialQuery* pQuery = engine->GetBSPTreeQuery();
+	if (!pQuery) {
+		AssertMsg(false, "InsertIntoTree: engine->GetBSPTreeQuery() returned null");
+		return;
 	}
 
 	EnumResultList_t list = { NULL, handle };
+	pQuery->EnumerateLeavesInBox(absMins, absMaxs, this, (int)&list);
 
-	// NOTE: The render bounds here are relative to the renderable's coordinate system
-	IClientRenderable* pRenderable = m_Renderables[handle].m_pRenderable;
-	Vector absMins, absMaxs;
-	
-	CalcRenderableWorldSpaceAABB_Fast( pRenderable, absMins, absMaxs );
-	Assert( absMins.IsValid() && absMaxs.IsValid() );
-
-	ISpatialQuery* pQuery = engine->GetBSPTreeQuery();
-	pQuery->EnumerateLeavesInBox( absMins, absMaxs, this, (int)&list );
-
-	if ( list.pHead )
-	{
-		m_DeferredInserts.PushItem( list );
+	if (list.pHead) {
+		m_DeferredInserts.PushItem(list);
 	}
 }
 
@@ -1347,6 +1354,12 @@ void CClientLeafSystem::SetRenderGroup( ClientRenderHandle_t handle, RenderGroup
 //-----------------------------------------------------------------------------
 void CClientLeafSystem::DrawDetailObjectsInLeaf( int leaf, int nFrameNumber, int& nFirstDetailObject, int& nDetailObjectCount )
 {
+	if (!m_Leaf.IsValidIndex(leaf)) {
+		AssertMsg(false, "DrawDetailObjectsInLeaf: Invalid leaf index %d (m_Leaf.Count()=%d)", leaf, m_Leaf.Count());
+		nFirstDetailObject = 0;
+		nDetailObjectCount = 0;
+		return;
+	}
 	ClientLeaf_t &leafInfo = m_Leaf[leaf];
 	leafInfo.m_DetailPropRenderFrame = nFrameNumber;
 	nFirstDetailObject = leafInfo.m_FirstDetailProp;
@@ -1373,7 +1386,7 @@ void CClientLeafSystem::ComputeTranslucentRenderLeaf( int count, const LeafIndex
 	ASSERT_NO_REENTRY();
 	VPROF_BUDGET( "CClientLeafSystem::ComputeTranslucentRenderLeaf", "ComputeTranslucentRenderLeaf"  );
 
-	#define LeafToMarker( leaf ) reinterpret_cast<RenderableInfo_t *>(( (leaf) << 1 ) | 1)
+	#define LeafToMarker( leaf ) reinterpret_cast<RenderableInfo_t *>(( (intp)(leaf) << 1 ) | 1)
 	#define IsLeafMarker( p ) (bool)((reinterpret_cast<size_t>(p)) & 1)
 	#define MarkerToLeaf( p ) (int)((reinterpret_cast<size_t>(p)) >> 1)
 

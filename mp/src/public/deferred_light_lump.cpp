@@ -140,4 +140,8 @@ void ProcessDeferredLight( entity_t* mapent )
 
 	mapent->epairs = NULL;
 }
+
+
 #endif
+
+#include "cbase.h"

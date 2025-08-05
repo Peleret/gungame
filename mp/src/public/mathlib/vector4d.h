@@ -1,6 +1,6 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
-// Purpose:
+// Purpose: 
 //
 // $NoKeywords: $
 //
@@ -31,7 +31,7 @@ class Vector2D;
 // 4D Vector4D
 //=========================================================
 
-class Vector4D
+class Vector4D					
 {
 public:
 	// Members
@@ -70,15 +70,15 @@ public:
 
 	// equality
 	bool operator==(const Vector4D& v) const;
-	bool operator!=(const Vector4D& v) const;
+	bool operator!=(const Vector4D& v) const;	
 
 	// arithmetic operations
-	Vector4D&	operator+=(const Vector4D &v);
-	Vector4D&	operator-=(const Vector4D &v);
-	Vector4D&	operator*=(const Vector4D &v);
+	Vector4D&	operator+=(const Vector4D &v);			
+	Vector4D&	operator-=(const Vector4D &v);		
+	Vector4D&	operator*=(const Vector4D &v);			
 	Vector4D&	operator*=(float s);
-	Vector4D&	operator/=(const Vector4D &v);
-	Vector4D&	operator/=(float s);
+	Vector4D&	operator/=(const Vector4D &v);		
+	Vector4D&	operator/=(float s);				
 
 	Vector4D	operator-( void ) const;
 	Vector4D	operator*( float fl ) const;
@@ -88,7 +88,7 @@ public:
 	Vector4D	operator-( const Vector4D& v ) const;
 
 	// negate the Vector4D components
-	void	Negate();
+	void	Negate(); 
 
 	// Get the Vector4D's magnitude.
 	vec_t	Length() const;
@@ -109,18 +109,18 @@ public:
 	vec_t	DistTo(const Vector4D &vOther) const;
 
 	// Get the distance from this Vector4D to the other one squared.
-	vec_t	DistToSqr(const Vector4D &vOther) const;
+	vec_t	DistToSqr(const Vector4D &vOther) const;		
 
 	// Copy
-	void	CopyToArray(float* rgfl) const;
+	void	CopyToArray(float* rgfl) const;	
 
 	// Multiply, add, and assign to this (ie: *this = a + b * scalar). This
 	// is about 12% faster than the actual Vector4D equation (because it's done per-component
 	// rather than per-Vector4D).
-	void	MulAdd(Vector4D const& a, Vector4D const& b, float scalar);
+	void	MulAdd(Vector4D const& a, Vector4D const& b, float scalar);	
 
 	// Dot product.
-	vec_t	Dot(Vector4D const& vOther) const;
+	vec_t	Dot(Vector4D const& vOther) const;			
 
 	// No copy constructors allowed if we're in optimal mode
 #ifdef VECTOR_NO_SLOW_OPERATIONS
@@ -151,7 +151,7 @@ public:
 	inline void InitZero( void );
 
 	inline __m128 &AsM128() { return *(__m128*)&x; }
-	inline const __m128 &AsM128() const { return *(const __m128*)&x; }
+	inline const __m128 &AsM128() const { return *(const __m128*)&x; } 
 
 private:
 	// No copy constructors allowed if we're in optimal mode
@@ -219,7 +219,7 @@ inline Vector4D::Vector4D(void)
 }
 
 inline Vector4D::Vector4D(vec_t X, vec_t Y, vec_t Z, vec_t W )
-{
+{ 
 	x = X; y = Y; z = Z; w = W;
 	Assert( IsValid() );
 }
@@ -233,7 +233,7 @@ inline Vector4D::Vector4D(const Vector &base, vec_t W )
 inline Vector4D::Vector4D(const float *pFloat)
 {
 	Assert( pFloat );
-	x = pFloat[0]; y = pFloat[1]; z = pFloat[2]; w = pFloat[3];
+	x = pFloat[0]; y = pFloat[1]; z = pFloat[2]; w = pFloat[3];	
 	Assert( IsValid() );
 }
 
@@ -242,8 +242,8 @@ inline Vector4D::Vector4D(const float *pFloat)
 // copy constructor
 //-----------------------------------------------------------------------------
 
-inline Vector4D::Vector4D(const Vector4D &vOther)
-{
+inline Vector4D::Vector4D(const Vector4D &vOther)					
+{ 
 	Assert( vOther.IsValid() );
 	x = vOther.x; y = vOther.y; z = vOther.z; w = vOther.w;
 }
@@ -253,7 +253,7 @@ inline Vector4D::Vector4D(const Vector4D &vOther)
 //-----------------------------------------------------------------------------
 
 inline void Vector4D::Init( vec_t ix, vec_t iy, vec_t iz, vec_t iw )
-{
+{ 
 	x = ix; y = iy; z = iz;	w = iw;
 	Assert( IsValid() );
 }
@@ -281,11 +281,11 @@ inline void Vector4DClear( Vector4D& a )
 // assignment
 //-----------------------------------------------------------------------------
 
-inline Vector4D& Vector4D::operator=(const Vector4D &vOther)
+inline Vector4D& Vector4D::operator=(const Vector4D &vOther)	
 {
 	Assert( vOther.IsValid() );
 	x=vOther.x; y=vOther.y; z=vOther.z; w=vOther.w;
-	return *this;
+	return *this; 
 }
 
 //-----------------------------------------------------------------------------
@@ -381,8 +381,8 @@ inline void Vector4DCopy( Vector4D const& src, Vector4D& dst )
 	dst.w = src.w;
 }
 
-inline void	Vector4D::CopyToArray(float* rgfl) const
-{
+inline void	Vector4D::CopyToArray(float* rgfl) const		
+{ 
 	Assert( IsValid() );
 	Assert( rgfl );
 	rgfl[0] = x; rgfl[1] = y; rgfl[2] = z; rgfl[3] = w;
@@ -393,26 +393,26 @@ inline void	Vector4D::CopyToArray(float* rgfl) const
 //-----------------------------------------------------------------------------
 
 inline void Vector4D::Negate()
-{
+{ 
 	Assert( IsValid() );
 	x = -x; y = -y; z = -z; w = -w;
-}
+} 
 
-inline Vector4D& Vector4D::operator+=(const Vector4D& v)
-{
+inline Vector4D& Vector4D::operator+=(const Vector4D& v)	
+{ 
 	Assert( IsValid() && v.IsValid() );
-	x+=v.x; y+=v.y; z += v.z; w += v.w;
+	x+=v.x; y+=v.y; z += v.z; w += v.w;	
 	return *this;
 }
 
-inline Vector4D& Vector4D::operator-=(const Vector4D& v)
-{
+inline Vector4D& Vector4D::operator-=(const Vector4D& v)	
+{ 
 	Assert( IsValid() && v.IsValid() );
 	x-=v.x; y-=v.y; z -= v.z; w -= v.w;
 	return *this;
 }
 
-inline Vector4D& Vector4D::operator*=(float fl)
+inline Vector4D& Vector4D::operator*=(float fl)	
 {
 	x *= fl;
 	y *= fl;
@@ -422,8 +422,8 @@ inline Vector4D& Vector4D::operator*=(float fl)
 	return *this;
 }
 
-inline Vector4D& Vector4D::operator*=(Vector4D const& v)
-{
+inline Vector4D& Vector4D::operator*=(Vector4D const& v)	
+{ 
 	x *= v.x;
 	y *= v.y;
 	z *= v.z;
@@ -432,7 +432,7 @@ inline Vector4D& Vector4D::operator*=(Vector4D const& v)
 	return *this;
 }
 
-inline Vector4D& Vector4D::operator/=(float fl)
+inline Vector4D& Vector4D::operator/=(float fl)	
 {
 	Assert( fl != 0.0f );
 	float oofl = 1.0f / fl;
@@ -444,8 +444,8 @@ inline Vector4D& Vector4D::operator/=(float fl)
 	return *this;
 }
 
-inline Vector4D& Vector4D::operator/=(Vector4D const& v)
-{
+inline Vector4D& Vector4D::operator/=(Vector4D const& v)	
+{ 
 	Assert( v.x != 0.0f && v.y != 0.0f && v.z != 0.0f && v.w != 0.0f );
 	x /= v.x;
 	y /= v.y;
@@ -456,43 +456,49 @@ inline Vector4D& Vector4D::operator/=(Vector4D const& v)
 }
 
 inline Vector4D Vector4D::operator-(void) const
-{
-	return Vector4D( -x, -y, -z, -w );
+{ 
+	return Vector4D(-x,-y,-z,-w);				
 }
 
-inline Vector4D Vector4D::operator+(const Vector4D& v) const
-{
+inline Vector4D Vector4D::operator+(const Vector4D& v) const	
+{ 
 	Vector4D res;
 	Vector4DAdd( *this, v, res );
-	return res;
+	return res;	
 }
 
-inline Vector4D Vector4D::operator-(const Vector4D& v) const
-{
+inline Vector4D Vector4D::operator-(const Vector4D& v) const	
+{ 
 	Vector4D res;
 	Vector4DSubtract( *this, v, res );
-	return res;
+	return res;	
 }
 
-inline Vector4D Vector4D::operator*(float fl) const
-{
+
+inline Vector4D Vector4D::operator*(float fl) const	
+{ 
 	Vector4D res;
 	Vector4DMultiply( *this, fl, res );
-	return res;
+	return res;	
 }
 
-inline Vector4D Vector4D::operator*(const Vector4D& v) const
-{
+inline Vector4D Vector4D::operator*(const Vector4D& v) const	
+{ 
 	Vector4D res;
 	Vector4DMultiply( *this, v, res );
-	return res;
+	return res;	
 }
 
-inline Vector4D Vector4D::operator/(float fl) const
-{
+inline Vector4D Vector4D::operator/(float fl) const	
+{ 
 	Vector4D res;
 	Vector4DDivide( *this, fl, res );
-	return res;
+	return res;	
+}
+
+inline Vector4D operator*( float fl, const Vector4D& v )	
+{ 
+	return v * fl; 
 }
 
 inline void Vector4DAdd( Vector4D const& a, Vector4D const& b, Vector4D& c )
@@ -583,10 +589,10 @@ inline void Vector4DLerp(const Vector4D& src1, const Vector4D& src2, vec_t t, Ve
 // dot, cross
 //-----------------------------------------------------------------------------
 
-inline vec_t DotProduct4D(const Vector4D& a, const Vector4D& b)
-{
+inline vec_t DotProduct4D(const Vector4D& a, const Vector4D& b) 
+{ 
 	Assert( a.IsValid() && b.IsValid() );
-	return( a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w );
+	return( a.x*b.x + a.y*b.y + a.z*b.z + a.w*b.w ); 
 }
 
 // for backwards compatability
@@ -601,18 +607,18 @@ inline vec_t Vector4D::Dot( Vector4D const& vOther ) const
 //-----------------------------------------------------------------------------
 
 inline vec_t Vector4DLength( Vector4D const& v )
-{
+{				   
 	Assert( v.IsValid() );
-	return (vec_t)FastSqrt(v.x*v.x + v.y*v.y + v.z*v.z + v.w*v.w);
+	return (vec_t)FastSqrt(v.x*v.x + v.y*v.y + v.z*v.z + v.w*v.w);		
 }
 
-inline vec_t Vector4D::LengthSqr(void) const
-{
+inline vec_t Vector4D::LengthSqr(void) const	
+{ 
 	Assert( IsValid() );
-	return (x*x + y*y + z*z + w*w);
+	return (x*x + y*y + z*z + w*w);		
 }
 
-inline vec_t Vector4D::Length(void) const
+inline vec_t Vector4D::Length(void) const	
 {
 	return Vector4DLength( *this );
 }
@@ -639,7 +645,7 @@ inline vec_t Vector4DNormalize( Vector4D& v )
 }
 
 //-----------------------------------------------------------------------------
-// Get the distance from this Vector4D to the other one
+// Get the distance from this Vector4D to the other one 
 //-----------------------------------------------------------------------------
 
 inline vec_t Vector4D::DistTo(const Vector4D &vOther) const
@@ -662,19 +668,19 @@ inline vec_t Vector4D::DistToSqr(const Vector4D &vOther) const
 //-----------------------------------------------------------------------------
 
 inline Vector4DAligned::Vector4DAligned( vec_t X, vec_t Y, vec_t Z, vec_t W )
-{
+{ 
 	x = X; y = Y; z = Z; w = W;
 	Assert( IsValid() );
 }
 
 inline void Vector4DAligned::Set( vec_t X, vec_t Y, vec_t Z, vec_t W )
-{
+{ 
 	x = X; y = Y; z = Z; w = W;
 	Assert( IsValid() );
 }
 
 inline void Vector4DAligned::InitZero( void )
-{
+{ 
 #if !defined( _X360 )
 	this->AsM128() = _mm_set1_ps( 0.0f );
 #else

@@ -1,8 +1,0 @@
-vertexlitgeneric
-{
-	"$basetexture" "models/terrain/one_icy_chamber/one_icy_chamber"
-	"$bumpmap" "models/terrain/one_icy_chamber/one_icy_chamber_normal"
-	//"$mraotexture" "shadertest/planks_pbr_mrao"
-	
-	//"$envmap" "env_cubemap"
-}

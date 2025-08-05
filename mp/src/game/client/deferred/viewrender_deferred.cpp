@@ -21,7 +21,7 @@
 #include "VGuiMatSurface/IMatSystemSurface.h"
 #include "client_virtualreality.h"
 #include "sourcevr/isourcevirtualreality.h"
-#include "ShaderEditor/IVShaderEditor.h"
+//#include "ShaderEditor/IVShaderEditor.h"
 #include "materialsystem/itexture.h"
 #include "materialsystem/imaterialvar.h"
 #include "tier1/callqueue.h"
@@ -46,7 +46,7 @@ extern ConVar r_skybox;
 extern ConVar r_ForceWaterLeaf;
 extern ConVar mat_viewportupscale;
 extern ConVar mat_viewportscale;
-extern ConVar mat_motion_blur_enabled;
+//extern ConVar mat_motion_blur_enabled;
 
 extern int g_CurrentViewID;
 
@@ -59,7 +59,7 @@ extern void GetSkyboxFogColor( float *pColor );
 extern float GetSkyboxFogStart( void );
 extern float GetSkyboxFogEnd( void );
 extern float GetSkyboxFogMaxDensity( void );
-extern void FlushWorldLists();
+//extern void FlushWorldLists();
 
 void DrawCube( CMeshBuilder &meshBuilder, Vector vecPos, float flRadius, float *pfl2Texcoords )
 {
@@ -582,7 +582,7 @@ void CBaseWorldViewDeferred::DrawExecute( float waterHeight, view_id_t viewID, f
 	//if ( m_DrawFlags & DF_DRAW_ENTITITES )
 	DrawOpaqueRenderablesDeferred( false );
 
-	//if (!m_bDrawWorldNormal)
+	if (!m_bDrawWorldNormal)
 	{
 		if ( m_DrawFlags & DF_DRAW_ENTITITES )
 		{
@@ -1637,7 +1637,7 @@ void CDeferredViewRender::ViewDrawSceneDeferred( const CViewSetup &view, int nCl
 	CPostLightingView::PushDeferredShadingFrameBuffer();
 #endif
 
-	g_ShaderEditorSystem->UpdateSkymask( bDrew3dSkybox, view.x, view.y, view.width, view.height );
+	//g_ShaderEditorSystem->UpdateSkymask( bDrew3dSkybox, view.x, view.y, view.width, view.height );
 
 	GetLightingManager()->RenderVolumetrics( view );
 
@@ -1803,7 +1803,7 @@ void CDeferredViewRender::DrawSkyboxComposite( const CViewSetup &view, const boo
 	if ( pSkyView->Setup( view, false, &nSkyboxVisible ) )
 	{
 		AddViewToScene( pSkyView );
-		g_ShaderEditorSystem->UpdateSkymask(false, view.x, view.y, view.width, view.height);
+		//g_ShaderEditorSystem->UpdateSkymask(false, view.x, view.y, view.width, view.height);
 	}
 
 	SafeRelease( pSkyView );
@@ -2551,7 +2551,7 @@ void CDeferredViewRender::RenderView( const CViewSetup &view, int nClearFlags, i
 	// Image-space motion blur
 	if ( !building_cubemaps.GetBool() && worldView.m_bDoBloomAndToneMapping ) // We probably should use a different view. variable here
 	{
-		if ( ( mat_motion_blur_enabled.GetInt() ) && ( g_pMaterialSystemHardwareConfig->GetDXSupportLevel() >= 90 ) )
+		/*if ( ( mat_motion_blur_enabled.GetInt() ) && ( g_pMaterialSystemHardwareConfig->GetDXSupportLevel() >= 90 ) )
 		{
 			pRenderContext.GetFrom( materials );
 			{
@@ -2559,7 +2559,7 @@ void CDeferredViewRender::RenderView( const CViewSetup &view, int nClearFlags, i
 				DoImageSpaceMotionBlur( worldView, worldView.x, worldView.y, worldView.width, worldView.height );
 			}
 			pRenderContext.SafeRelease();
-		}
+		}*/
 	}
 
 	GetClientModeNormal()->DoPostScreenSpaceEffects( &worldView );
@@ -2602,7 +2602,7 @@ void CDeferredViewRender::RenderView( const CViewSetup &view, int nClearFlags, i
 	}
 
 	//SSE
-	g_ShaderEditorSystem->CustomPostRender();
+	//g_ShaderEditorSystem->CustomPostRender();
 
 	// And here are the screen-space effects
 
@@ -2838,7 +2838,7 @@ void CDeferredViewRender::RenderView( const CViewSetup &view, int nClearFlags, i
 	}
 
 	render->PopView( GetFrustum() );
-	FlushWorldLists();
+	//FlushWorldLists();
 
 	m_CurrentView = worldView;
 }
@@ -2850,7 +2850,7 @@ void CDeferredViewRender::ProcessDeferredGlobals( const CViewSetup &view )
 	matView.SetupMatrixOrgAngles( vec3_origin, view.angles );
 
 	MatrixSourceToDeviceSpace( matView );
-	g_ShaderEditorSystem->SetMainViewMatrix( matView );
+	//g_ShaderEditorSystem->SetMainViewMatrix( matView );
 
 	matView = matView.Transpose3x3();
 	Vector viewPosition;

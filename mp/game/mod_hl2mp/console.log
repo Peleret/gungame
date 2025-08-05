@@ -1,0 +1,584 @@
+maxplayers set to 2
+Steam config directory: A:\SteamLibrary\steamapps\common\Half-Life 2 Deathmatch\platform\config
+CLocalizedStringTable::AddFile() failed to load file "resource/tf_english.txt".
+CClientSteamContext logged on = 1
+Failed to load Resource/UI/NavProgress.res
+Host_WriteConfiguration: Wrote cfg/config.cfg
+Can't use cheat cvar fog_start in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_end in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_startskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_endskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar r_farz in multiplayer, unless the server has sv_cheats set to 1.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+Network: IP 10.0.0.221, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Connecting to 85.14.192.76:27015...
+You are in insecure mode.  You must restart before you can connect to secure servers.
+
+maxplayers set to 2
+Steam config directory: A:\SteamLibrary\steamapps\common\Half-Life 2 Deathmatch\platform\config
+CLocalizedStringTable::AddFile() failed to load file "resource/tf_english.txt".
+CClientSteamContext logged on = 1
+Failed to load Resource/UI/NavProgress.res
+Can't use cheat cvar fog_start in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_end in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_startskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_endskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar r_farz in multiplayer, unless the server has sv_cheats set to 1.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+Network: IP 10.0.0.221, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Connecting to 65.108.120.15:27001...
+Connected to 65.108.120.15:27001
+
+Deathmatch
+Map: dm_donutbox_tsgk_rc3
+Players: 4 / 32
+Build: 9371887
+Server Number: 20
+
+Voice_Init: Using Steam voice optimal sample rate 24000
+--- Missing Vgui material vgui/logos/UI/Spray_canned
+--- Missing Vgui material vgui/gfx/vgui/crosshair
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Creating fallback sound cache at: a:\steamlibrary\steamapps\common\half-life 2 deathmatch\hl2mp\sound_workshop
+Voice_Init: Using Steam voice optimal sample rate 24000
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Connecting to 65.108.120.15:27001...
+Connected to 65.108.120.15:27001
+
+Deathmatch
+Map: dm_donutbox_tsgk_rc3
+Players: 4 / 32
+Build: 9371887
+Server Number: 20
+
+The server is using sv_pure 0.  (Enforcing consistency for select files only)
+30.700319 BlockingGetDataPointer:  Async I/O Force amongus\overrides\items\medcharge4.wav (    0.50 msec /     0.50 msec total )
+30.700319 BlockingGetDataPointer:  Async I/O Force amongus\overrides\items\suitchargeok1.wav (    0.18 msec /     0.19 msec total )
+Cannot figure out which search path sound\amongus\overrides\items\suitcharge1.wav came from. Not playing.
+Cannot figure out which search path sound\amongus\overrides\items\medshot4.wav came from. Not playing.
+Cannot figure out which search path sound\quake\standard\headshot.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\headshot.mp3 ]
+Cannot figure out which search path sound\quake\standard\hattrick.wav came from. Not playing.
+Cannot figure out which search path sound\quake\standard\headhunter.wav came from. Not playing.
+Cannot figure out which search path sound\quake\standard\perfect.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\perfect.mp3 ]
+Cannot figure out which search path sound\quake\standard\humiliation.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\humiliation.mp3 ]
+Cannot figure out which search path sound\quake\standard\play.wav came from. Not playing.
+Cannot figure out which search path sound\quake\standard\dominating.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\dominating.mp3 ]
+Cannot figure out which search path sound\quake\standard\rampage.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\rampage.mp3 ]
+Cannot figure out which search path sound\quake\standard\killingspree.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\killingspree.mp3 ]
+Cannot figure out which search path sound\quake\standard\monsterkill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\monsterkill.mp3 ]
+Cannot figure out which search path sound\quake\standard\unstoppable.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\unstoppable.mp3 ]
+Cannot figure out which search path sound\quake\standard\ultrakill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\ultrakill.mp3 ]
+Cannot figure out which search path sound\quake\standard\godlike.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\godlike.mp3 ]
+Cannot figure out which search path sound\quake\standard\wickedsick.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\wickedsick.mp3 ]
+Cannot figure out which search path sound\quake\standard\impressive.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\impressive.mp3 ]
+Cannot figure out which search path sound\quake\standard\ludicrouskill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\ludicrouskill.mp3 ]
+Cannot figure out which search path sound\quake\standard\holyshit.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\holyshit.mp3 ]
+Cannot figure out which search path sound\quake\standard\firstblood.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\firstblood.mp3 ]
+Cannot figure out which search path sound\quake\standard\teamkiller.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\teamkiller.mp3 ]
+Cannot figure out which search path sound\quake\standard\doublekill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\doublekill.mp3 ]
+Cannot figure out which search path sound\quake\standard\triplekill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\triplekill.mp3 ]
+Cannot figure out which search path sound\quake\standard\multikill.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\multikill.mp3 ]
+Cannot figure out which search path sound\quake\standard\combowhore.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ quake\standard\combowhore.mp3 ]
+Cannot figure out which search path sound\weapons\minigun\minigun_fire.wav came from. Not playing.
+Cannot figure out which search path sound\weapons\minigun\minigun_spinup.wav came from. Not playing.
+Cannot figure out which search path sound\amongus\joinserver3.mp3 came from. Not playing.
+MP3 is completely missing, sound system will be upset to learn of this [ amongus\joinserver3.mp3 ]
+Cannot figure out which search path sound\weapons\oicw\oicw_reload.wav came from. Not playing.
+Cannot figure out which search path sound\weapons\oicw\oicw_fire1.wav came from. Not playing.
+Cannot figure out which search path sound\weapons\oicw\oicw_fire2.wav came from. Not playing.
+Cannot figure out which search path sound\weapons\oicw\oicw_fire3.wav came from. Not playing.
+Voice_Init: Using Steam voice optimal sample rate 24000
+Download file 'user_custom/c1/c12cc55b.dat' already exists!
+Saving a:\steamlibrary\steamapps\common\half-life 2 deathmatch\hl2mp\sound\sound.cache
+habel(STEAM_0:0:100071163) connected from Seattle, United States
+habel connected
+Compact freed 540672 bytes
+MP3 initialized with no sound cache, this may cause janking. [ amongus\joinserver3.mp3 ]
+*** Invalid sample rate (0) for sound 'amongus\joinserver3.mp3'.
+Cannot figure out which search path sound\amongus\joinserver3.mp3 came from. Not playing.
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Redownloading all lightmaps
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Stomach Ache killed habel with 357.
+Перфоратор killed Stomach Ache with 357.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Zalupator2000 killed Перфоратор with ar2.
+Zalupator2000 killed Stomach Ache with 357.
+Перфоратор killed habel with smg1.
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+Changing resolutions from (1176, 664) -> (2560, 1440)
+Failed to load Resource/UI/NavProgress.res
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+Changing resolutions from (2560, 1440) -> (2560, 1440)
+Unable to remove a:\steamlibrary\steamapps\common\half-life 2 deathmatch\hl2mp\textwindow_temp.html!
+Zalupator2000 killed Stomach Ache with ar2.
+Zalupator2000 killed Перфоратор with ar2.
+Stomach Ache killed Zalupator2000 with shotgun.
+Zalupator2000 killed Stomach Ache with 357.
+Zalupator2000 killed Перфоратор with 357.
+Cannot figure out which search path sound\amongus\overrides\items\suitcharge1.wav came from. Not playing.
+Failed to load sound "amongus\overrides\items\suitcharge1.wav", file probably missing from disk/repository
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+Перфоратор killed Zalupator2000 with ar2.
+Can't change fps_max when playing, disconnect from the server or switch team to spectators
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+Перфоратор killed Zalupator2000 with ar2.
+Перфоратор killed Stomach Ache with ar2.
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+'userconfig.cfg' not present; not executing.
+Host_WriteConfiguration: Wrote cfg/config.cfg
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Can't change snd_mute_losefocus when playing, disconnect from the server or switch team to spectators
+Zalupator2000 killed Перфоратор with 357.
+Stomach Ache killed Zalupator2000 with physics.
+CShaderAPIDX8::BlitTextureBits: couldn't lock texture rect or use UpdateSurface
+Cannot figure out which search path sound\amongus\overrides\items\suitcharge1.wav came from. Not playing.
+Failed to load sound "amongus\overrides\items\suitcharge1.wav", file probably missing from disk/repository
+habel killed Stomach Ache with ar2.
+Zalupator2000 killed Перфоратор with physics.
+Zalupator2000 killed habel with physics.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+habel killed Zalupator2000 with smg1.
+Перфоратор killed Stomach Ache with pistol.
+Zalupator2000 killed habel with smg1.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+CShaderAPIDX8::BlitTextureBits: couldn't lock texture rect or use UpdateSurface
+habel killed Stomach Ache with 357.
+Перфоратор killed habel with 357.
+Перфоратор killed Zalupator2000 with physics.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Zalupator2000 suicided.
+habel killed Перфоратор with smg1.
+Zalupator2000 killed Stomach Ache with physics.
+Перфоратор killed Zalupator2000 with ar2.
+habel killed Перфоратор with smg1.
+Remember to join our Discord server at: https://discord.gg/zub9haWbmP
+Zalupator2000 killed Перфоратор with physics.
+Stomach Ache killed Zalupator2000 with combine_ball.
+habel killed Stomach Ache with pistol.
+Zalupator2000 killed habel with shotgun.
+Перфоратор killed Zalupator2000 with 357.
+Перфоратор killed Stomach Ache with 357.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Перфоратор killed Zalupator2000 with 357.
+Перфоратор killed habel with 357.
+Перфоратор killed Zalupator2000 with 357.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Stomach Ache killed Перфоратор with shotgun.
+Zalupator2000 killed habel with ar2.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Zalupator2000 killed Stomach Ache with ar2.
+Перфоратор killed habel with 357.
+Перфоратор killed Zalupator2000 with 357.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Перфоратор killed Stomach Ache with 357.
+Перфоратор killed habel with physics.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Stomach Ache killed Zalupator2000 with smg1.
+habel killed Stomach Ache with smg1.
+Перфоратор killed Zalupator2000 with pistol.
+Перфоратор killed habel with shotgun.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Zalupator2000 killed habel with combine_ball.
+Перфоратор killed Zalupator2000 with shotgun.
+Can't use cheat command thirdperson in multiplayer, unless the server has sv_cheats set to 1.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Zalupator2000 killed Перфоратор with smg1.
+Перфоратор killed Zalupator2000 with smg1.
+Перфоратор killed habel with smg1.
+Warning! Your cl_showpluginmessages console variable value is 0. Please set it to 1.
+Warning! Your cl_downloadfilter console variable value is not "all". Please set it to "all" and rejoin for intended gameplay experience.
+Stomach Ache killed Перфоратор with crossbow_bolt.
+Stomach Ache killed habel with 357.
+Перфоратор killed Zalupator2000 with smg1.
+Перфоратор killed Zalupator2000 with crossbow_bolt.
+Stomach Ache killed Перфоратор with 357.
+Stomach Ache killed Zalupator2000 with 357.
+Stomach Ache killed Перфоратор with crossbow_bolt.
+Stomach Ache killed Zalupator2000 with crossbow_bolt.
+Перфоратор killed Stomach Ache with smg1.
+Zalupator2000 killed Перфоратор with ar2.
+Stomach Ache killed Перфоратор with 357.
+Перфоратор killed Stomach Ache with smg1.
+Перфоратор killed Zalupator2000 with smg1.
+Zalupator2000 killed Перфоратор with shotgun.
+Remember to join our Discord server at: https://discord.gg/zub9haWbmP
+Stomach Ache killed Zalupator2000 with smg1.
+Zalupator2000 killed Stomach Ache with ar2.
+Перфоратор killed Stomach Ache with 357.
+maxplayers set to 2
+Steam config directory: A:\SteamLibrary\steamapps\common\Half-Life 2 Deathmatch\platform\config
+CLocalizedStringTable::AddFile() failed to load file "resource/tf_english.txt".
+CClientSteamContext logged on = 1
+Failed to load Resource/UI/NavProgress.res
+Unknown command "cl_thirdperson"
+Can't use cheat cvar cam_snapto in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_ideallag in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealdelta in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealyaw in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealpitch in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealdist in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealdistright in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_idealdistup in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cam_collision in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_maxpitch in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_minpitch in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_maxyaw in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_minyaw in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_maxdistance in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_mindistance in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_orthowidth in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar c_orthoheight in multiplayer, unless the server has sv_cheats set to 1.
+Unknown command "mat_spewalloc"
+Creating fallback sound cache at: a:\steamlibrary\steamapps\common\half-life 2 deathmatch\hl2mp\sound_workshop
+Can't use cheat cvar fog_start in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_end in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_startskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar fog_endskybox in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar r_farz in multiplayer, unless the server has sv_cheats set to 1.
+Voice_Init: Using Steam voice optimal sample rate 24000
+--- Missing Vgui material vgui/gfx/vgui/crosshair
+Host_WriteConfiguration: Wrote cfg/config.cfg
+Unable to remove a:\steamlibrary\steamapps\common\half-life 2 deathmatch\hl2mp\textwindow_temp.html!
+Shutdown function ShutdownMixerControls() not in list!!!
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Hooking DecalSurfaceDraw unsuccessful
+Hooking DispInfo_DrawDecalsGroup unsuccessful
+Changing resolutions from (1920, 1080) -> (1920, 1080)
+Failed to load Resource/UI/NavProgress.res
+Creating fallback sound cache at: c:\stardust-sdk\source-sdk-2013\game\mod_hl2mp\sound_workshop
+Network: IP 192.168.56.1, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Using map cycle file 'cfg/mapcycle_default.txt'.  ('cfg\mapcycle.txt' was not found.)
+Error loading cfg/vscript_convar_allowlist.txt
+VSCRIPT: Started VScript virtual machine using script language 'Squirrel'
+Script not found (scripts/vscripts/mapspawn.nut) 
+Set motd from file 'cfg/motd_default.txt'.  ('cfg/motd.txt' was not found.)
+Set motd_text from file 'cfg/motd_text_default.txt'.  ('cfg/motd_text.txt' was not found.)
+SV_ActivateServer: setting tickrate to 66.7
+'listenserver.cfg' not present; not executing.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+FakeIP allocation succeeded: 169.254.9.120:29128, 29129
+
+Deathmatch
+Map: dm_lockdown
+Players: 1 / 16
+Build: 9540945
+Server Number: 1
+
+The server is using sv_pure 0.  (Enforcing consistency for select files only)
+Voice_Init: Using Steam voice optimal sample rate 24000
+kuaru ! connected
+Compact freed 315392 bytes
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Redownloading all lightmaps
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Hooking DecalSurfaceDraw unsuccessful
+Hooking DispInfo_DrawDecalsGroup unsuccessful
+Changing resolutions from (1920, 1080) -> (1920, 1080)
+Failed to load Resource/UI/NavProgress.res
+Creating fallback sound cache at: c:\stardust-sdk\source-sdk-2013\game\mod_hl2mp\sound_workshop
+Network: IP 192.168.56.1, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Using map cycle file 'cfg/mapcycle_default.txt'.  ('cfg\mapcycle.txt' was not found.)
+Error loading cfg/vscript_convar_allowlist.txt
+VSCRIPT: Started VScript virtual machine using script language 'Squirrel'
+Script not found (scripts/vscripts/mapspawn.nut) 
+Set motd from file 'cfg/motd_default.txt'.  ('cfg/motd.txt' was not found.)
+Set motd_text from file 'cfg/motd_text_default.txt'.  ('cfg/motd_text.txt' was not found.)
+SV_ActivateServer: setting tickrate to 66.7
+'listenserver.cfg' not present; not executing.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+FakeIP allocation succeeded: 169.254.16.25:52320, 52321
+
+Deathmatch
+Map: dm_lockdown
+Players: 1 / 16
+Build: 9540945
+Server Number: 1
+
+The server is using sv_pure 0.  (Enforcing consistency for select files only)
+Voice_Init: Using Steam voice optimal sample rate 24000
+kuaru ! connected
+Compact freed 348160 bytes
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Redownloading all lightmaps
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Hooking DecalSurfaceDraw unsuccessful
+Hooking DispInfo_DrawDecalsGroup unsuccessful
+Changing resolutions from (1920, 1080) -> (1920, 1080)
+Failed to load Resource/UI/NavProgress.res
+Creating fallback sound cache at: c:\stardust-sdk\source-sdk-2013\game\mod_hl2mp\sound_workshop
+Network: IP 192.168.56.1, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Using map cycle file 'cfg/mapcycle_default.txt'.  ('cfg\mapcycle.txt' was not found.)
+Error loading cfg/vscript_convar_allowlist.txt
+VSCRIPT: Started VScript virtual machine using script language 'Squirrel'
+Script not found (scripts/vscripts/mapspawn.nut) 
+Set motd from file 'cfg/motd_default.txt'.  ('cfg/motd.txt' was not found.)
+Set motd_text from file 'cfg/motd_text_default.txt'.  ('cfg/motd_text.txt' was not found.)
+SV_ActivateServer: setting tickrate to 66.7
+'listenserver.cfg' not present; not executing.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+FakeIP allocation succeeded: 169.254.175.184:34144, 34145
+
+Deathmatch
+Map: dm_lockdown
+Players: 1 / 16
+Build: 9540945
+Server Number: 1
+
+The server is using sv_pure 0.  (Enforcing consistency for select files only)
+Voice_Init: Using Steam voice optimal sample rate 24000
+kuaru ! connected
+Compact freed 282624 bytes
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Redownloading all lightmaps
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Hooking DecalSurfaceDraw unsuccessful
+Hooking DispInfo_DrawDecalsGroup unsuccessful
+Changing resolutions from (1920, 1080) -> (1920, 1080)
+Failed to load Resource/UI/NavProgress.res
+Creating fallback sound cache at: c:\stardust-sdk\source-sdk-2013\game\mod_hl2mp\sound_workshop
+Network: IP 192.168.56.1, mode MP, dedicated No, ports 27015 SV / 27005 CL
+Using map cycle file 'cfg/mapcycle_default.txt'.  ('cfg\mapcycle.txt' was not found.)
+Error loading cfg/vscript_convar_allowlist.txt
+VSCRIPT: Started VScript virtual machine using script language 'Squirrel'
+Script not found (scripts/vscripts/mapspawn.nut) 
+Set motd from file 'cfg/motd_default.txt'.  ('cfg/motd.txt' was not found.)
+Set motd_text from file 'cfg/motd_text_default.txt'.  ('cfg/motd_text.txt' was not found.)
+SV_ActivateServer: setting tickrate to 66.7
+'listenserver.cfg' not present; not executing.
+[SteamNetworkingSockets] SDR network config fetch attempt #1 failed.  HTTP 504.  .  Trying again.
+FakeIP allocation succeeded: 169.254.203.19:45264, 45265
+
+Deathmatch
+Map: dm_lockdown
+Players: 1 / 16
+Build: 9540945
+Server Number: 1
+
+The server is using sv_pure 0.  (Enforcing consistency for select files only)
+Voice_Init: Using Steam voice optimal sample rate 24000
+kuaru ! connected
+Compact freed 253952 bytes
+JOY_AXIS_X:  mapped to Turn (absolute)
+JOY_AXIS_Y:  mapped to Look (absolute)
+JOY_AXIS_Z:  unmapped
+JOY_AXIS_R:  mapped to Forward (absolute)
+JOY_AXIS_U:  mapped to Side (absolute)
+JOY_AXIS_V:  unmapped
+Advanced Joystick settings initialized
+Redownloading all lightmaps
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res
+Parent cvar in server.dll not allowed (hl2mp_bot_debug_ammo_scavenging)
+maxplayers set to 16
+Steam config directory: C:\stardust-sdk\source-sdk-2013\game\platform\config
+CClientSteamContext logged on = 1
+Both ConVars must be marked FCVAR_REPLICATED for linkage to work (sv_infinite_aux_power)
+Failed to load Resource/UI/NavProgress.res

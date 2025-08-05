@@ -1,6 +1,6 @@
 //========= Copyright Valve Corporation, All rights reserved. ============//
 //
-// Purpose:
+// Purpose: 
 //
 //===========================================================================//
 
@@ -57,11 +57,11 @@ void r_newflashlightCallback_f( IConVar *pConVar, const char *pOldString, float 
 	if( engine->GetDXSupportLevel() < 70 )
 	{
 		r_newflashlight.SetValue( 0 );
-	}
+	}	
 }
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 // Input  : nEntIndex - The m_nEntIndex of the client entity that is creating us.
 //			vecPos - The position of the light emitter.
 //			vecDir - The direction of the light emission.
@@ -75,7 +75,7 @@ CFlashlightEffect::CFlashlightEffect(int nEntIndex)
 	if( engine->GetDXSupportLevel() < 70 )
 	{
 		r_newflashlight.SetValue( 0 );
-	}
+	}	
 
 	if ( g_pMaterialSystemHardwareConfig->SupportsBorderColor() )
 	{
@@ -89,7 +89,7 @@ CFlashlightEffect::CFlashlightEffect(int nEntIndex)
 
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 //-----------------------------------------------------------------------------
 CFlashlightEffect::~CFlashlightEffect()
 {
@@ -98,7 +98,7 @@ CFlashlightEffect::~CFlashlightEffect()
 
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 //-----------------------------------------------------------------------------
 void CFlashlightEffect::TurnOn()
 {
@@ -108,7 +108,7 @@ void CFlashlightEffect::TurnOn()
 
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 //-----------------------------------------------------------------------------
 void CFlashlightEffect::TurnOff()
 {
@@ -178,7 +178,7 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 	Vector vOrigin = vecPos + flOffsetY * vecUp;
 
 	// Not on ladder...trace a hull
-	if ( !bPlayerOnLadder )
+	if ( !bPlayerOnLadder ) 
 	{
 		trace_t pmOriginTrace;
 		UTIL_TraceHull( vecPos, vOrigin, Vector(-4, -4, -4), Vector(4, 4, 4), MASK_SOLID & ~(CONTENTS_HITBOX), &traceFilter, &pmOriginTrace );
@@ -225,8 +225,11 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 
 	if ( r_flashlightvisualizetrace.GetBool() == true )
 	{
-		debugoverlay->AddBoxOverlay( pmDirectionTrace.endpos, Vector( -4, -4, -4 ), Vector( 4, 4, 4 ), QAngle( 0, 0, 0 ), 0, 0, 255, 16, 0 );
-		debugoverlay->AddLineOverlay( vOrigin, pmDirectionTrace.endpos, 255, 0, 0, false, 0 );
+		if ( debugoverlay )
+		{
+			debugoverlay->AddBoxOverlay( pmDirectionTrace.endpos, Vector( -4, -4, -4 ), Vector( 4, 4, 4 ), QAngle( 0, 0, 0 ), 0, 0, 255, 16, 0 );
+			debugoverlay->AddLineOverlay( vOrigin, pmDirectionTrace.endpos, 255, 0, 0, false, 0 );
+		}
 	}
 
 	float flDist = (pmDirectionTrace.endpos - vOrigin).Length();
@@ -236,7 +239,7 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 		// Determine how far to pull back, then trace to see if we are clear
 		float flPullBackDist = bPlayerOnLadder ? r_flashlightladderdist.GetFloat() : flDistCutoff - flDist;	// Fixed pull-back distance if on ladder
 		m_flDistMod = Lerp( flDistDrag, m_flDistMod, flPullBackDist );
-
+		
 		if ( !bPlayerOnLadder )
 		{
 			trace_t pmBackTrace;
@@ -273,20 +276,20 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 		{
 			float flScale;
 			if ( flBatteryPower >= 0.0f )
-			{
+			{	
 				flScale = ( flBatteryPower <= 4.5f ) ? SimpleSplineRemapVal( flBatteryPower, 4.5f, 0.0f, 1.0f, 0.0f ) : 1.0f;
 			}
 			else
 			{
 				flScale = SimpleSplineRemapVal( flBatteryPower, 10.0f, 4.8f, 1.0f, 0.0f );
 			}
-
+			
 			flScale = clamp( flScale, 0.0f, 1.0f );
 
 			if ( flScale < 0.35f )
 			{
 				float flFlicker = cosf( gpGlobals->curtime * 6.0f ) * sinf( gpGlobals->curtime * 15.0f );
-
+				
 				if ( flFlicker > 0.25f && flFlicker < 0.75f )
 				{
 					// On
@@ -306,7 +309,7 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 
 			state.m_fHorizontalFOVDegrees = r_flashlightfov.GetFloat() - ( 16.0f * (1.0f-flScale) );
 			state.m_fVerticalFOVDegrees = r_flashlightfov.GetFloat() - ( 16.0f * (1.0f-flScale) );
-
+			
 			bFlicker = true;
 		}
 	}
@@ -324,7 +327,7 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 	state.m_Color[1] = 1.0f;
 	state.m_Color[2] = 1.0f;
 	state.m_Color[3] = r_flashlightambient.GetFloat();
-	state.m_NearZ = r_flashlightnear.GetFloat() + m_flDistMod;	// Push near plane out so that we don't clip the world when the flashlight pulls back
+	state.m_NearZ = r_flashlightnear.GetFloat() + m_flDistMod;	// Push near plane out so that we don't clip the world when the flashlight pulls back 
 	state.m_FarZ = r_flashlightfar.GetFloat();
 	state.m_bEnableShadows = r_flashlightdepthtexture.GetBool();
 	state.m_flShadowMapResolution = r_flashlightdepthres.GetInt();
@@ -339,7 +342,6 @@ void CFlashlightEffect::UpdateLightNew(const Vector &vecPos, const Vector &vecFo
 	UpdateLightProjection(state);
 
 	// Kill the old flashlight method if we have one.
-	//LightOffOld();
 
 #ifndef NO_TOOLFRAMEWORK
 	if ( clienttools->IsInRecordingMode() )
@@ -369,7 +371,7 @@ void CFlashlightEffect::UpdateLight(const Vector &vecPos, const Vector &vecDir, 
 
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 //-----------------------------------------------------------------------------
 void CFlashlightEffect::LightOffNew()
 {
@@ -412,21 +414,21 @@ void CFlashlightEffect::UpdateLightProjection( FlashlightState_t& state )
 }
 
 //-----------------------------------------------------------------------------
-// Purpose:
+// Purpose: 
 //-----------------------------------------------------------------------------
 void CFlashlightEffect::LightOff()
 {
 	LightOffNew();
 }
 
-CHeadlightEffect::CHeadlightEffect()
+CHeadlightEffect::CHeadlightEffect() 
 {
 
 }
 
 CHeadlightEffect::~CHeadlightEffect()
 {
-
+	
 }
 
 void CHeadlightEffect::UpdateLight( const Vector &vecPos, const Vector &vecDir, const Vector &vecRight, const Vector &vecUp, int nDistance )
@@ -444,7 +446,7 @@ void CHeadlightEffect::UpdateLight( const Vector &vecPos, const Vector &vecDir, 
 	VectorNormalize(basisZ);
 
 	BasisToQuaternion( basisX, basisY, basisZ, state.m_quatOrientation );
-
+		
 	state.m_vecLightOrigin = vecPos;
 
 	state.m_fHorizontalFOVDegrees = 45.0f;

@@ -1,8 +1,8 @@
 
 #include "cbase.h"
 #include "deferred/deferred_shared_common.h"
-#include "ShaderEditor/ShaderEditorSystem.h"
-#include "ShaderEditor/IVShaderEditor.h"
+//#include "ShaderEditor/ShaderEditorSystem.h"
+//#include "ShaderEditor/IVShaderEditor.h"
 
 #include "view_shared.h"
 #include "view.h"
@@ -25,7 +25,7 @@ CLightingEditor *GetLightingEditor()
 	return &__g_lightingEditor;
 }
 
-extern IVShaderEditor *shaderEdit;
+//extern IVShaderEditor *shaderEdit;
 
 def_light_editor_t::def_light_editor_t()
 {
@@ -180,7 +180,7 @@ void CLightingEditor::OnRender()
 		return;
 
 	const EDITOR_DBG_MODES dbg = GetDebugMode();
-	if ( dbg != EDITOR_DBG_OFF && g_ShaderEditorSystem->IsReady() )
+	/*if ( dbg != EDITOR_DBG_OFF && g_ShaderEditorSystem->IsReady() )
 	{
 		const char *pszDebugList[] = {
 			"dbg_editor_ppe_lighting",
@@ -193,7 +193,7 @@ void CLightingEditor::OnRender()
 		int iDbgIndex = shaderEdit->GetPPEIndex( pszDebugName );
 		if ( iDbgIndex != -1 )
 			shaderEdit->DrawPPEOnDemand( iDbgIndex );
-	}
+	}*/
 
 	RenderSprites();
 

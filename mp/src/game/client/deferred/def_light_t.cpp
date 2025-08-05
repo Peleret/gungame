@@ -571,8 +571,8 @@ void def_light_t::UpdateXForms()
 
 	if ( ( bounds_max - bounds_min ).LengthSqr() < 1 )
 	{
-		bounds_max = pos + __ND1;
-		bounds_min = pos - __ND1;
+		//bounds_max = pos + __ND1;
+		//bounds_min = pos - __ND1;
 	}
 
 	QAngle worldAng = ang;
