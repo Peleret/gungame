@@ -35,7 +35,7 @@ public:
 		m_nHARDWAREFOGBLEND = i;
 	}
 
-	decalmodulate_vs30_Static_Index( IShaderShadow* pShaderShadow, IMaterialVar** params )
+	decalmodulate_vs30_Static_Index(  )
 	{
 		m_nVERTEXCOLOR = 0;
 		m_nDOPIXELFOG = g_pHardwareConfig->SupportsPixelShaders_2_b() ;
@@ -107,7 +107,7 @@ public:
 		m_nMORPHING = i;
 	}
 
-	decalmodulate_vs30_Dynamic_Index( IShaderDynamicAPI* pShaderAPI )
+	decalmodulate_vs30_Dynamic_Index(  )
 	{
 		m_nCOMPRESSED_VERTS = 0;
 		m_nDOWATERFOG = ( pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z ) ;

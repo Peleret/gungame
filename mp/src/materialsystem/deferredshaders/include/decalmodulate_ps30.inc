@@ -32,7 +32,7 @@ public:
 #endif	// _DEBUG
 	}
 
-	decalmodulate_ps30_Static_Index( IShaderShadow* pShaderShadow, IMaterialVar** params )
+	decalmodulate_ps30_Static_Index(  )
 	{
 		m_nVERTEXALPHA = 0;
 #ifdef _DEBUG
@@ -60,7 +60,7 @@ public:
 		m_nPIXELFOGTYPE = i;
 	}
 
-	decalmodulate_ps30_Dynamic_Index( IShaderDynamicAPI* pShaderAPI )
+	decalmodulate_ps30_Dynamic_Index(  )
 	{
 		m_nPIXELFOGTYPE = ( pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z ) ;
 	}

@@ -314,30 +314,28 @@ void DrawPassGBuffer( const defParms_gBuffer &info, CBaseVSShader *pShader, IMat
             pShaderAPI->MarkUnusedVertexFields( 0, 3, bUnusedTexCoords );
         }
 
-        if ( bTreeSway )
-        {
-            float fTempConst[4];
-            fTempConst[0] = 0;  // unused
-            fTempConst[1] = pShaderAPI->CurrentTime();
-            const Vector &windDir = pShaderAPI->GetVectorRenderingParameter( VECTOR_RENDERPARM_WIND_DIRECTION );
-            fTempConst[2] = windDir.x;
-            fTempConst[3] = windDir.y;
-            pShaderAPI->SetVertexShaderConstant( VERTEX_SHADER_SHADER_SPECIFIC_CONST_6, fTempConst );
-        }
+		if (bTreeSway)
+		{
+			float fTempConst[4];
+			fTempConst[0] = 0; // unused
+			fTempConst[1] = pShaderAPI->CurrentTime();
+			Vector windDir = pShaderAPI->GetVectorRenderingParameter(VECTOR_RENDERPARM_WIND_DIRECTION);
+			fTempConst[2] = windDir.x;
+			fTempConst[3] = windDir.y;
+			pShaderAPI->SetVertexShaderConstant(VERTEX_SHADER_SHADER_SPECIFIC_CONST_6, fTempConst);
+		}
 
-        float vPos[4] = { 0, 0, 0, 0 };
-        pShaderAPI->GetWorldSpaceCameraPosition( vPos );
-        float zScale[4] = { GetDeferredExt()->GetZScale(), 0, 0, 0 };
-        pShaderAPI->SetVertexShaderConstant( VERTEX_SHADER_SHADER_SPECIFIC_CONST_0, vPos );
-        pShaderAPI->SetVertexShaderConstant( VERTEX_SHADER_SHADER_SPECIFIC_CONST_1,
-                                             GetDeferredExt()->GetForwardBase() );
-        pShaderAPI->SetVertexShaderConstant( VERTEX_SHADER_SHADER_SPECIFIC_CONST_2, zScale );
+		float vPos[4] = {0,0,0,0};
+		pShaderAPI->GetWorldSpaceCameraPosition(vPos);
+		float zScale[4] = {GetDeferredExt()->GetZScale(),0,0,0};
+		pShaderAPI->SetVertexShaderConstant(VERTEX_SHADER_SHADER_SPECIFIC_CONST_0, vPos);
+		pShaderAPI->SetVertexShaderConstant(VERTEX_SHADER_SHADER_SPECIFIC_CONST_1, GetDeferredExt()->GetForwardBase());
+		pShaderAPI->SetVertexShaderConstant(VERTEX_SHADER_SHADER_SPECIFIC_CONST_2, zScale);
 
         pShader->LoadViewMatrixIntoVertexShaderConstant( VERTEX_SHADER_AMBIENT_LIGHT );
 
-        pShaderAPI->ExecuteCommandBuffer(
-            pDeferredContext->GetCommands( CDeferredPerMaterialContextData::DEFSTAGE_GBUFFER ) );
-    }
+		pShaderAPI->ExecuteCommandBuffer(pDeferredContext->GetCommands(CDeferredPerMaterialContextData::DEFSTAGE_GBUFFER));
+	}
 
     pShader->Draw();
 }
