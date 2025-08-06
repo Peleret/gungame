@@ -73,7 +73,7 @@ BEGIN_VS_SHADER( RADIOSITY_BLEND, "" )
 			pShaderAPI->SetPixelShaderConstant( 1, fl1 );
 			pShaderAPI->SetPixelShaderConstant( 2, fl2 );
 
-			float fl3[4] = { deferred_radiosity_multiplier.GetFloat() };
+			float fl3[4] = { r_deferred_radiosity_multiplier.GetFloat() };
 			pShaderAPI->SetPixelShaderConstant( 3, fl3 );
 		}
 

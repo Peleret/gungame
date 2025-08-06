@@ -11,6 +11,8 @@
 
 #include "tier0/memdbgon.h"
 
+ConVar r_deferred_light_visleaf_cull( "r_deferred_light_visleaf_cull", "1", 0, "Culling based on map visleaves - buggy, improves performance" );
+
 static CLightingManager __g_lightingMan;
 
 CLightingManager* GetLightingManager()
@@ -118,7 +120,7 @@ void CLightingManager::LightSetup( const CViewSetup& setup )
 
 	SortLights();
 
-	if ( deferred_lightmanager_debug.GetInt() >= 2 )
+	if ( r_deferred_light_stats.GetInt() >= 2 )
 	{
 		DebugLights_Draw_Boundingboxes();
 	}
@@ -435,23 +437,24 @@ void CLightingManager::CullLights()
 		if ( !m_bDrawWorldLights && l->bWorldLight )
 			continue;
 
-		if ( !render->AreAnyLeavesVisible( l->iLeaveIDs, l->iNumLeaves ) )
+		// FIXME: inaccurate with e.g. angled lights, causes popping - performance impact when disabled
+		if ( !render->AreAnyLeavesVisible( l->iLeaveIDs, l->iNumLeaves ) && r_deferred_light_visleaf_cull.GetBool() )
 			continue;
 
 		// if the optimized bounds cause popping for you, use the naive ones or
 		// ...improve the optimization code
-		//if( !engine->IsBoxInViewCluster( l->bounds_min_naive, l->bounds_max_naive ) )
-		//	continue;
-
-		if ( engine->CullBox( l->bounds_min_naive, l->bounds_max_naive ) )
-			//if ( engine->CullBox( l->bounds_min, l->bounds_max ) )
+		if( !engine->IsBoxInViewCluster( l->bounds_min_naive, l->bounds_max_naive ) )
 			continue;
 
-		if ( l->IsSpot() && l->HasShadow() )
-		{
-			if ( IntersectFrustumWithFrustum( m_matScreenToWorld, l->spotMVPInv ) )
-				continue;
-		}
+		if ( engine->CullBox( l->bounds_min_naive, l->bounds_max_naive ) )
+		//if ( engine->CullBox( l->bounds_min, l->bounds_max ) )
+			continue;
+
+		// if ( l->IsSpot() && l->HasShadow() )
+		// {
+		// 	if ( IntersectFrustumWithFrustum( m_matScreenToWorld, l->spotMVPInv ) )
+		// 		continue;
+		// }
 
 		Vector veclightDelta = l->boundsCenter - m_vecViewOrigin;
 
@@ -536,35 +539,35 @@ void CLightingManager::SortLights()
 		                                           adjustedMins, adjustedMaxs );
 
 		//Jack: this is terrible I know
-		for ( uint i = 0; i < s.count; i++ )
+		for ( uint j = 0; j < s.count; j++ )
 		{
-			if ( s.lights[i]->IsSpot() )
+			if ( s.lights[j]->IsSpot() )
 			{
-				if ( IS_NAN( SubFloat( needsFullscreen, i ) ) )
+				if ( IS_NAN( SubFloat( needsFullscreen, j ) ) )
 				{
-					if ( !R_CullBox( camMins, camMaxs, s.lights[i]->spotFrustum ) )
+					if ( !R_CullBox( camMins, camMaxs, s.lights[j]->spotFrustum ) )
 					{
-						m_hPreSortedLights[LSORT_SPOT_FULLSCREEN].AddToTail( s.lights[i] );
+						m_hPreSortedLights[LSORT_SPOT_FULLSCREEN].AddToTail( s.lights[j] );
 					}
 					else
 					{
-						m_hPreSortedLights[LSORT_SPOT_WORLD].AddToTail( s.lights[i] );
+						m_hPreSortedLights[LSORT_SPOT_WORLD].AddToTail( s.lights[j] );
 					}
 				}
 				else
 				{
-					m_hPreSortedLights[LSORT_SPOT_WORLD].AddToTail( s.lights[i] );
+					m_hPreSortedLights[LSORT_SPOT_WORLD].AddToTail( s.lights[j] );
 				}
 			}
 			else
 			{
-				if ( IS_NAN( SubFloat( needsFullscreen, i ) ) )
+				if ( IS_NAN( SubFloat( needsFullscreen, j ) ) )
 				{
-					m_hPreSortedLights[LSORT_POINT_FULLSCREEN].AddToTail( s.lights[i] );
+					m_hPreSortedLights[LSORT_POINT_FULLSCREEN].AddToTail( s.lights[j] );
 				}
 				else
 				{
-					m_hPreSortedLights[LSORT_POINT_WORLD].AddToTail( s.lights[i] );
+					m_hPreSortedLights[LSORT_POINT_WORLD].AddToTail( s.lights[j] );
 				}
 			}
 		}
@@ -1396,6 +1399,7 @@ void CLightingManager::RenderLights( const CViewSetup& view, CDeferredViewRender
 #if DEFCFG_CONFIGURABLE_VOLUMETRIC_LOD
 				data.iSamples = l->iVolumeSamples;
 #endif
+				#pragma warning(suppress: 4456)
 				QUEUE_FIRE( CommitVolumeData, data );
 
 				DrawVolumePrepass( false, view, l );
@@ -1418,7 +1422,7 @@ void CLightingManager::RenderLights( const CViewSetup& view, CDeferredViewRender
 #endif
 	}
 
-	if ( deferred_lightmanager_debug.GetBool() )
+	if ( r_deferred_light_stats.GetBool() )
 	{
 		Assert( iNumLightTypes == 2 );
 
@@ -1447,6 +1451,9 @@ void CLightingManager::RenderLights( const CViewSetup& view, CDeferredViewRender
 		case SHADOWMAPPING_DEPTH_COLOR__5X5_SOFTWARE_BILINEAR_GAUSSIAN:
 		case SHADOWMAPPING_DEPTH_STENCIL__5X5_GAUSSIAN:
 			pszFilterName = "5x5 GAUSS";
+			break;
+		case SHADOWMAPPING_DEPTH_COLOR__PCSS_4X4_PCF_4X4:
+			pszFilterName = "PCSS 4x4 PCF 4x4";
 			break;
 		default:
 			Assert(0); // add filter name to this switch case
@@ -1496,11 +1503,11 @@ void CLightingManager::RenderVolumetrics( const CViewSetup& view )
 
 void CLightingManager::DoSceneDebug()
 {
-	if ( !deferred_lightmanager_debug.GetBool() )
+	if ( !r_deferred_light_stats.GetBool() )
 		return;
 
 #if DEBUG
-	if ( deferred_lightmanager_debug.GetInt() >= 2 )
+	if ( r_deferred_light_stats.GetInt() >= 2 )
 	{
 		CMatRenderContextPtr pRenderContext( materials );
 		pRenderContext->ClearBuffers( false, true );

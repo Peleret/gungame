@@ -1,4 +1,4 @@
-//====== Copyright © Sandern Corporation, All rights reserved. ===========//
+//====== Copyright Â© Sandern Corporation, All rights reserved. ===========//
 //
 // Purpose: Implementation of IMaterialSystem interface which "passes tru" all
 //			function calls to the real interface. Can be used to override
@@ -357,11 +357,6 @@ public:
 	{
 		return m_pBaseMaterialsPassThru->CreateNamedTextureFromBitsEx( pName, pTextureGroupName, w, h, mips, fmt, srcBufferSize, srcBits, nFlags );
 	}
-
-	//HAZEL MAKE SURE TO CREATE RETURN VALUES
-
-
-	// Creates a texture compositor template for use in later code. 
 	virtual bool				AddTextureCompositorTemplate(const char* pName, KeyValues* pTmplDesc, int nTexCompositeTemplateFlags = 0) { return m_pBaseMaterialsPassThru->AddTextureCompositorTemplate(pName, null); }
 
 	// Performs final verification of all compositor templates (after they've all been initially loaded).
@@ -373,7 +368,6 @@ public:
 	// operations that shouldn't take usage of textures as a signal to stream them in at full rez.
 	virtual void				SuspendTextureStreaming() { return m_pBaseMaterialsPassThru->SuspendTextureStreaming(); }
 	virtual void				ResumeTextureStreaming() { return m_pBaseMaterialsPassThru->ResumeTextureStreaming(); }
-
 
 protected:
 	IMaterialSystem * m_pBaseMaterialsPassThru;
@@ -395,10 +389,8 @@ public:
 	IMaterial* FindProceduralMaterial( const char* pMaterialName, const char* pTextureGroupName, KeyValues* pVMTKeyValues ) OVERRIDE;
 
 	IMaterial* CreateMaterial( const char* pMaterialName, KeyValues* pVMTKeyValues ) OVERRIDE;
-
 private:
 	IMaterial * ReplaceMaterialInternal( IMaterial* pMat ) const;
-	
 };
 
 #endif // WARS_MATERIALSYSTEM_PASSTHRU_H

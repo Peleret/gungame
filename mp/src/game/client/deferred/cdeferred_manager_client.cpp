@@ -15,6 +15,7 @@
 datamap_t def_lump_light_global_t::m_DataMap;
 datamap_t def_lump_light_t::m_DataMap;
 
+
 static CDeferredManagerClient __g_defmanager;
 CDeferredManagerClient *GetDeferredManager()
 {
@@ -46,6 +47,16 @@ CDeferredManagerClient::~CDeferredManagerClient()
 
 bool CDeferredManagerClient::Init()
 {
+
+	m_bDefRenderingEnabled = CommandLine() && CommandLine()->FindParm( "-nodeferred" ) == 0;
+
+	if (!m_bDefRenderingEnabled) {
+		Msg( "Skipping deferred lighting because of -nodeferred param\n" );
+		g_pCurrentViewRender = new CViewRender();
+
+		return true;
+	}
+
 	AssertMsg( g_pCurrentViewRender == NULL, "viewrender already allocated?!" );
 
 	if ( g_pMaterialSystemHardwareConfig->GetDXSupportLevel() < 95 )
@@ -84,8 +95,9 @@ bool CDeferredManagerClient::Init()
 	{
 		Assert( g_pCurrentViewRender == NULL );
 
-		Warning( "Your hardware does not seem to support shader model 3.0. If you think that this is an error (hybrid GPUs), add -forcedeferred as start parameter.\n" );
+		Warning( "Deferred rendering failed to initialize\n" );
 		g_pCurrentViewRender = new CViewRender();
+		return true;
 	}
 	else
 	{
@@ -94,24 +106,25 @@ bool CDeferredManagerClient::Init()
 #define VENDOR_ATI 0x1002
 #define VENDOR_AMD 0x1022
 
-#ifndef SHADOWMAPPING_USE_COLOR
-		MaterialAdapterInfo_t info;
-		materials->GetDisplayAdapterInfo( materials->GetCurrentAdapter(), info );
+// #ifndef SHADOWMAPPING_USE_COLOR
+// 		MaterialAdapterInfo_t info;
+// 		materials->GetDisplayAdapterInfo( materials->GetCurrentAdapter(), info );
 
-		if ( info.m_VendorID == VENDOR_ATI ||
-			info.m_VendorID == VENDOR_AMD )
-		{
-			vgui::MessageBox *pATIWarning = new vgui::MessageBox("UNSUPPORTED HARDWARE", VarArgs( "AMD/ATI IS NOT YET SUPPORTED IN HARDWARE FILTERING MODE\n"
-				"(cdeferred_manager_client.cpp #%i).", __LINE__ ) );
+// 		if ( info.m_VendorID == VENDOR_ATI ||
+// 			info.m_VendorID == VENDOR_AMD )
+// 		{
+// 			vgui::MessageBox *pATIWarning = new vgui::MessageBox("UNSUPPORTED HARDWARE", VarArgs( "AMD/ATI IS NOT YET SUPPORTED IN HARDWARE FILTERING MODE\n"
+// 				"(cdeferred_manager_client.cpp #%i).", __LINE__ ) );
 
-			pATIWarning->InvalidateLayout();
-			pATIWarning->DoModal();
-		}
-#endif
+// 			pATIWarning->InvalidateLayout();
+// 			pATIWarning->DoModal();
+// 		}
+// #endif
 	}
 
 	view = g_pCurrentViewRender;
 
+	Msg("Deferred lighting enabled (use -nodeferred in the command line to disable if necessary)\n");
 	return true;
 }
 

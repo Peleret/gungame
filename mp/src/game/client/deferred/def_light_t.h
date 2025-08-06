@@ -188,7 +188,7 @@ private:
 
 	void UpdateFrustum();
 	Frustum_t spotFrustum;
-	
+
 	void UpdateXForms();
 	Vector bounds_min, bounds_max;
 	Vector bounds_min_naive, bounds_max_naive;

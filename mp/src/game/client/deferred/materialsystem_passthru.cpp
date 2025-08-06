@@ -1,4 +1,4 @@
-//====== Copyright Sandern Corporation, All rights reserved. ===========//
+//====== Copyright � Sandern Corporation, All rights reserved. ===========//
 //
 // Purpose:
 //
@@ -12,6 +12,9 @@
 #include "materialsystem_passthru.h"
 #include "materialsystem/imaterialvar.h"
 #include "materialsystem/itexture.h"
+#include "icommandline.h"
+
+#include "deferred/deferred_shared_common.h"
 
 // memdbgon must be the last include file in a .cpp file!!!
 #include "tier0/memdbgon.h"
@@ -27,10 +30,10 @@ CON_COMMAND(print_num_replaced_mats, "")
 // List of materials that should be replaced
 //-----------------------------------------------------------------------------
 static const char * const pszShaderReplaceDict[][2] = {
-	{ "VertexLitGeneric",			"DEFERRED_MODEL" },
-	{ "LightmappedGeneric",			"DEFERRED_BRUSH" },
-	{ "WorldVertexTransition",		"DEFERRED_BRUSH" },
-	{ "DecalModulate",				"DEFERRED_DECALMODULATE" }
+	{ "vertexlitgeneric",				"DEFERRED_MODEL" },
+	{ "lightmappedgeneric",			"DEFERRED_BRUSH" },
+	{ "worldvertextransition",	"DEFERRED_BRUSH" },
+	//{ "decalmodulate",					"DEFERRED_DECALMODULATE" }, //doesn't work
 };
 
 // Copied from cdeferred_manager_client.cpp
@@ -124,28 +127,28 @@ static void ShaderReplaceReplMat( const char *szNewShadername, IMaterial *pMat )
 		}
 	}
 
-	const bool alphaBlending = pMat->IsTranslucent() || pMat->GetMaterialVarFlag( MATERIAL_VAR_TRANSLUCENT );
-	const bool translucentOverride = pMat->IsAlphaTested() || pMat->GetMaterialVarFlag( MATERIAL_VAR_ALPHATEST ) || alphaBlending;
+	const bool bAlphaBlending = pMat->IsTranslucent() || pMat->GetMaterialVarFlag( MATERIAL_VAR_TRANSLUCENT );
+	const bool bAlphaTesting = pMat->IsAlphaTested() || pMat->GetMaterialVarFlag( MATERIAL_VAR_ALPHATEST );
 	const bool bSelfillum = pMat->GetMaterialVarFlag( MATERIAL_VAR_SELFILLUM );
-
-	const bool bDecal = ( pszOldShadername != NULL && V_stristr( pszOldShadername, "decal" ) != NULL ) ||
-		/*( pszMatname != NULL && V_stristr( pszMatname, "decal" ) != NULL ) ||*/
+	const bool bDecal = pszOldShadername != NULL && Q_stristr( pszOldShadername,"decal" ) != NULL ||
+		pszMatname != NULL && Q_stristr( pszMatname, "decal" ) != NULL ||
 		pMat->GetMaterialVarFlag( MATERIAL_VAR_DECAL );
 
 	if ( bDecal )
 	{
 		msg->SetInt( "$decal", 1 );
-
-		if ( alphaBlending )
-			msg->SetInt( "$translucent", 1 );
 	}
-	else if ( translucentOverride )
+
+	if ( bAlphaTesting )
 	{
 		msg->SetInt( "$alphatest", 1 );
 	}
+	else if ( bAlphaBlending )
+	{
+		msg->SetInt( "$translucent", 1 );
+	}
 
-	// Find a better solution to this...
-	if ( pMat->IsTwoSided() || ( FStrEq( pszOldShadername, "LightmappedGeneric" ) || FStrEq( pszOldShadername, "WorldVertexTransition" ) ) && !( V_stristr( pszMatname, "glass" ) || V_stristr( pszMatname, "window" ) ) )
+	if ( pMat->IsTwoSided() )
 	{
 		msg->SetInt( "$nocull", 1 );
 	}
@@ -158,6 +161,7 @@ static void ShaderReplaceReplMat( const char *szNewShadername, IMaterial *pMat )
 	pMat->SetShaderAndParams( msg );
 
 	pMat->RefreshPreservingMaterialVars();
+
 }
 
 IMaterial* CDeferredMaterialSystem::FindProceduralMaterial( const char* pMaterialName, const char* pTextureGroupName,
@@ -196,12 +200,22 @@ IMaterial* CDeferredMaterialSystem::ReplaceMaterialInternal( IMaterial* pMat ) c
 	if ( !pMat || pMat->IsErrorMaterial() )
 		return pMat;
 
+	if (CommandLine() && CommandLine()->FindParm("-nodeferred") != 0) {
+		return pMat;
+	}
+
+	//FIXME: subrect decals don't work at all
+	if (V_stristr(pMat->GetName(), "_subrect")) {
+		DevMsg(2, "Decal %s skipped due to subrect issues\n", pMat->GetName());
+		return pMat;
+	}
+
 	const char* pShaderName = pMat->GetShaderName();
 	if ( pShaderName )
 	{
 		for ( const char* const* row : pszShaderReplaceDict )
 		{
-			if ( FStrEq( pShaderName, row[0] ) )
+			if ( V_stristr( pShaderName, row[0] ) )
 			{
 				ShaderReplaceReplMat( row[1], pMat );
 				matCount++;

@@ -13,7 +13,6 @@ struct lightPassParms
 	int iWorldProjection;
 };
 
-
 void InitParmsLightPass( const lightPassParms &info, CBaseVSShader *pShader, IMaterialVar **params );
 void InitPassLightPass( const lightPassParms &info, CBaseVSShader *pShader, IMaterialVar **params );
 void DrawPassLightPass( const lightPassParms &info, CBaseVSShader *pShader, IMaterialVar **params,

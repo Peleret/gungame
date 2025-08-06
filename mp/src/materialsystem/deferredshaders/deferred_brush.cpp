@@ -169,14 +169,14 @@ BEGIN_VS_SHADER( DEFERRED_BRUSH, "" )
 
 	SHADER_FALLBACK
 	{
-		/*if ( !GetDeferredExt()->IsDeferredLightingEnabled() )
+		if ( !GetDeferredExt()->IsDeferredLightingEnabled() )
 			return "LightmappedGeneric";
 
 		const bool bTranslucent = IS_FLAG_SET( MATERIAL_VAR_TRANSLUCENT );
 		const bool bIsDecal = IS_FLAG_SET( MATERIAL_VAR_DECAL );
 
 		if ( bTranslucent && !bIsDecal )
-			return "LightmappedGeneric";*/
+			return "LightmappedGeneric";
 
 		return 0;
 	}

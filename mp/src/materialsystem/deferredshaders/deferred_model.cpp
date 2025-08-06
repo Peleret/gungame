@@ -39,23 +39,6 @@ BEGIN_VS_SHADER( DEFERRED_MODEL, "" )
 		SHADER_PARAM( SELFILLUMFRESNEL, SHADER_PARAM_TYPE_BOOL, "0", "Self illum fresnel" )
 		SHADER_PARAM( SELFILLUMMASK, SHADER_PARAM_TYPE_TEXTURE, "shadertest/BaseTexture", "If we bind a texture here, it overrides base alpha (if any) for self illum" )
 
-		SHADER_PARAM( TREESWAY, SHADER_PARAM_TYPE_INTEGER, "0", "" )
-		SHADER_PARAM( TREESWAYHEIGHT, SHADER_PARAM_TYPE_FLOAT, "1000", "" )
-		SHADER_PARAM( TREESWAYSTARTHEIGHT, SHADER_PARAM_TYPE_FLOAT, "0.2", "" )
-		SHADER_PARAM( TREESWAYRADIUS, SHADER_PARAM_TYPE_FLOAT, "300", "" )
-		SHADER_PARAM( TREESWAYSTARTRADIUS, SHADER_PARAM_TYPE_FLOAT, "0.1", "" )
-		SHADER_PARAM( TREESWAYSPEED, SHADER_PARAM_TYPE_FLOAT, "1", "" )
-		SHADER_PARAM( TREESWAYSPEEDHIGHWINDMULTIPLIER, SHADER_PARAM_TYPE_FLOAT, "2", "" )
-		SHADER_PARAM( TREESWAYSTRENGTH, SHADER_PARAM_TYPE_FLOAT, "10", "" )
-		SHADER_PARAM( TREESWAYSCRUMBLESPEED, SHADER_PARAM_TYPE_FLOAT, "0.1", "" )
-		SHADER_PARAM( TREESWAYSCRUMBLESTRENGTH, SHADER_PARAM_TYPE_FLOAT, "0.1", "" )
-		SHADER_PARAM( TREESWAYSCRUMBLEFREQUENCY, SHADER_PARAM_TYPE_FLOAT, "0.1", "" )
-		SHADER_PARAM( TREESWAYFALLOFFEXP, SHADER_PARAM_TYPE_FLOAT, "1.5", "" )
-		SHADER_PARAM( TREESWAYSCRUMBLEFALLOFFEXP, SHADER_PARAM_TYPE_FLOAT, "1.0", "" )
-		SHADER_PARAM( TREESWAYSPEEDLERPSTART, SHADER_PARAM_TYPE_FLOAT, "3", "" )
-		SHADER_PARAM( TREESWAYSPEEDLERPEND, SHADER_PARAM_TYPE_FLOAT, "6", "" )
-
-
 	END_SHADER_PARAMS
 
 	void SetupParmsGBuffer( defParms_gBuffer &p )
@@ -69,22 +52,6 @@ BEGIN_VS_SHADER( DEFERRED_MODEL, "" )
 		p.iAlphatestRef = ALPHATESTREFERENCE;
 		p.iLitface = LITFACE;
 		p.iPhongExp = PHONG_EXP;
-
-		p.iTreeSway = TREESWAY;
-		p.iTreeSwayHeight = TREESWAYHEIGHT;
-		p.iTreeSwayStartHeight = TREESWAYSTARTHEIGHT;
-		p.iTreeSwayRadius = TREESWAYRADIUS;
-		p.iTreeSwayStartRadius = TREESWAYSTARTRADIUS;
-		p.iTreeSwaySpeed = TREESWAYSPEED;
-		p.iTreeSwaySpeedHighWindMultiplier = TREESWAYSPEEDHIGHWINDMULTIPLIER;
-		p.iTreeSwayStrength = TREESWAYSTRENGTH;
-		p.iTreeSwayScrumbleSpeed = TREESWAYSCRUMBLESPEED;
-		p.iTreeSwayScrumbleStrength = TREESWAYSCRUMBLESTRENGTH;
-		p.iTreeSwayScrumbleFrequency = TREESWAYSCRUMBLEFREQUENCY;
-		p.iTreeSwayFalloffExp = TREESWAYFALLOFFEXP;
-		p.iTreeSwayScrumbleFalloffExp = TREESWAYSCRUMBLEFALLOFFEXP;
-		p.iTreeSwaySpeedLerpStart = TREESWAYSPEEDLERPSTART;
-		p.iTreeSwaySpeedLerpEnd = TREESWAYSPEEDLERPEND;
 	}
 
 	void SetupParmsShadow( defParms_shadow &p )
@@ -92,22 +59,6 @@ BEGIN_VS_SHADER( DEFERRED_MODEL, "" )
 		p.bModel = true;
 		p.iAlbedo = BASETEXTURE;
 		p.iAlphatestRef = ALPHATESTREFERENCE;
-
-		p.iTreeSway = TREESWAY;
-		p.iTreeSwayHeight = TREESWAYHEIGHT;
-		p.iTreeSwayStartHeight = TREESWAYSTARTHEIGHT;
-		p.iTreeSwayRadius = TREESWAYRADIUS;
-		p.iTreeSwayStartRadius = TREESWAYSTARTRADIUS;
-		p.iTreeSwaySpeed = TREESWAYSPEED;
-		p.iTreeSwaySpeedHighWindMultiplier = TREESWAYSPEEDHIGHWINDMULTIPLIER;
-		p.iTreeSwayStrength = TREESWAYSTRENGTH;
-		p.iTreeSwayScrumbleSpeed = TREESWAYSCRUMBLESPEED;
-		p.iTreeSwayScrumbleStrength = TREESWAYSCRUMBLESTRENGTH;
-		p.iTreeSwayScrumbleFrequency = TREESWAYSCRUMBLEFREQUENCY;
-		p.iTreeSwayFalloffExp = TREESWAYFALLOFFEXP;
-		p.iTreeSwayScrumbleFalloffExp = TREESWAYSCRUMBLEFALLOFFEXP;
-		p.iTreeSwaySpeedLerpStart = TREESWAYSPEEDLERPSTART;
-		p.iTreeSwaySpeedLerpEnd = TREESWAYSPEEDLERPEND;
 	}
 
 	void SetupParmsComposite( defParms_composite &p )
@@ -139,22 +90,6 @@ BEGIN_VS_SHADER( DEFERRED_MODEL, "" )
 		p.iSelfIllumMask = SELFILLUMMASK;
 
 		p.iFresnelRanges = FRESNELRANGES;
-
-		p.iTreeSway = TREESWAY;
-		p.iTreeSwayHeight = TREESWAYHEIGHT;
-		p.iTreeSwayStartHeight = TREESWAYSTARTHEIGHT;
-		p.iTreeSwayRadius = TREESWAYRADIUS;
-		p.iTreeSwayStartRadius = TREESWAYSTARTRADIUS;
-		p.iTreeSwaySpeed = TREESWAYSPEED;
-		p.iTreeSwaySpeedHighWindMultiplier = TREESWAYSPEEDHIGHWINDMULTIPLIER;
-		p.iTreeSwayStrength = TREESWAYSTRENGTH;
-		p.iTreeSwayScrumbleSpeed = TREESWAYSCRUMBLESPEED;
-		p.iTreeSwayScrumbleStrength = TREESWAYSCRUMBLESTRENGTH;
-		p.iTreeSwayScrumbleFrequency = TREESWAYSCRUMBLEFREQUENCY;
-		p.iTreeSwayFalloffExp = TREESWAYFALLOFFEXP;
-		p.iTreeSwayScrumbleFalloffExp = TREESWAYSCRUMBLEFALLOFFEXP;
-		p.iTreeSwaySpeedLerpStart = TREESWAYSPEEDLERPSTART;
-		p.iTreeSwaySpeedLerpEnd = TREESWAYSPEEDLERPEND;
 	}
 
 	bool DrawToGBuffer( IMaterialVar **params )
@@ -216,14 +151,14 @@ BEGIN_VS_SHADER( DEFERRED_MODEL, "" )
 
 	SHADER_FALLBACK
 	{
-		/*if ( !GetDeferredExt()->IsDeferredLightingEnabled() )
+		if ( !GetDeferredExt()->IsDeferredLightingEnabled() )
 			return "VertexlitGeneric";
 
 		const bool bTranslucent = IS_FLAG_SET( MATERIAL_VAR_TRANSLUCENT );
 		const bool bIsDecal = IS_FLAG_SET( MATERIAL_VAR_DECAL );
 
 		if ( bTranslucent && !bIsDecal )
-			return "VertexlitGeneric";*/
+			return "VertexlitGeneric";
 
 		return 0;
 	}

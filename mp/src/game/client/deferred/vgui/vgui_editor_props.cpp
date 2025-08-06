@@ -20,9 +20,10 @@ using namespace vgui;
 class VisibilityClient
 {
 public:
-	inline virtual ~VisibilityClient() {};
 	virtual bool ShouldDraw() = 0;
 	virtual VisibilityClient *ShallowCopy() = 0;
+	virtual ~VisibilityClient() = default;
+
 };
 
 class Visibility_CheckButton : public VisibilityClient
@@ -404,26 +405,26 @@ public:
 		return TextEntry::GetBgColor();
 	};
 
-	void SetBoundsFloat( bool bMin, float flMin, bool bMax = false, float flMax = 0 )
+	void SetBoundsFloat( bool bMin, float flBoundsMin, bool bMax = false, float flBoundsMax = 0 )
 	{
 		Assert( m_Mode == PTENTRY_FLOAT );
 
 		bHasMin = bMin;
 		bHasMax = bMax;
 
-		this->flMin = flMin;
-		this->flMax = flMax;
+		this->flMin = flBoundsMin;
+		this->flMax = flBoundsMax;
 	};
 
-	void SetBoundsInt( bool bMin, int iMin, bool bMax = false, int iMax = 0 )
+	void SetBoundsInt( bool bMin, int iBoundsMin, bool bMax = false, int iBoundsMax = 0 )
 	{
 		Assert( m_Mode == PTENTRY_INT );
 
 		bHasMin = bMin;
 		bHasMax = bMax;
 
-		this->iMin = iMin;
-		this->iMax = iMax;
+		this->iMin = iBoundsMin;
+		this->iMax = iBoundsMax;
 	};
 
 private:
@@ -533,7 +534,7 @@ class PropertyColorPicker : public Panel, public PropertyClient
 	DECLARE_CLASS_SIMPLE( PropertyColorPicker, Panel );
 
 public:
-	PropertyColorPicker( KeyValues *prop ): 
+	PropertyColorPicker( KeyValues *prop ):
 	Panel( NULL, "" ),
 	PropertyClient( prop ),
 	m_pButton( new Button( this, "OpenPicker", "Choose", this, "OpenPicker" ) ),
@@ -564,7 +565,7 @@ public:
 	MESSAGE_FUNC_PARAMS( OnPicked, "ColorPickerPicked", data )
 	{
 		m_pButton->SetEnabled( true );
-		
+
 		Color newColor( data->GetColor( "color" ) );
 		newColor[3] = 255;
 
@@ -582,7 +583,7 @@ public:
 	MESSAGE_FUNC( OnCancelled, "ColorPickerCancel" )
 	{
 		m_pButton->SetEnabled( true );
-		
+
 		m_pValues[0] = m_pOldValues[0];
 		m_pValues[1] = m_pOldValues[1];
 		m_pValues[2] = m_pOldValues[2];
@@ -603,7 +604,7 @@ public:
 
 			m_pButton->SetEnabled( false );
 
-			CColorPickerFrame* pColorPickerFrame = new CColorPickerFrame( this, "Select Color" ); 
+			CColorPickerFrame* pColorPickerFrame = new CColorPickerFrame( this, "Select Color" );
 			//pColorPickerFrame->SetName( "ColorPicker" );
 			pColorPickerFrame->AddActionSignalTarget( this );
 			pColorPickerFrame->DoModal( Color( m_pOldValues[0], m_pOldValues[1], m_pOldValues[2], 255 ) );
@@ -625,7 +626,7 @@ public:
 
 		m_pPreviewPanel->SetPos( m_pButton->GetWide() + 2, 0 );
 
-		m_pPreviewPanel->SetBorder( pScheme->GetBorder( "GenericPanelListBorder" ) );		
+		m_pPreviewPanel->SetBorder( pScheme->GetBorder( "GenericPanelListBorder" ) );
 	}
 
 	virtual void ReadValue()
@@ -642,16 +643,16 @@ public:
 	virtual void WriteValue()
 	{
 		PropertyClient::GetValue()->SetString
-		( 
+		(
 			NULL,
 			VarArgs
-			( 
-				"%i %i %i %i", 
-				m_pValues[0], 
-				m_pValues[1], 
-				m_pValues[2], 
+			(
+				"%i %i %i %i",
+				m_pValues[0],
+				m_pValues[1],
+				m_pValues[2],
 				m_pValues[3]
-			) 
+			)
 		);
 	};
 

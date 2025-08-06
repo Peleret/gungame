@@ -37,7 +37,7 @@ public:
 
 	~CVGUILightEditor();
 
-protected:
+
 	void ApplySchemeSettings( IScheme *scheme );
 	void PerformLayout();
 
@@ -160,7 +160,9 @@ CVGUILightEditor::CVGUILightEditor( VPANEL pParent )
 	: BaseClass( NULL, "LightEditorRoot" )
 {
 	SetParent( pParent );
+	DevMsg(1, "Parent panel: %d\n", pParent);
 	SetConsoleStylePanel( true );
+	DevMsg(1, "Is console style panel: %d\n", IsConsoleStylePanel());
 
 	m_pEditorSystem = GetLightingEditor();
 
@@ -202,7 +204,7 @@ CVGUILightEditor::CVGUILightEditor( VPANEL pParent )
 #endif
 
 	m_pEditorProps = new CVGUILightEditor_Properties( this );
-	m_pEditorProps->AddActionSignalTarget( this );
+	//m_pEditorProps->AddActionSignalTarget( this );
 	AddActionSignalTarget( m_pEditorProps );
 
 	m_pCurrentProperties = NULL;
@@ -248,6 +250,8 @@ void CVGUILightEditor::ApplySchemeSettings( IScheme *scheme )
 {
 	BaseClass::ApplySchemeSettings( scheme );
 
+	DevMsg(1, "ApplySchemeSettings\n");
+
 	MakeReadyForUse();
 
 	SetPaintBackgroundEnabled( false );
@@ -264,9 +268,14 @@ void CVGUILightEditor::PerformLayout()
 {
 	BaseClass::PerformLayout();
 
+	DevMsg(1, "PerformLayout\n");
+
 	int w,h;
 	engine->GetScreenSize( w, h );
+	DevMsg(1, "Screen size: %d, %d\n", w, h );
 	SetBounds( 0, 0, w, h );
+
+	DevMsg(1, "Bounds: %d, %d\n", GetWide(), GetTall() );
 
 #if DEFCG_LIGHTEDITOR_ALTERNATESETUP
 	m_pMenuBar->SetWide( w );
@@ -277,6 +286,8 @@ void CVGUILightEditor::PerformLayout()
 
 void CVGUILightEditor::OnMousePressed( MouseCode code )
 {
+	DevMsg(1, "OnMousePressed: %d\n", code );
+
 	StopDrag();
 
 	if ( code == MOUSE_RIGHT )
@@ -622,9 +633,9 @@ void CVGUILightEditor::OnCursorMoved_Internal( int &x, int &y )
 				vecDelta[1].NormalizeInPlace();
 
 				float flAngle[2] = {
-					atan2( DotProduct( vDirections[ iDirIndices[iAxis][0] ], vecDelta[0] ),
+					atan2f( DotProduct( vDirections[ iDirIndices[iAxis][0] ], vecDelta[0] ),
 						DotProduct( vDirections[ iDirIndices[iAxis][1] ], vecDelta[0] ) ),
-					atan2( DotProduct( vDirections[ iDirIndices[iAxis][0] ], vecDelta[1] ),
+					atan2f( DotProduct( vDirections[ iDirIndices[iAxis][0] ], vecDelta[1] ),
 						DotProduct( vDirections[ iDirIndices[iAxis][1] ], vecDelta[1] ) ),
 				};
 
@@ -671,6 +682,8 @@ void CVGUILightEditor::OnKeyCodePressed_Internal( KeyCode code )
 
 	if ( panel_over && panel_over != gamedll )
 		return;
+
+	DevMsg(1, "OnKeyCodePressed_Internal after: %d\n", code );
 
 	Vector &vecEditorMoveDir = m_pEditorSystem->GetMoveDirForModify();
 	bool bUnhandled = true;
@@ -793,6 +806,8 @@ void CVGUILightEditor::OnKeyCodeReleased_Internal( KeyCode code )
 bool CVGUILightEditor::ActivateEditorInteractionMode( CLightingEditor::EDITORINTERACTION_MODE mode )
 {
 	const char *pszTargetRadioButton = NULL;
+
+	DevMsg(1, "ActivateEditorInteractionMode: %d\n", mode );
 
 	switch( mode )
 	{
@@ -938,6 +953,7 @@ void CVGUILightEditor::OnThink()
 		{
 			if ( bMouseLeft_Cur[ i ] != bMouseLeft_Last[ i ] )
 			{
+				DevMsg( 1, "Mouse %d: %d\n", i, bMouseLeft_Cur[ i ] );
 				if ( bMouseLeft_Cur[ i ] )
 					OnMousePressed( iMouse_Map[ i ] );
 				else
@@ -950,6 +966,7 @@ void CVGUILightEditor::OnThink()
 	{
 		if ( bKey_Cur[ i ] != bKey_Last[ i ] )
 		{
+			DevMsg(1, "Key %d: %d\n", i, bKey_Cur[ i ] );
 			if ( bKey_Cur[ i ] )
 				OnKeyCodePressed_Internal( iKey_Map[ i ] );
 			else
@@ -973,42 +990,42 @@ void CVGUILightEditor::OnThink()
 	BaseClass::OnThink();
 }
 
-CON_COMMAND( deferred_LightEditor_toggle, "" )
+CON_COMMAND( r_deferred_light_editor_toggle, "" )
 {
 	CVGUILightEditor::ToggleEditor();
 }
 
+// FIXME: do not hijack tab until this is working - mouse not captured when frame on top
+// static class CLightEditorHelper : public CAutoGameSystemPerFrame
+// {
+// 	void LevelShutdownPostEntity()
+// 	{
+// 		CVGUILightEditor::DestroyEditor();
+// 	};
 
-static class CLightEditorHelper : public CAutoGameSystemPerFrame
-{
-	void LevelShutdownPostEntity()
-	{
-		CVGUILightEditor::DestroyEditor();
-	};
+// 	void Update( float ft )
+// 	{
+// 		if ( !engine->IsInGame() || engine->Con_IsVisible() )
+// 		{
+// 			if ( g_EditorInstance && CVGUILightEditor::IsEditorVisible() )
+// 				CVGUILightEditor::ToggleEditor();
 
-	void Update( float ft )
-	{
-		if ( !engine->IsInGame() || engine->Con_IsVisible() )
-		{
-			if ( g_EditorInstance && CVGUILightEditor::IsEditorVisible() )
-				CVGUILightEditor::ToggleEditor();
+// 			return;
+// 		}
 
-			return;
-		}
+// 		static bool bWasTabDown = false;
+// 		bool bIsTabDown = vgui::input()->IsKeyDown( KEY_TAB );
 
-		static bool bWasTabDown = false;
-		bool bIsTabDown = vgui::input()->IsKeyDown( KEY_TAB );
+// 		VPANEL focusedPanel = input()->GetFocus();
 
-		VPANEL focusedPanel = input()->GetFocus();
+// 		if ( bIsTabDown != bWasTabDown )
+// 		{
+// 			if ( bIsTabDown &&
+// 				( focusedPanel == 0 || CVGUILightEditor::GetEditorPanel() == 0 ||
+// 				ipanel()->HasParent( focusedPanel, CVGUILightEditor::GetEditorPanel() ) ) )
+// 				CVGUILightEditor::ToggleEditor();
 
-		if ( bIsTabDown != bWasTabDown )
-		{
-			if ( bIsTabDown &&
-				( focusedPanel == 0 || CVGUILightEditor::GetEditorPanel() == 0 ||
-				ipanel()->HasParent( focusedPanel, CVGUILightEditor::GetEditorPanel() ) ) )
-				CVGUILightEditor::ToggleEditor();
-
-			bWasTabDown = bIsTabDown;
-		}
-	};
-} __g_lightEditorHelper;
+// 			bWasTabDown = bIsTabDown;
+// 		}
+// 	};
+// } __g_lightEditorHelper;

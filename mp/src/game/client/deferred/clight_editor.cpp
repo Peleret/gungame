@@ -1,8 +1,11 @@
 
 #include "cbase.h"
 #include "deferred/deferred_shared_common.h"
-//#include "ShaderEditor/ShaderEditorSystem.h"
-//#include "ShaderEditor/IVShaderEditor.h"
+
+#ifdef SHADEREDITOR
+#include "ShaderEditor/ShaderEditorSystem.h"
+#include "ShaderEditor/IVShaderEditor.h"
+#endif
 
 #include "view_shared.h"
 #include "view.h"
@@ -25,7 +28,9 @@ CLightingEditor *GetLightingEditor()
 	return &__g_lightingEditor;
 }
 
-//extern IVShaderEditor *shaderEdit;
+#ifdef SHADEREDITOR
+extern IVShaderEditor *shaderEdit;
+#endif
 
 def_light_editor_t::def_light_editor_t()
 {
@@ -179,8 +184,9 @@ void CLightingEditor::OnRender()
 	if ( !IsEditorActive() )
 		return;
 
+	#ifdef SHADEREDITOR
 	const EDITOR_DBG_MODES dbg = GetDebugMode();
-	/*if ( dbg != EDITOR_DBG_OFF && g_ShaderEditorSystem->IsReady() )
+	if ( dbg != EDITOR_DBG_OFF && g_ShaderEditorSystem->IsReady() )
 	{
 		const char *pszDebugList[] = {
 			"dbg_editor_ppe_lighting",
@@ -193,7 +199,8 @@ void CLightingEditor::OnRender()
 		int iDbgIndex = shaderEdit->GetPPEIndex( pszDebugName );
 		if ( iDbgIndex != -1 )
 			shaderEdit->DrawPPEOnDemand( iDbgIndex );
-	}*/
+	}
+	#endif
 
 	RenderSprites();
 
@@ -221,8 +228,8 @@ void CLightingEditor::RenderSprites()
 		float flMax = Max( 1.f, Max( pLight->col_diffuse[0],
 			Max( pLight->col_diffuse[1], pLight->col_diffuse[2] ) ) );
 
-		for ( int i = 0; i < 3; i++ )
-			flC3[i] = clamp( pLight->col_diffuse[i] / flMax, 0, 1 );
+		for ( int j = 0; j < 3; j++ )
+			flC3[j] = clamp( pLight->col_diffuse[j] / flMax, 0, 1 );
 
 		DrawHalo( m_matSprite_Light, origin, LIGHT_BOX_SIZE, flC3 );
 	}
@@ -820,6 +827,7 @@ bool CLightingEditor::IsEditorLightingActive()
 
 void CLightingEditor::SetEditorInteractionMode( EDITORINTERACTION_MODE mode )
 {
+	DevMsg(1, "SetEditorInteractionMode: %d\n", mode);
 	m_iInteractionMode = mode;
 }
 
@@ -1469,6 +1477,9 @@ void CLightingEditor::ApplyKVToGlobalLight( KeyValues *pKVChanges )
 			m_pKVGlobalLight->SetString( pszName, pszValue );
 		}
 	}
+
+	CDeferredViewRender *pDefView = assert_cast< CDeferredViewRender* >( view );
+	//pDefView->ResetCascadeDelay();
 
 	m_EditorGlobalState.bEnabled = ( m_pKVGlobalLight->GetInt( GetLightParamName( LPARAM_SPAWNFLAGS ), 1 ) & DEFLIGHTGLOBAL_ENABLED ) != 0;
 	m_EditorGlobalState.bShadow = ( m_pKVGlobalLight->GetInt( GetLightParamName( LPARAM_SPAWNFLAGS ), 1 ) & DEFLIGHTGLOBAL_SHADOW_ENABLED ) != 0;

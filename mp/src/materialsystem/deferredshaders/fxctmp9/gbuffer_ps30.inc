@@ -1,41 +1,11 @@
-// ALL SKIP STATEMENTS THAT AFFECT THIS SHADER!!!
-// !$BUMPMAP2 && $BLENDMODULATE
-// !$BUMPMAP && $BUMPMAP2
-// $MODEL && $BUMPMAP2
-// $DECAL && $BLENDMODULATE
-// $DECAL && $BUMPMAP
-// $DECAL && $NOCULL
-// $DECAL && $PHONGMAP
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-// !$MODEL && $MORPHING_VTEX
-// !$MODEL && $COMPRESSED_VERTS
-// !$MODEL && $SKINNING
-// !$MODEL && $MORPHING_VTEX
-
-#pragma once
 #include "shaderlib/cshader.h"
 class gbuffer_ps30_Static_Index
 {
-	unsigned int m_nALPHATEST : 2;
-	unsigned int m_nBUMPMAP : 2;
-	unsigned int m_nNOCULL : 2;
-	unsigned int m_nPHONGMAP : 2;
-	unsigned int m_nBUMPMAP2 : 2;
-	unsigned int m_nBLENDMODULATE : 2;
+private:
+	int m_nALPHATEST;
 #ifdef _DEBUG
-	bool m_bALPHATEST : 1;
-	bool m_bBUMPMAP : 1;
-	bool m_bNOCULL : 1;
-	bool m_bPHONGMAP : 1;
-	bool m_bBUMPMAP2 : 1;
-	bool m_bBLENDMODULATE : 1;
-#endif	// _DEBUG
+	bool m_bALPHATEST;
+#endif
 public:
 	void SetALPHATEST( int i )
 	{
@@ -43,96 +13,173 @@ public:
 		m_nALPHATEST = i;
 #ifdef _DEBUG
 		m_bALPHATEST = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetALPHATEST( bool i )
+	{
+		m_nALPHATEST = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bALPHATEST = true;
+#endif
+	}
+private:
+	int m_nBUMPMAP;
+#ifdef _DEBUG
+	bool m_bBUMPMAP;
+#endif
+public:
 	void SetBUMPMAP( int i )
 	{
 		Assert( i >= 0 && i <= 2 );
 		m_nBUMPMAP = i;
 #ifdef _DEBUG
 		m_bBUMPMAP = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBUMPMAP( bool i )
+	{
+		m_nBUMPMAP = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBUMPMAP = true;
+#endif
+	}
+private:
+	int m_nNOCULL;
+#ifdef _DEBUG
+	bool m_bNOCULL;
+#endif
+public:
 	void SetNOCULL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nNOCULL = i;
 #ifdef _DEBUG
 		m_bNOCULL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetNOCULL( bool i )
+	{
+		m_nNOCULL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bNOCULL = true;
+#endif
+	}
+private:
+	int m_nPHONGMAP;
+#ifdef _DEBUG
+	bool m_bPHONGMAP;
+#endif
+public:
 	void SetPHONGMAP( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nPHONGMAP = i;
 #ifdef _DEBUG
 		m_bPHONGMAP = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetPHONGMAP( bool i )
+	{
+		m_nPHONGMAP = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPHONGMAP = true;
+#endif
+	}
+private:
+	int m_nBUMPMAP2;
+#ifdef _DEBUG
+	bool m_bBUMPMAP2;
+#endif
+public:
 	void SetBUMPMAP2( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBUMPMAP2 = i;
 #ifdef _DEBUG
 		m_bBUMPMAP2 = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBUMPMAP2( bool i )
+	{
+		m_nBUMPMAP2 = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBUMPMAP2 = true;
+#endif
+	}
+private:
+	int m_nBLENDMODULATE;
+#ifdef _DEBUG
+	bool m_bBLENDMODULATE;
+#endif
+public:
 	void SetBLENDMODULATE( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBLENDMODULATE = i;
 #ifdef _DEBUG
 		m_bBLENDMODULATE = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	gbuffer_ps30_Static_Index( IShaderShadow* pShaderShadow, IMaterialVar** params )
+	void SetBLENDMODULATE( bool i )
 	{
-		m_nALPHATEST = 0;
-		m_nBUMPMAP = 0;
-		m_nNOCULL = 0;
-		m_nPHONGMAP = 0;
-		m_nBUMPMAP2 = 0;
-		m_nBLENDMODULATE = 0;
+		m_nBLENDMODULATE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBLENDMODULATE = true;
+#endif
+	}
+public:
+	gbuffer_ps30_Static_Index( )
+	{
 #ifdef _DEBUG
 		m_bALPHATEST = false;
+#endif // _DEBUG
+		m_nALPHATEST = 0;
+#ifdef _DEBUG
 		m_bBUMPMAP = false;
+#endif // _DEBUG
+		m_nBUMPMAP = 0;
+#ifdef _DEBUG
 		m_bNOCULL = false;
+#endif // _DEBUG
+		m_nNOCULL = 0;
+#ifdef _DEBUG
 		m_bPHONGMAP = false;
+#endif // _DEBUG
+		m_nPHONGMAP = 0;
+#ifdef _DEBUG
 		m_bBUMPMAP2 = false;
+#endif // _DEBUG
+		m_nBUMPMAP2 = 0;
+#ifdef _DEBUG
 		m_bBLENDMODULATE = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nBLENDMODULATE = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bALPHATEST && m_bBUMPMAP && m_bNOCULL && m_bPHONGMAP && m_bBUMPMAP2 && m_bBLENDMODULATE );
-		AssertMsg( !( !m_nBUMPMAP2 && m_nBLENDMODULATE ), "Invalid combo combination ( !BUMPMAP2 && BLENDMODULATE )" );
-		AssertMsg( !( !m_nBUMPMAP && m_nBUMPMAP2 ), "Invalid combo combination ( !BUMPMAP && BUMPMAP2 )" );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllStaticVarsDefined = m_bALPHATEST && m_bBUMPMAP && m_bNOCULL && m_bPHONGMAP && m_bBUMPMAP2 && m_bBLENDMODULATE;
+		Assert( bAllStaticVarsDefined );
+#endif // _DEBUG
 		return ( 1 * m_nALPHATEST ) + ( 2 * m_nBUMPMAP ) + ( 6 * m_nNOCULL ) + ( 12 * m_nPHONGMAP ) + ( 24 * m_nBUMPMAP2 ) + ( 48 * m_nBLENDMODULATE ) + 0;
 	}
 };
-
-#define shaderStaticTest_gbuffer_ps30 psh_forgot_to_set_static_ALPHATEST + psh_forgot_to_set_static_BUMPMAP + psh_forgot_to_set_static_NOCULL + psh_forgot_to_set_static_PHONGMAP + psh_forgot_to_set_static_BUMPMAP2 + psh_forgot_to_set_static_BLENDMODULATE
-
-
+#define shaderStaticTest_gbuffer_ps30 psh_forgot_to_set_static_ALPHATEST + psh_forgot_to_set_static_BUMPMAP + psh_forgot_to_set_static_NOCULL + psh_forgot_to_set_static_PHONGMAP + psh_forgot_to_set_static_BUMPMAP2 + psh_forgot_to_set_static_BLENDMODULATE + 0
 class gbuffer_ps30_Dynamic_Index
 {
 public:
-	gbuffer_ps30_Dynamic_Index( IShaderDynamicAPI* pShaderAPI )
+	gbuffer_ps30_Dynamic_Index()
 	{
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+#endif // _DEBUG
 		return 0;
 	}
 };
-
-#define shaderDynamicTest_gbuffer_ps30 1
-
+#define shaderDynamicTest_gbuffer_ps30 0

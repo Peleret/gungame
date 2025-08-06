@@ -18,58 +18,58 @@
 #include "shaderlib/cshader.h"
 class decalmodulate_ps30_Static_Index
 {
-	unsigned int m_nVERTEXALPHA : 2;
-#ifdef _DEBUG
-	bool m_bVERTEXALPHA : 1;
-#endif	// _DEBUG
+	unsigned int m_nCONVERT_TO_SRGB : 2;
 public:
-	void SetVERTEXALPHA( int i )
+	void SetCONVERT_TO_SRGB( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
-		m_nVERTEXALPHA = i;
-#ifdef _DEBUG
-		m_bVERTEXALPHA = true;
-#endif	// _DEBUG
+		m_nCONVERT_TO_SRGB = i;
 	}
 
 	decalmodulate_ps30_Static_Index(  )
 	{
-		m_nVERTEXALPHA = 0;
-#ifdef _DEBUG
-		m_bVERTEXALPHA = false;
-#endif	// _DEBUG
+		m_nCONVERT_TO_SRGB = g_pHardwareConfig->NeedsShaderSRGBConversion();
 	}
 
 	int GetIndex() const
 	{
-		Assert( m_bVERTEXALPHA );
-		return ( 2 * m_nVERTEXALPHA ) + 0;
+		return ( 3 * m_nCONVERT_TO_SRGB ) + 0;
 	}
 };
 
-#define shaderStaticTest_decalmodulate_ps30 psh_forgot_to_set_static_VERTEXALPHA
+#define shaderStaticTest_decalmodulate_ps30 1
 
 
 class decalmodulate_ps30_Dynamic_Index
 {
 	unsigned int m_nPIXELFOGTYPE : 2;
+#ifdef _DEBUG
+	bool m_bPIXELFOGTYPE : 1;
+#endif	// _DEBUG
 public:
 	void SetPIXELFOGTYPE( int i )
 	{
-		Assert( i >= 0 && i <= 1 );
+		Assert( i >= 0 && i <= 2 );
 		m_nPIXELFOGTYPE = i;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = true;
+#endif	// _DEBUG
 	}
 
 	decalmodulate_ps30_Dynamic_Index(  )
 	{
-		m_nPIXELFOGTYPE = ( pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z ) ;
+		m_nPIXELFOGTYPE = 0;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = false;
+#endif	// _DEBUG
 	}
 
 	int GetIndex() const
 	{
+		Assert( m_bPIXELFOGTYPE );
 		return ( 1 * m_nPIXELFOGTYPE ) + 0;
 	}
 };
 
-#define shaderDynamicTest_decalmodulate_ps30 1
+#define shaderDynamicTest_decalmodulate_ps30 psh_forgot_to_set_dynamic_PIXELFOGTYPE
 

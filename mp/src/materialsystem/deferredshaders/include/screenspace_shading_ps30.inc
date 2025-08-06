@@ -1,42 +1,27 @@
-// ALL SKIP STATEMENTS THAT AFFECT THIS SHADER!!!
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-// !$MODEL && $MORPHING_VTEX
-// !$MODEL && $COMPRESSED_VERTS
-// !$MODEL && $SKINNING
-// !$MODEL && $MORPHING_VTEX
-
-#pragma once
 #include "shaderlib/cshader.h"
 class screenspace_shading_ps30_Static_Index
 {
 public:
-	screenspace_shading_ps30_Static_Index(  )
+	screenspace_shading_ps30_Static_Index( )
 	{
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+#endif // _DEBUG
 		return 0;
 	}
 };
-
-#define shaderStaticTest_screenspace_shading_ps30 1
-
-
+#define shaderStaticTest_screenspace_shading_ps30 0
 class screenspace_shading_ps30_Dynamic_Index
 {
-	unsigned int m_nRADIOSITY : 2;
-	unsigned int m_nPIXELFOGTYPE : 2;
+private:
+	int m_nRADIOSITY;
 #ifdef _DEBUG
-	bool m_bRADIOSITY : 1;
-	bool m_bPIXELFOGTYPE : 1;
-#endif	// _DEBUG
+	bool m_bRADIOSITY;
+#endif
 public:
 	void SetRADIOSITY( int i )
 	{
@@ -44,34 +29,57 @@ public:
 		m_nRADIOSITY = i;
 #ifdef _DEBUG
 		m_bRADIOSITY = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetRADIOSITY( bool i )
+	{
+		m_nRADIOSITY = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bRADIOSITY = true;
+#endif
+	}
+private:
+	int m_nPIXELFOGTYPE;
+#ifdef _DEBUG
+	bool m_bPIXELFOGTYPE;
+#endif
+public:
 	void SetPIXELFOGTYPE( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nPIXELFOGTYPE = i;
 #ifdef _DEBUG
 		m_bPIXELFOGTYPE = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	screenspace_shading_ps30_Dynamic_Index(  )
+	void SetPIXELFOGTYPE( bool i )
 	{
-		m_nRADIOSITY = 0;
-		m_nPIXELFOGTYPE = 0;
+		m_nPIXELFOGTYPE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = true;
+#endif
+	}
+public:
+	screenspace_shading_ps30_Dynamic_Index()
+	{
 #ifdef _DEBUG
 		m_bRADIOSITY = false;
+#endif // _DEBUG
+		m_nRADIOSITY = 0;
+#ifdef _DEBUG
 		m_bPIXELFOGTYPE = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nPIXELFOGTYPE = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bRADIOSITY && m_bPIXELFOGTYPE );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllDynamicVarsDefined = m_bRADIOSITY && m_bPIXELFOGTYPE;
+		Assert( bAllDynamicVarsDefined );
+#endif // _DEBUG
 		return ( 1 * m_nRADIOSITY ) + ( 2 * m_nPIXELFOGTYPE ) + 0;
 	}
 };
-
-#define shaderDynamicTest_screenspace_shading_ps30 psh_forgot_to_set_dynamic_RADIOSITY + psh_forgot_to_set_dynamic_PIXELFOGTYPE
-
+#define shaderDynamicTest_screenspace_shading_ps30 psh_forgot_to_set_dynamic_RADIOSITY + psh_forgot_to_set_dynamic_PIXELFOGTYPE + 0
