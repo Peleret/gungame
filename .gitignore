@@ -138,10 +138,18 @@ bld/
 [Ll]og/
 [Ll]ogs/
 
-# Keep official protobuf binaries
+# Keep required binaries
 !mp/src/thirdparty/protobuf-2.6.1/bin/
 !mp/src/thirdparty/protobuf-2.6.1/bin/win64/2015/staticcrt/release
 !mp/src/thirdparty/protobuf-2.6.1/bin/win64/2015/staticcrt/debug
+!mp/src/devtools/bin/texttoarray.py
+!mp/src/devtools/bin/vpc
+!mp/src/devtools/bin/vpc.exe
+
+# Linux build files
+.ninja_deps
+.ninja_log
+compile_commands.json
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
