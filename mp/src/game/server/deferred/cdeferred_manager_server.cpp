@@ -6,6 +6,7 @@
 #include "bspfile.h"
 #include "utlbuffer.h"
 #include "lzmaDecoder.h"
+#include "icommandline.h"
 
 #include "tier0/memdbgon.h"
 
@@ -121,14 +122,18 @@ float ComputeLightRadius( const dworldlight_t &light )
 	return flLightRadius;
 }
 
-static ConVar deferred_autoenvlight_ambient_intensity_low("deferred_autoenvlight_ambient_intensity_low", "0.15");
-static ConVar deferred_autoenvlight_ambient_intensity_high("deferred_autoenvlight_ambient_intensity_high", "0.45");
-static ConVar deferred_autoenvlight_diffuse_intensity("deferred_autoenvlight_diffuse_intensity", "1");
+ConVar r_deferred_autoenvlight_ambient_intensity_low("r_deferred_autoenvlight_ambient_intensity_low", "0.1");
+ConVar r_deferred_autoenvlight_ambient_intensity_high("r_deferred_autoenvlight_ambient_intensity_high", "0.25");
+ConVar r_deferred_autoenvlight_diffuse_intensity("r_deferred_autoenvlight_diffuse_intensity", "1");
 
 void CDeferredManagerServer::LevelInitPreEntity()
 {
 	if ( gpGlobals->eLoadType == MapLoad_LoadGame )
 		return;
+
+	if (CommandLine() && CommandLine()->FindParm( "-nodeferred" ) != 0)
+		return;
+
 	const char* entStr = engine->GetMapEntitiesString();
 
 	if ( V_stristr( entStr, "light_deferred_global" ) )
@@ -196,9 +201,9 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			Error( "MapEntity_ParseAllEntities: found %s when expecting {", token );
 			continue;
 		}
-		
+
 		CEntityMapData entData( (char*)entStr );
-		
+
 		char className[MAPKEY_MAXLENGTH];
 		entData.ExtractValue( "classname", className );
 		int iType;
@@ -212,16 +217,16 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			iType = 3;
 		else
 			continue;
-		
+
 		char keyName[MAPKEY_MAXLENGTH];
 		char value[MAPKEY_MAXLENGTH];
 		KeyValues* pSubKey = new KeyValues( className );
 		if ( entData.GetFirstKey( keyName, value ) )
 		{
-			do 
+			do
 			{
 				pSubKey->SetString( keyName, value );
-			} 
+			}
 			while ( entData.GetNextKey( keyName, value ) );
 		}
 		pSubKey->SetInt( "light_type", iType );
@@ -242,14 +247,14 @@ void CDeferredManagerServer::LevelInitPreEntity()
 	FOR_EACH_TRUE_SUBKEY( vmfFile, entity1 )
 	{
 		const int type1 = entity1->GetInt( "light_type" );
-		if ( type1 != 1 && type1 != 2 )
+		if ( type1 != 1 )
 			continue;
 		bool bSkip = false;
 		const int numPairs = spotLightPairs.Count();
 		for ( int i = 0; i < numPairs; ++i )
 		{
 			const SpotLightPair_t& pair = spotLightPairs[i];
-			if (pair.light == entity1 || pair.spotlight == entity1)
+			if (pair.light == entity1)
 			{
 				bSkip = true;
 				break;
@@ -262,32 +267,39 @@ void CDeferredManagerServer::LevelInitPreEntity()
 		QAngle rot1;
 		UTIL_StringToVector( pos1.Base(), entity1->GetString( "origin" ) );
 		UTIL_StringToVector( rot1.Base(), entity1->GetString( "angles" ) );
+
 		FOR_EACH_TRUE_SUBKEY( vmfFile, entity2 )
 		{
-			bool bSkip = false;
-			const int numPairs = spotLightPairs.Count();
-			for ( int i = 0; i < numPairs; ++i )
+			const int type2 = entity2->GetInt( "light_type" );
+			if ( type2 != 2 )
+				continue;
+
+			if (entity1 == entity2)
+				continue;
+
+			bool bSkip2 = false;
+			const int numPairs2 = spotLightPairs.Count();
+			for ( int i = 0; i < numPairs2; ++i )
 			{
 				const SpotLightPair_t& pair = spotLightPairs[i];
-				if (pair.light == entity2 || pair.spotlight == entity2)
+				if (pair.spotlight == entity2)
 				{
-					bSkip = true;
+					bSkip2 = true;
 					break;
 				}
 			}
-			if ( bSkip )
+			if (bSkip2)
 				continue;
-			const int type2 = entity2->GetInt( "light_type" );
-			if ( entity1 == entity2 || ( type2 != 1 && type2 != 2 && type1 != type2 ) )
-				continue;
+
 
 			Vector pos2;
 			QAngle rot2;
-			UTIL_StringToVector( pos2.Base(), entity1->GetString( "origin" ) );
-			UTIL_StringToVector( rot2.Base(), entity1->GetString( "angles" ) );
+			UTIL_StringToVector( pos2.Base(), entity2->GetString( "origin" ) );
+			UTIL_StringToVector( rot2.Base(), entity2->GetString( "angles" ) );
 
-			if ( CloseEnough( pos1, pos2, 0.2f ) && CloseEnough( rot1.x, rot2.x, 2.f ) && CloseEnough( rot1.y, rot2.y, 2.f ) && CloseEnough( rot1.z, rot2.z, 2.f ) )
+			if ( CloseEnough( pos1.x, pos2.x, 2.f ) && CloseEnough( pos1.y, pos2.y, 2.f ) && CloseEnough( pos1.z, pos1.z, 2.f ) && CloseEnough( rot1.y, rot2.y, 2.f ) && CloseEnough( rot1.z, rot2.z, 2.f ) )
 			{
+				DevMsg(1, "Found matching lights at positions %f %f %f and %f %f %f of types %d and %d\n", pos1.x, pos1.y, pos1.z, pos2.x, pos2.y, pos2.z, type1, type2 );
 				SpotLightPair_t& pair = spotLightPairs[spotLightPairs.AddToTail()];
 				pair.light = type1 == 1 ? entity1 : entity2;
 				pair.spotlight = type1 != 1 ? entity1 : entity2;
@@ -327,18 +339,22 @@ void CDeferredManagerServer::LevelInitPreEntity()
 	const char* szParamVolumeSamples = GetLightParamName( LPARAM_VOLUME_SAMPLES );
 
 	bool bCreatedGlobalLight = false;
-	CUtlVector<const dworldlight_t*> unspawnedLights;
+	//CUtlVector<const dworldlight_t*> unspawnedLights;
 	FOR_EACH_TRUE_SUBKEY( vmfFile, entity )
 	{
 		const int type = entity->GetInt( "light_type" );
-		if ( type == -1 || ( type == 3 && bCreatedGlobalLight ) || type == 2 )
+		if ( type == -1 || ( type == 3 && bCreatedGlobalLight ))
 			continue;
 
 		Vector pos;
 		QAngle rot;
 		UTIL_StringToVector( pos.Base(), entity->GetString( "origin" ) );
-		if ( KeyValues* angle = entity->FindKey( "angles" ) )
+		if ( KeyValues* angle = entity->FindKey( "angles" ) ) {
 			UTIL_StringToVector( rot.Base(), angle->GetString() );
+			if (type == 1 && entity->GetInt("pitch") != 0)
+				rot.x = -entity->GetInt("pitch");
+
+		}
 		else
 			rot = vec3_angle;
 
@@ -353,9 +369,9 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			UTIL_StringToIntArray( color, 4, entity->GetString( "_light" ) );
 			UTIL_StringToIntArray( ambient, 4, entity->GetString( "_ambient" ) );
 
-			const float ds = deferred_autoenvlight_diffuse_intensity.GetFloat();
-			const float asl = deferred_autoenvlight_ambient_intensity_low.GetFloat();
-			const float ash = deferred_autoenvlight_ambient_intensity_high.GetFloat();
+			const float ds = r_deferred_autoenvlight_diffuse_intensity.GetFloat();
+			const float asl = r_deferred_autoenvlight_ambient_intensity_low.GetFloat();
+			const float ash = r_deferred_autoenvlight_ambient_intensity_high.GetFloat();
 
 			lightEntity->KeyValue( "diffuse", UTIL_VarArgs("%d %d %d %f", color[0], color[1], color[2], color[3] * ds ) );
 			lightEntity->KeyValue( "ambient_high", UTIL_VarArgs("%d %d %d %f", ambient[0], ambient[1], ambient[2], ambient[3] * ash ) );
@@ -368,17 +384,14 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			continue;
 		}
 
-		if (entity->GetBool("_baked_only", true))
-			continue;
-
 		for ( uint i = 0; i < lightCount; ++i )
 		{
 			const dworldlight_t& light = lights[i];
 			if ( light.type != emit_spotlight && light.type != emit_point )
 				continue;
 
-			if ( CloseEnough( light.origin, pos, 1.f ) )
-			{
+			// if ( CloseEnough( light.origin, pos, 1.f ) )
+			// {
 				if ( light.type == emit_point )
 				{
 					entity->SetFloat( "_distance", ComputeLightRadius( light ) );
@@ -395,20 +408,20 @@ void CDeferredManagerServer::LevelInitPreEntity()
 					entity->SetFloat( "_distance", ComputeLightRadius( light ) );
 					break;
 				}
-			}
-			else
-			{
-				const int numUnspawnedLights = unspawnedLights.Count();
-				for ( int i = 0; i < numUnspawnedLights; ++i )
-				{
-					if (unspawnedLights[i] == &light)
-						goto out;
-				}
-				unspawnedLights.AddToTail( &light );
-			}
+			// }
+			// else
+			// {
+			// 	const int numUnspawnedLights = unspawnedLights.Count();
+			// 	for ( int i = 0; i < numUnspawnedLights; ++i )
+			// 	{
+			// 		if (unspawnedLights[i] == &light)
+			// 			goto out;
+			// 	}
+			// 	unspawnedLights.AddToTail( &light );
+			// }
 		}
 
-		out:
+		//out:
 		CDeferredLight* lightEntity = static_cast<CDeferredLight*>( CBaseEntity::CreateNoSpawn( "light_deferred", pos, rot ) );
 		if ( !lightEntity )
 			break;
@@ -419,20 +432,20 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			color[3] = 255;
 
 		char string[256];
-		V_sprintf_safe( string, "%d %d %d %d", color[0], color[1], color[2], color[3] );
+			V_sprintf_safe( string, "%d %d %d %d", color[0], color[1], color[2], color[3] );
 		lightEntity->KeyValue( szParamDiffuse, string );
 
 		lightEntity->KeyValue( "spawnflags", type == 2 || type == 5 ? "11" : "3" );
 		if ( type == 1 || type == 5 )
 		{
 			lightEntity->KeyValue( szParamLightType, "1" );
-			lightEntity->KeyValue( szParamSpotConeInner, entity->GetFloat( "_inner_cone" ) );
-			lightEntity->KeyValue( szParamSpotConeOuter, entity->GetFloat( "_cone" ) );
+				lightEntity->KeyValue( szParamSpotConeInner, entity->GetFloat( "_inner_cone" ) );
+				lightEntity->KeyValue( szParamSpotConeOuter, entity->GetFloat( "_cone" ) );
 			lightEntity->KeyValue( szParamPower, entity->GetFloat( "_exponent", 1.f ) );
 			if ( type == 5 )
 				lightEntity->KeyValue( szParamVolumeSamples, 50 );
 		}
-		/*else if ( type == 2 )
+		else if ( type == 2 )
 		{
 			lightEntity->KeyValue( szParamLightType, "1" );
 			const float width = entity->GetFloat( "spotlightwidth" );
@@ -440,14 +453,14 @@ void CDeferredManagerServer::LevelInitPreEntity()
 			lightEntity->KeyValue( szParamSpotConeOuter, width * 1.5f );
 			lightEntity->KeyValue( szParamPower, 1 );
 			lightEntity->KeyValue( szParamVolumeSamples, 50 );
-		}*/
+		}
 		else
 		{
 			lightEntity->KeyValue( szParamLightType, "0" );
 			lightEntity->KeyValue( szParamPower, "1" );
 		}
 
-		const float radius = /*type == 2 ? entity->GetFloat( "spotlightlength" ) : */
+		const float radius = type == 2 ? entity->GetFloat( "spotlightlength" ) :
 		ComputeLightRadius( entity->GetFloat( "_distance" ), color[3], entity->GetFloat( "_constant_attn" ), entity->GetFloat( "_linear_attn" ), entity->GetFloat( "_quadratic_attn" ) );
 		lightEntity->KeyValue( szParamRadius, radius );
 		lightEntity->KeyValue( szParamVisDist, radius * 2 );
@@ -464,6 +477,7 @@ void CDeferredManagerServer::LevelInitPreEntity()
 		DispatchSpawn( lightEntity );
 	}
 
+	/*
 	const int numUnspawnedLights = unspawnedLights.Count();
 	for ( int i = 0; i < numUnspawnedLights; ++i )
 	{
@@ -512,6 +526,7 @@ void CDeferredManagerServer::LevelInitPreEntity()
 
 		DispatchSpawn( lightEntity );
 	}
+	*/
 
 	delete[] lights;
 }

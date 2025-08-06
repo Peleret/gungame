@@ -406,7 +406,7 @@ public:
 	void BeginTranslucentDetailRendering( );
 
 	// Method of ISpatialLeafEnumerator
-	bool EnumerateLeaf( int leaf, int context );
+	bool EnumerateLeaf( int leaf, intp context );
 
 	DetailPropLightstylesLump_t& DetailLighting( int i ) { return m_DetailLighting[i]; }
 	DetailPropSpriteDict_t& DetailSpriteDict( int i ) { return m_DetailSpriteDict[i]; }
@@ -2739,27 +2739,13 @@ void CDetailObjectSystem::RenderTranslucentDetailObjectsInLeaf( const Vector &vi
 //-----------------------------------------------------------------------------
 // Gets called each view
 //-----------------------------------------------------------------------------
-bool CDetailObjectSystem::EnumerateLeaf(int leaf, int context)
+bool CDetailObjectSystem::EnumerateLeaf(int leaf, intp context)
 {
 	VPROF_BUDGET("CDetailObjectSystem::EnumerateLeaf", VPROF_BUDGETGROUP_DETAILPROP_RENDERING);
 	Vector v;
-	int firstDetailObject = 0, detailObjectCount = 0;
+	int firstDetailObject, detailObjectCount;
 
 	EnumContext_t* pCtx = (EnumContext_t*)context;
-
-	// Defensive: Check ClientLeafSystem pointer
-	if (!ClientLeafSystem()) {
-		AssertMsg(false, "ClientLeafSystem() is null!");
-		return false;
-	}
-
-	// Defensive: Check leaf index
-	int leafCount = engine->LevelLeafCount(); // Or the correct function for your engine
-	if (leaf < 0 || leaf >= leafCount) {
-		AssertMsg2(false, "Invalid leaf index %d (max %d) in DrawDetailObjectsInLeaf", leaf, leafCount);
-		return false;
-	}
-
 	ClientLeafSystem()->DrawDetailObjectsInLeaf(leaf, pCtx->m_BuildWorldListNumber,
 		firstDetailObject, detailObjectCount);
 
@@ -2795,6 +2781,7 @@ bool CDetailObjectSystem::EnumerateLeaf(int leaf, int context)
 	}
 	return true;
 }
+
 
 
 

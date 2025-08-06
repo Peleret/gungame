@@ -47,7 +47,9 @@ float GetDepthMapDepthResolution( float zDelta )
 
 void DefRTsOnModeChanged()
 {
-	InitDeferredRTs();
+	// Causes a crash ingame, so only allow in main menu
+	if ( !engine->IsInGame() )
+		InitDeferredRTs();
 }
 
 void InitDeferredRTs( bool bInitial )
@@ -55,10 +57,10 @@ void InitDeferredRTs( bool bInitial )
 	if ( !bInitial )
 		materials->BeginRenderTargetAllocation(); // HAHAHAHA. No.
 
-	int screen_w, screen_h;
+	//int screen_w, screen_h;
 	int dummy = 128;
 
-	materials->GetBackBufferDimensions( screen_w, screen_h );
+	//materials->GetBackBufferDimensions( screen_w, screen_h );
 
 const ImageFormat fmt_gbuffer0 =
 #if DEFCFG_LIGHTCTRL_PACKING
@@ -85,12 +87,13 @@ const ImageFormat fmt_gbuffer0 =
 	const ImageFormat fmt_volumAccum = IMAGE_FORMAT_RGB888;
 	const ImageFormat fmt_projVGUI = IMAGE_FORMAT_RGB888;
 
-	const bool bShadowUseColor =
-#ifdef SHADOWMAPPING_USE_COLOR
-		true;
-#else
-		false;
-#endif
+// causes broken shadows on particles
+	const bool bShadowUseColor = false;
+// #ifdef SHADOWMAPPING_USE_COLOR
+// 		true;
+// #else
+// 		false;
+// #endif
 
 	const ImageFormat fmt_depth = GetDeferredManager()->GetShadowDepthFormat();
 	const ImageFormat fmt_depthColor = bShadowUseColor ? IMAGE_FORMAT_R32F
@@ -449,35 +452,35 @@ const ImageFormat fmt_gbuffer0 =
 
 int GetShadowResolution_Spot()
 {
-	return deferred_rt_shadowspot_res.GetInt();
+	return r_deferred_rt_shadowspot_res.GetInt();
 }
 
 #if DEFCFG_ADAPTIVE_SHADOWMAP_LOD
 int GetShadowResolution_Spot_LOD1()
 {
-	return deferred_rt_shadowspot_lod1_res.GetInt();
+	return r_deferred_rt_shadowspot_lod1_res.GetInt();
 }
 
 int GetShadowResolution_Spot_LOD2()
 {
-	return deferred_rt_shadowspot_lod2_res.GetInt();
+	return r_deferred_rt_shadowspot_lod2_res.GetInt();
 }
 #endif
 
 int GetShadowResolution_Point()
 {
-	return deferred_rt_shadowpoint_res.GetInt();
+	return r_deferred_rt_shadowpoint_res.GetInt();
 }
 
 #if DEFCFG_ADAPTIVE_SHADOWMAP_LOD
 int GetShadowResolution_Point_LOD1()
 {
-	return deferred_rt_shadowpoint_lod1_res.GetInt();
+	return r_deferred_rt_shadowpoint_lod1_res.GetInt();
 }
 
 int GetShadowResolution_Point_LOD2()
 {
-	return deferred_rt_shadowpoint_lod2_res.GetInt();
+	return r_deferred_rt_shadowpoint_lod2_res.GetInt();
 }
 #endif
 

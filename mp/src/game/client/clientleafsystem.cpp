@@ -132,7 +132,7 @@ public:
 	// methods of ISpatialLeafEnumerator
 public:
 
-	bool EnumerateLeaf( int leaf, int context );
+	bool EnumerateLeaf( int leaf, intp context );
 
 	// Adds a shadow to a leaf
 	void AddShadowToLeaf( int leaf, ClientLeafShadowHandle_t handle );
@@ -1180,7 +1180,7 @@ void CClientLeafSystem::AddRenderableToLeaves( ClientRenderHandle_t handle, int 
 //-----------------------------------------------------------------------------
 // Inserts an element into the tree
 //-----------------------------------------------------------------------------
-bool CClientLeafSystem::EnumerateLeaf( int leaf, int context )
+bool CClientLeafSystem::EnumerateLeaf( int leaf, intp context )
 {
 	EnumResultList_t *pList = (EnumResultList_t *)context;
 	if ( ThreadInMainThread() )

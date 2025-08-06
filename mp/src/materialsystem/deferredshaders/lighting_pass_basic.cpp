@@ -20,7 +20,6 @@ void InitPassLightPass( const lightPassParms &info, CBaseVSShader *pShader, IMat
 {
 }
 
-
 void DrawPassLightPass( const lightPassParms &info, CBaseVSShader *pShader, IMaterialVar **params,
 	IShaderShadow* pShaderShadow, IShaderDynamicAPI* pShaderAPI,
 	VertexCompressionType_t vertexCompression )

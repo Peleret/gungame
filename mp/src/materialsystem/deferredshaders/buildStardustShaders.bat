@@ -14,17 +14,17 @@ rem == Note that this path needs does not support long file/directory names ==
 rem == So instead of a path such as "C:\Program Files\Steam\steamapps\mymod" ==
 rem == you need to find the 8.3 abbreviation for the directory name using 'dir /x' ==
 rem == and set the directory to something like C:\PROGRA~2\Steam\steamapps\sourcemods\mymod ==
-set GAMEDIR=C:\STARDU~2\source-sdk-2013\game\hl2mp
+set GAMEDIR=C:\stardust-sdk\source-sdk-2013\game\hl2mp
 
 rem == Set the relative path to steamapps\common\Alien Swarm\bin ==
 rem == As above, this path does not support long directory names or spaces ==
 rem == e.g. ..\..\..\..\..\PROGRA~2\Steam\steamapps\common\ALIENS~1\bin ==
 rem == set SDKBINDIR=..\..\..\..\STEAME~1\steamapps\common\ALIENS~1\bin
-set SDKBINDIR=C:\STARDU~2\source-sdk-2013\game
+set SDKBINDIR=C:\stardust-sdk\source-sdk-2013\src/devtools/bin
 
 rem ==  Set the Path to your mods root source code ==
 rem this should already be correct, accepts relative paths only!
-set SOURCEDIR=C:\STARDU~2\source-sdk-2013\src
+set SOURCEDIR=C:\stardust-sdk\source-sdk-2013\src
 rem ==== MOD PATH CONFIGURATIONS END ===
 rem ====================================
 

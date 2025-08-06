@@ -15,7 +15,7 @@
 
 using namespace vgui;
 
-ConVar deferred_lighteditor_defaultvmfpath( "deferred_lighteditor_defaultvmfpath", "", FCVAR_ARCHIVE );
+ConVar r_deferred_light_editor_defaultvmfpath( "r_deferred_light_editor_defaultvmfpath", "", FCVAR_ARCHIVE );
 
 CVGUILightEditor_Controls::CVGUILightEditor_Controls( Panel *pParent )
 	: BaseClass( pParent, "LightEditorControls" )
@@ -55,7 +55,7 @@ void CVGUILightEditor_Controls::OnLevelSpawn()
 
 	CheckButton *pCheckDebugStats = assert_cast<CheckButton*>( FindChildByName( "check_def_stats" ) );
 	if ( pCheckDebugStats != NULL )
-		pCheckDebugStats->SetSelected( deferred_lightmanager_debug.GetBool() );
+		pCheckDebugStats->SetSelected( r_deferred_light_stats.GetBool() );
 }
 
 void CVGUILightEditor_Controls::PerformLayout()
@@ -68,6 +68,8 @@ void CVGUILightEditor_Controls::PerformLayout()
 	int w, h;
 	GetSize( w, h );
 
+	DevMsg(1, "CVGUILightEditor_Controls::PerformLayout: %dx%d %dx%d\n", sw, sh, w, h );
+
 	SetPos( 5, sh / 2 - h / 2 );
 }
 
@@ -78,6 +80,8 @@ void CVGUILightEditor_Controls::OnRadioButtonChecked( Panel *panel )
 	int iSubPos = pRadioButton->GetSubTabPosition();
 
 	Assert( iSubPos >= 0 && iSubPos < CLightingEditor::EDITORINTERACTION_COUNT );
+
+	DevMsg(1, "CVGUILightEditor_Controls::OnRadioButtonChecked: %d\n", iSubPos );
 
 	GetLightingEditor()->SetEditorInteractionMode( (CLightingEditor::EDITORINTERACTION_MODE)iSubPos );
 }
@@ -97,7 +101,7 @@ void CVGUILightEditor_Controls::OnCheckButtonChecked( Panel *panel )
 	}
 	else if ( !Q_stricmp( pszName, "check_def_stats" ) )
 	{
-		deferred_lightmanager_debug.SetValue( ( bChecked ? 1 : 0 ) );
+		r_deferred_light_stats.SetValue( ( bChecked ? 1 : 0 ) );
 	}
 }
 
@@ -115,6 +119,7 @@ void CVGUILightEditor_Controls::OnTextChanged( Panel *panel )
 
 void CVGUILightEditor_Controls::OnCommand( const char *pCmd )
 {
+	DevMsg(1, "Received command %s\n", pCmd);
 	if ( !Q_stricmp( pCmd, "loadvmf" ) )
 	{
 		OnLoadVmf();
@@ -183,10 +188,10 @@ void CVGUILightEditor_Controls::BuildVmfPath( char *pszOut, int maxlen, bool bMa
 	char tmp[MAX_PATH*4];
 	char tmp2[MAX_PATH*4];
 
-	if( Q_strcmp( deferred_lighteditor_defaultvmfpath.GetString(), "" ) != 0 &&
-		g_pFullFileSystem->IsDirectory( deferred_lighteditor_defaultvmfpath.GetString() ) )
+	if( Q_strcmp( r_deferred_light_editor_defaultvmfpath.GetString(), "" ) != 0 &&
+		g_pFullFileSystem->IsDirectory( r_deferred_light_editor_defaultvmfpath.GetString() ) )
 	{
-		Q_strcpy( tmp, deferred_lighteditor_defaultvmfpath.GetString() );
+		Q_strcpy( tmp, r_deferred_light_editor_defaultvmfpath.GetString() );
 	}
 	else
 	{

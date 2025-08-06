@@ -45,10 +45,10 @@ private:
 
 	void PerformLighting( const CViewSetup &view );
 
-	void BeginRadiosity( const CViewSetup &view );
-	void UpdateRadiosityPosition();
-	void PerformRadiosityGlobal( int iRadiosityCascade, const CViewSetup &view );
-	void EndRadiosity( const CViewSetup &view );
+	//void BeginRadiosity( const CViewSetup &view );
+	//void UpdateRadiosityPosition();
+	//void PerformRadiosityGlobal( int iRadiosityCascade, const CViewSetup &view );
+	//void EndRadiosity( const CViewSetup &view );
 	void DebugRadiosity( const CViewSetup &view );
 
 	void RenderCascadedShadows( const CViewSetup &view, bool bEnableRadiosity );

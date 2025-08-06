@@ -84,7 +84,7 @@ int CDeferredLightGlobal::UpdateTransmitState()
 	return SetTransmitState( FL_EDICT_ALWAYS );
 }
 
-CON_COMMAND( deferred_debug_globalLight_SetAngles, "" )
+CON_COMMAND( r_deferred_light_global_override_angles, "" )
 {
 	if ( !GetGlobalLight() )
 	{

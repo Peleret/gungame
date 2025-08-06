@@ -12,7 +12,7 @@
 class CLightLeafEnum : public ISpatialLeafEnumerator
 {
 public:
-	bool EnumerateLeaf( int leaf, int context )
+	bool EnumerateLeaf( int leaf, intp context )
 	{
 		m_LeafList.AddToTail( leaf );
 		return true;
@@ -197,10 +197,10 @@ KeyValues *def_light_t::AllocateAsKeyValues()
 		}
 		else if ( !Q_stricmp( pszFieldName, GetLightParamName( LPARAM_COOKIETEX ) ) )
 		{
-			int iCookieIndex = 0;
-			Q_memcpy( &iCookieIndex, reinterpret_cast<byte*>( this ) + pField.fieldOffset[0], pField.fieldSizeInBytes );
+			int iFieldCookieIndex = 0;
+			Q_memcpy( &iFieldCookieIndex, reinterpret_cast<byte*>( this ) + pField.fieldOffset[0], pField.fieldSizeInBytes );
 
-			const char *pszCookieName = g_pStringTable_LightCookies->GetString( iCookieIndex );
+			const char *pszCookieName = g_pStringTable_LightCookies->GetString(iFieldCookieIndex );
 
 			if ( pszCookieName != NULL && *pszCookieName )
 			{
@@ -210,10 +210,10 @@ KeyValues *def_light_t::AllocateAsKeyValues()
 		else if ( !Q_stricmp( pszFieldName, GetLightParamName( LPARAM_ORIGIN ) ) ||
 			!Q_stricmp( pszFieldName, GetLightParamName( LPARAM_ANGLES ) ) )
 		{
-			Vector pos;
-			Q_memcpy( pos.Base(), reinterpret_cast<byte*>( this ) + pField.fieldOffset[0], pField.fieldSizeInBytes );
+			Vector iFieldPos;
+			Q_memcpy( iFieldPos.Base(), reinterpret_cast<byte*>( this ) + pField.fieldOffset[0], pField.fieldSizeInBytes );
 
-			pRet->SetString( pszFieldName, VarArgs( "%.2f %.2f %.2f", XYZ( pos ) ) );
+			pRet->SetString( pszFieldName, VarArgs( "%.2f %.2f %.2f", XYZ( iFieldPos ) ) );
 		}
 		else
 		{
@@ -364,10 +364,10 @@ ITexture *def_light_t::GetCookieForDraw( const int iTargetIndex )
 	return pCookie->GetCookieTarget( iTargetIndex );
 }
 
-void def_light_t::SetCookie( IDefCookie *pCookie )
+void def_light_t::SetCookie( IDefCookie *pSetCookie )
 {
 	ClearCookie();
-	this->pCookie = pCookie;
+	this->pCookie = pSetCookie;
 }
 
 void def_light_t::ClearCookie()
@@ -569,9 +569,9 @@ void def_light_t::UpdateXForms()
 		break;
 	}
 
-	if ((bounds_max - bounds_min).LengthSqr() < 1)
+	if ( ( bounds_max - bounds_min ).LengthSqr() < 1 )
 	{
-		bounds_max = pos + Vector(__ND1, __ND1, __ND1);
+		bounds_max = pos + Vector( __ND1, __ND1, __ND1);
 		bounds_min = pos - Vector(__ND1, __ND1, __ND1);
 	}
 
@@ -834,7 +834,7 @@ void def_light_t::BuildSphere( IMesh **pMesh )
 		return;
 	}
 
-	const float flRadius = 1.05f; // overlap member var
+	const float flSphereRadius = 1.05f;
 	const int iNumLa = 10;
 	const int iNumLo = 11;
 
@@ -854,7 +854,7 @@ void def_light_t::BuildSphere( IMesh **pMesh )
 			sin( M_PI * flLa ) * sin( 2.0f * M_PI * flLo ),
 			cos( M_PI * flLa ) );
 
-		cachedPoints[ iPoint ] *= flRadius;
+		cachedPoints[ iPoint ] *= flSphereRadius;
 	}
 
 	const int iNumVerts = iNumLo * 2 * ( iNumLa - 1 ) + ( iNumLo - 1 ) * 2 + 1;

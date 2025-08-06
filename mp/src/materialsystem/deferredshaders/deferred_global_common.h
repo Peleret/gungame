@@ -9,7 +9,6 @@
 #ifndef DEFERRED_GLOBAL_COMMON_H
 #define DEFERRED_GLOBAL_COMMON_H
 
-
 /* Run with deferred shading instead of deferred lighting,
  * Light accumulation is used for both.
  */
@@ -19,7 +18,7 @@
  * 0 - DISABLE packing, gbuffer 0 at 3 bytes, gbuffer 2 at 4 bytes, less expensive math
  * 1 - ENABLE packing, gbuffer 0 at 4 bytes, gbuffer 2 disabled, more expensive math
  */
-#define DEFCFG_LIGHTCTRL_PACKING 0
+#define DEFCFG_LIGHTCTRL_PACKING 1
 
 
 /* Toggles compression for light accumulation buffer
@@ -71,6 +70,8 @@
 #	define	DEFCFG_ADAPTIVE_VOLUMETRIC_LOD 0
 #endif
 
+#define DEFCFG_BILATERAL_DEPTH_TEST 0
+
 /* RT Names
  */
 #define DEFRTNAME_GBUFFER0 "_rt_defNormals"
@@ -82,7 +83,6 @@
 #	define DEFRTNAME_GBUFFER2 "_rt_defAlbedo"
 #	define DEFRTNAME_GBUFFER3 "_rt_defSpecular"
 #endif
-#define DEFRTNAME_GBUFFER4 "_rt_defLightmap"
 #define DEFRTNAME_LIGHTACCUM "_rt_LightAccum"
 
 #define DEFRTNAME_VOLUMPREPASS "_rt_VolumPrepass"

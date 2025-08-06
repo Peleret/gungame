@@ -1,27 +1,11 @@
-// ALL SKIP STATEMENTS THAT AFFECT THIS SHADER!!!
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-
-#pragma once
 #include "shaderlib/cshader.h"
 class decalmodulate_ps30_Static_Index
 {
-	unsigned int m_nVERTEXALPHA : 2;
+private:
+	int m_nVERTEXALPHA;
 #ifdef _DEBUG
-	bool m_bVERTEXALPHA : 1;
-#endif	// _DEBUG
+	bool m_bVERTEXALPHA;
+#endif
 public:
 	void SetVERTEXALPHA( int i )
 	{
@@ -29,47 +13,75 @@ public:
 		m_nVERTEXALPHA = i;
 #ifdef _DEBUG
 		m_bVERTEXALPHA = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	decalmodulate_ps30_Static_Index( IShaderShadow* pShaderShadow, IMaterialVar** params )
+	void SetVERTEXALPHA( bool i )
 	{
-		m_nVERTEXALPHA = 0;
+		m_nVERTEXALPHA = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bVERTEXALPHA = true;
+#endif
+	}
+public:
+	decalmodulate_ps30_Static_Index( )
+	{
 #ifdef _DEBUG
 		m_bVERTEXALPHA = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nVERTEXALPHA = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bVERTEXALPHA );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllStaticVarsDefined = m_bVERTEXALPHA;
+		Assert( bAllStaticVarsDefined );
+#endif // _DEBUG
 		return ( 2 * m_nVERTEXALPHA ) + 0;
 	}
 };
-
-#define shaderStaticTest_decalmodulate_ps30 psh_forgot_to_set_static_VERTEXALPHA
-
-
+#define shaderStaticTest_decalmodulate_ps30 psh_forgot_to_set_static_VERTEXALPHA + 0
 class decalmodulate_ps30_Dynamic_Index
 {
-	unsigned int m_nPIXELFOGTYPE : 2;
+private:
+	int m_nPIXELFOGTYPE;
+#ifdef _DEBUG
+	bool m_bPIXELFOGTYPE;
+#endif
 public:
 	void SetPIXELFOGTYPE( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nPIXELFOGTYPE = i;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = true;
+#endif
 	}
-
-	decalmodulate_ps30_Dynamic_Index( IShaderDynamicAPI* pShaderAPI )
+	void SetPIXELFOGTYPE( bool i )
 	{
-		m_nPIXELFOGTYPE = ( pShaderAPI->GetSceneFogMode() == MATERIAL_FOG_LINEAR_BELOW_FOG_Z ) ;
+		m_nPIXELFOGTYPE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = true;
+#endif
 	}
-
-	int GetIndex() const
+public:
+	decalmodulate_ps30_Dynamic_Index()
 	{
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = false;
+#endif // _DEBUG
+		m_nPIXELFOGTYPE = 0;
+	}
+	int GetIndex()
+	{
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllDynamicVarsDefined = m_bPIXELFOGTYPE;
+		Assert( bAllDynamicVarsDefined );
+#endif // _DEBUG
 		return ( 1 * m_nPIXELFOGTYPE ) + 0;
 	}
 };
-
-#define shaderDynamicTest_decalmodulate_ps30 1
-
+#define shaderDynamicTest_decalmodulate_ps30 psh_forgot_to_set_dynamic_PIXELFOGTYPE + 0

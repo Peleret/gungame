@@ -4,31 +4,31 @@
 
 #include "tier0/memdbgon.h"
 
-ConVar deferred_rt_shadowspot_res( "deferred_rt_shadowspot_res", "1024", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowspot_res( "r_deferred_rt_shadowspot_res", "1024", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
 #if DEFCFG_ADAPTIVE_SHADOWMAP_LOD
-ConVar deferred_rt_shadowspot_lod1_res( "deferred_rt_shadowspot_lod1_res", "512", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
-ConVar deferred_rt_shadowspot_lod2_res( "deferred_rt_shadowspot_lod2_res", "256", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowspot_lod1_res( "r_deferred_rt_shadowspot_lod1_res", "512", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowspot_lod2_res( "r_deferred_rt_shadowspot_lod2_res", "256", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
 #endif
-ConVar deferred_rt_shadowpoint_res( "deferred_rt_shadowpoint_res", "1024", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowpoint_res( "r_deferred_rt_shadowpoint_res", "1024", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
 #if DEFCFG_ADAPTIVE_SHADOWMAP_LOD
-ConVar deferred_rt_shadowpoint_lod1_res( "deferred_rt_shadowpoint_lod1_res", "512", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
-ConVar deferred_rt_shadowpoint_lod2_res( "deferred_rt_shadowpoint_lod2_res", "256", FCVAR_HIDDEN | FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowpoint_lod1_res( "r_deferred_rt_shadowpoint_lod1_res", "512", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
+ConVar r_deferred_rt_shadowpoint_lod2_res( "r_deferred_rt_shadowpoint_lod2_res", "256", FCVAR_RELOAD_TEXTURES | FCVAR_RELOAD_MATERIALS );
 #endif
 
-ConVar deferred_lightmanager_debug( "deferred_lightmanager_debug", "0" );
+ConVar r_deferred_light_stats( "r_deferred_light_stats", "0", 0, "Shows stats panel for rendered lights, shadows, etc." );
 
-ConVar deferred_override_globalLight_enable( "deferred_override_globalLight_enable", "0" );
-ConVar deferred_override_globalLight_shadow_enable( "deferred_override_globalLight_shadow_enable", "1" );
-ConVar deferred_override_globalLight_diffuse( "deferred_override_globalLight_diffuse", "1 1 1" );
-ConVar deferred_override_globalLight_ambient_high( "deferred_override_globalLight_ambient_high", "0 0.04 0.08" );
-ConVar deferred_override_globalLight_ambient_low( "deferred_override_globalLight_ambient_low", "0 0.07 0.09" );
+ConVar r_deferred_light_global_override( "r_deferred_light_global_override", "0", 0, "Overrides light_deferred_global (or converted light_environment)" );
+ConVar r_deferred_light_global_override_shadow( "r_deferred_light_global_override_shadow", "1", 0, "Render shadows from global light" );
+ConVar r_deferred_light_global_override_diffuse( "r_deferred_light_global_override_diffuse", "1 1 1" );
+ConVar r_deferred_light_global_override_ambient_high( "r_deferred_light_global_override_ambient_high", "0 0.04 0.08" );
+ConVar r_deferred_light_global_override_ambient_low( "r_deferred_light_global_override_ambient_low", "0 0.07 0.09" );
 
-ConVar deferred_radiosity_enable( "deferred_radiosity_enable", "0" );
-ConVar deferred_radiosity_propagate_count( "deferred_radiosity_propagate_count", "1" ); // 1
-ConVar deferred_radiosity_propagate_count_far( "deferred_radiosity_propagate_count_far", "0" );
-ConVar deferred_radiosity_blur_count( "deferred_radiosity_blur_count", "2" ); // 2
-ConVar deferred_radiosity_blur_count_far( "deferred_radiosity_blur_count_far", "1" ); // 1
-ConVar deferred_radiosity_debug( "deferred_radiosity_debug", "0" );
+ConVar r_deferred_radiosity( "r_deferred_radiosity", "0", 0, "Enable radiosity for diffused lighting simulation - buggy" );
+ConVar r_deferred_radiosity_propagate_count( "r_deferred_radiosity_propagate_count", "1" ); // 1
+ConVar r_deferred_radiosity_propagate_far_count( "r_deferred_radiosity_propagate_far_count", "0" );
+ConVar r_deferred_radiosity_blur_count( "r_deferred_radiosity_blur_count", "4" ); // 2
+ConVar r_deferred_radiosity_blur_far_count( "r_deferred_radiosity_blur_far_count", "2" ); // 1
+ConVar r_deferred_radiosity_nodes( "r_deferred_radiosity_nodes", "0", 0, "Shows radiosity nodes in the world for debugging" );
 
 void OnCookieTableChanged( void *object, INetworkStringTable *stringTable, int stringNumber, const char *newString, void const *newData )
 {

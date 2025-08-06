@@ -4,7 +4,6 @@
 // STATIC:		"MORPHING_VTEX"			"0..1"
 // STATIC:		"BUMPMAP2"				"0..1"
 // STATIC:		"BLENDMODULATE"			"0..1"
-// STATIC:		"TREESWAY"				"0..2"
 
 // DYNAMIC:		"COMPRESSED_VERTS"		"0..1"
 // DYNAMIC:		"SKINNING"				"0..1"
@@ -35,37 +34,6 @@ sampler2D morphSampler						: register( s0 );
 const float4 flBlendModTransform[2]			: register( SHADER_SPECIFIC_CONST_3 ); // up to 4
 #endif
 
-#if TREESWAY
-const float4 flTreeSwayParams1			: register( SHADER_SPECIFIC_CONST_5 );
-const float4 flTreeSwayParams2			: register( SHADER_SPECIFIC_CONST_6 );
-const float4 flTreeSwayParams3			: register( SHADER_SPECIFIC_CONST_7 );
-const float4 flTreeSwayParams4			: register( SHADER_SPECIFIC_CONST_8 );
-const float4 flTreeSwayParams5			: register( SHADER_SPECIFIC_CONST_9 );
-
-#define g_flFastSwaySpeedScale flTreeSwayParams1.x
-#define g_flScrumbleFalloffCurve flTreeSwayParams1.y
-#define g_flSwayFalloffCurve flTreeSwayParams1.z
-#define g_flScrumbleSpeed flTreeSwayParams1.w
-
-#define g_flTime flTreeSwayParams2.y
-#define g_vWindDir flTreeSwayParams2.zw
-
-#define g_flHeight flTreeSwayParams3.x
-#define g_flStartHeight flTreeSwayParams3.y
-#define g_flRadius flTreeSwayParams3.z
-#define g_flStartRadius flTreeSwayParams3.w
-
-#define g_flSwaySpeed flTreeSwayParams4.x
-#define g_flSwayIntensity flTreeSwayParams4.y
-#define g_flScrumbleWaveCount flTreeSwayParams4.z
-#define g_flScrumbleIntensity flTreeSwayParams4.w
-
-#define g_flWindSpeedLerpStart flTreeSwayParams5.x
-#define g_flWindSpeedLerpEnd flTreeSwayParams5.y
-
-#include "tree_sway.h"
-#endif
-
 struct VS_INPUT
 {
 #if MODEL
@@ -76,12 +44,7 @@ struct VS_INPUT
 	float3 vNormal					: NORMAL;
 #endif
 	float2 vTexCoord_0				: TEXCOORD0;
-	
-#if !MODEL
-	float2 vTexCoord_Lightmap		: TEXCOORD1;
-	float2 vTexCoord_LightmapOffset	: TEXCOORD2;
-#endif
-	
+
 #if MODEL
 
 	float4 vBoneWeights				: BLENDWEIGHT;
@@ -124,11 +87,6 @@ struct VS_OUTPUT
 #if BUMPMAP2
 	float4 vColor_0					: COLOR0;
 #endif
-	
-#if !MODEL
-	float4 vLightmapCoord0And1 : TEXCOORD4;
-	float4 vLightmapCoord2And3 : TEXCOORD5;
-#endif
 };
 
 VS_OUTPUT main( const VS_INPUT In )
@@ -163,10 +121,6 @@ VS_OUTPUT main( const VS_INPUT In )
 #endif
 #endif
 
-#if TREESWAY
-	vPos.xyz = ComputeTreeSway( vPos.xyz, g_flTime );
-#endif
-
 	SkinPositionNormalAndTangentSpace( g_bSkinning, vPos, vNormal, vTangentMixed,
 		In.vBoneWeights, In.vBoneIndices,
 		worldPos, worldNormal, worldTangentS, worldTangentT );
@@ -184,10 +138,6 @@ VS_OUTPUT main( const VS_INPUT In )
 	ApplyMorph( morphSampler, cMorphTargetTextureDim, cMorphSubrect,
 		In.vVertexID, In.vTexCoord2, vPos.xyz, vNormal );
 #endif
-#endif
-
-#if TREESWAY
-	vPos.xyz = ComputeTreeSway( vPos.xyz, g_flTime );
 #endif
 
 	SkinPositionAndNormal( g_bSkinning, vPos, vNormal,
@@ -231,12 +181,5 @@ VS_OUTPUT main( const VS_INPUT In )
 	Out.worldTangentT = worldTangentT;
 #endif
 
-#if !MODEL
-	Out.vLightmapCoord0And1.xy = In.vTexCoord_Lightmap;
-	Out.vLightmapCoord0And1.zw = Out.vLightmapCoord0And1.xy + In.vTexCoord_LightmapOffset;
-	Out.vLightmapCoord2And3.xy = Out.vLightmapCoord0And1.zw + In.vTexCoord_LightmapOffset;
-	Out.vLightmapCoord2And3.zw = Out.vLightmapCoord2And3.xy + In.vTexCoord_LightmapOffset;
-#endif
-	
 	return Out;
 }

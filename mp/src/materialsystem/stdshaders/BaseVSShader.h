@@ -256,7 +256,7 @@ public:
 		);
 	
 	// Sets up hw morphing state for the vertex shader
-	void SetHWMorphVertexShaderState( int nDimConst, int nSubrectConst, VertexTextureSampler_t morphSampler );
+	
 
 	// Computes the shader index for vertex lit materials
 	int ComputeVertexLitShaderIndex( bool bVertexLitGeneric, bool hasBump, bool hasEnvmap, bool hasVertexColor, bool bHasNormal ) const;
@@ -314,6 +314,8 @@ public:
 	void DrawFlashlight_dx90( IMaterialVar** params, 
 		IShaderDynamicAPI *pShaderAPI, IShaderShadow* pShaderShadow, DrawFlashlight_dx90_Vars_t &vars );
 #endif // GAME_SHADER_DLL
+
+	void SetHWMorphVertexShaderState(int nDimConst, int nSubrectConst, VertexTextureSampler_t morphSampler);
 
 	BlendType_t EvaluateBlendRequirements( int textureVar, bool isBaseTexture, int detailTextureVar = -1 );
 

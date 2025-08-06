@@ -7,25 +7,32 @@
 
 #define DEFLIGHT_SPOT_ZNEAR 5.0f
 
-#define DEFLIGHT_MAX_LEAVES 64
+#define DEFLIGHT_MAX_LEAVES 128
 
-extern ConVar deferred_rt_shadowspot_res;
-extern ConVar deferred_rt_shadowpoint_res;
+extern ConVar r_deferred_rt_shadowspot_res;
+extern ConVar r_deferred_rt_shadowpoint_res;
 
-extern ConVar deferred_lightmanager_debug;
+#if DEFCFG_ADAPTIVE_SHADOWMAP_LOD
+extern ConVar r_deferred_rt_shadowspot_lod1_res;
+extern ConVar r_deferred_rt_shadowspot_lod2_res;
+extern ConVar r_deferred_rt_shadowpoint_lod1_res;
+extern ConVar r_deferred_rt_shadowpoint_lod2_res;
+#endif
 
-extern ConVar deferred_override_globalLight_enable;
-extern ConVar deferred_override_globalLight_shadow_enable;
-extern ConVar deferred_override_globalLight_diffuse;
-extern ConVar deferred_override_globalLight_ambient_high;
-extern ConVar deferred_override_globalLight_ambient_low;
+extern ConVar r_deferred_light_stats;
 
-extern ConVar deferred_radiosity_enable;
-extern ConVar deferred_radiosity_propagate_count;
-extern ConVar deferred_radiosity_propagate_count_far;
-extern ConVar deferred_radiosity_blur_count;
-extern ConVar deferred_radiosity_blur_count_far;
-extern ConVar deferred_radiosity_debug;
+extern ConVar r_deferred_light_global_override;
+extern ConVar r_deferred_light_global_override_shadow;
+extern ConVar r_deferred_light_global_override_diffuse;
+extern ConVar r_deferred_light_global_override_ambient_high;
+extern ConVar r_deferred_light_global_override_ambient_low;
+
+extern ConVar r_deferred_radiosity;
+extern ConVar r_deferred_radiosity_propagate_count;
+extern ConVar r_deferred_radiosity_propagate_far_count;
+extern ConVar r_deferred_radiosity_blur_count;
+extern ConVar r_deferred_radiosity_blur_far_count;
+extern ConVar r_deferred_radiosity_nodes;
 
 
 #define PROFILER_DECLARE CFastTimer __pft; __pft.Start()

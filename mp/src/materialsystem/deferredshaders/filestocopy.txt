@@ -1,0 +1,6 @@
+C:\stardust-sdk\source-sdk-2013\src\devtools\bin\d3dx9_33.dll 
+C:\stardust-sdk\source-sdk-2013\src\dx10sdk\utilities\dx9_30\dx_proxy.dll 
+C:\stardust-sdk\source-sdk-2013\src/devtools/bin\shadercompile.exe 
+C:\stardust-sdk\source-sdk-2013\src/devtools/bin\shadercompile_dll.dll 
+C:\stardust-sdk\source-sdk-2013\src/devtools/bin\vstdlib.dll 
+C:\stardust-sdk\source-sdk-2013\src/devtools/bin\tier0.dll 

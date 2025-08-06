@@ -112,20 +112,9 @@ $Project "Client (HL2MP)"
 				$File	"deferred\IDeferredExtClient.cpp"
 				$File	"deferred\materialsystem_passthru.cpp"
 				$File	"deferred\materialsystem_passthru.h"
-				$File	"deferred\viewrender_deferred_helper.cpp"
-				{
-					$Configuration
-					{
-						$Compiler
-						{
-							$AdditionalIncludeDirectories	"$BASE;$SRCDIR\thirdparty\subhook"
-						}
-					}
-				}
-		$File	"deferred\viewrender_deferred_helper.h"
-		$File	"deferred\viewrender_deferred.cpp"
-		$File	"deferred\viewrender_deferred.h"
-		$File	"$SRCDIR\public\deferred_light_lump.cpp"
+				$File	"deferred\viewrender_deferred.cpp"
+				$File	"deferred\viewrender_deferred.h"
+				$File	"$SRCDIR\public\deferred_light_lump.cpp"
 		}
 		
 		$Folder	"NextBot"

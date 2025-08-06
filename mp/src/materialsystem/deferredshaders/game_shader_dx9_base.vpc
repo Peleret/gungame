@@ -12,8 +12,8 @@ $Configuration	"Debug"
 {
 	$General
 	{
-		$OutputDirectory		"$BUILDDIR\$PROJECTNAME\Debug_dx9_$GAMENAME"			[$WIN32]
-		$IntermediateDirectory	"$BUILDDIR\$PROJECTNAME\Debug_dx9_$GAMENAME"			[$WIN32]
+		$OutputDirectory		"Debug_dx9_$GAMENAME"			[$WIN32]
+		$IntermediateDirectory	"Debug_dx9_$GAMENAME"			[$WIN32]
 	}
 }
 
@@ -21,8 +21,8 @@ $Configuration	"Release"
 {
 	$General
 	{
-		$OutputDirectory		"$BUILDDIR\$PROJECTNAME\Release_dx9_$GAMENAME"		[$WIN32]
-		$IntermediateDirectory	"$BUILDDIR\$PROJECTNAME\Release_dx9_$GAMENAME"		[$WIN32]
+		$OutputDirectory		"Release_dx9_$GAMENAME"		[$WIN32]
+		$IntermediateDirectory	"Release_dx9_$GAMENAME"		[$WIN32]
 	}
 }
 
@@ -31,7 +31,7 @@ $Configuration
 {
 	$Compiler
 	{
-		$AdditionalIncludeDirectories	"$BASE;include"	[$WIN32||$POSIX]
+		$AdditionalIncludeDirectories	"$BASE;fxctmp9;vshtmp9;"	[$WIN32||$POSIX]
 //		$AdditionalIncludeDirectories	"$BASE;..\..\dx9sdk\include"	[$WIN32]
 		$AdditionalIncludeDirectories	"$BASE;fxctmp9_360;vshtmp9_360"					[$X360]
 		$PreprocessorDefinitions		"$BASE;STDSHADER_DX9_DLL_EXPORT;FAST_MATERIALVAR_ACCESS;GAME_SHADER_DLL"
@@ -50,7 +50,32 @@ $Project
 	$Folder	"Source Files"
 	{
 		$File	"BaseVSShader.cpp"
+		$File	"blur.cpp"
+		$File	"debug_lightingctrl.cpp"
+		$File	"debug_radiosity_grid.cpp"
+		$File	"debug_shadow.cpp"
+		$File	"deferred_brush.cpp"
+		$File	"deferred_model.cpp"
+		$File	"deferred_utility.cpp"
+		$File	"defpass_composite.cpp"
+		$File	"defpass_gbuffer.cpp"
+		$File	"defpass_shadow.cpp"
+		$File	"IDeferredExt.cpp"
+		$File	"lighting_global.cpp"
+		$File	"lighting_pass_basic.cpp"
+		$File	"lighting_pass_volum.cpp"
+		$File	"lighting_volume.cpp"
+		$File	"lighting_world.cpp"
+		$File	"radiosity_blend.cpp"
+		$File	"radiosity_global.cpp"
+		$File	"radiosity_propagate.cpp"
+		$File	"screenspace_combine.cpp"
+		$File	"screenspace_shading.cpp"
+		$File	"volume_blend.cpp"
+		$File	"volume_prepass.cpp"
 	}
+
+	$Shaders	"deferred_shaders.txt"
 
 	$Folder	"Header Files"
 	{
@@ -61,11 +86,6 @@ $Project
 		$File	"common_vertexlitgeneric_dx9.h"
 		$File	"common_vs_fxc.h"
 		$File	"shader_constant_register_map.h"
-	}
-
-	$Folder	"Link Libraries" [$WIN32]
-	{
-//		$File	"$SRCDIR\dx9sdk\lib\d3dx9.lib"		
 	}
 
 	$Folder "Link Libraries"

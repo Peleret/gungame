@@ -39,10 +39,10 @@ REM PC SHADERS
 REM ****************
 
 set SOURCE_DIR="..\..\"
-set GAME_DIR="..\..\..\game\mod_hl2mp"
+set GAME_DIR="..\..\..\game\hl2"
 
-%BUILD_SHADER% deferred_shaders_sm2 -game %GAME_DIR% -source %SOURCE_DIR%
-%BUILD_SHADER% deferred_shaders -game %GAME_DIR% -source %SOURCE_DIR% -force30
+%BUILD_SHADER% misylshaders_dx9_20b -game %GAME_DIR% -source %SOURCE_DIR%
+%BUILD_SHADER% misylshaders_dx9_30 -game %GAME_DIR% -source %SOURCE_DIR% -force30
 
 REM ****************
 REM END
@@ -60,4 +60,3 @@ if not "%dynamic_shaders%" == "1" (
 
 rem %TTEXE% -diff %tt_all_start% -cur
 rem echo.
-pause

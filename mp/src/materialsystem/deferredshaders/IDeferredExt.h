@@ -476,7 +476,7 @@ ITexture *CDeferredExtension::GetTexture_RadNormal( const int &index )
 }
 #endif
 
-#ifdef HL2MP
+#ifdef CLIENT_DLL
 bool ConnectDeferredExt();
 void ShutdownDeferredExt();
 

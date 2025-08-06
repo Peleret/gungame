@@ -1,78 +1,11 @@
-// ALL SKIP STATEMENTS THAT AFFECT THIS SHADER!!!
-// $ALPHATEST && $TRANSLUCENT
-// !$ENVMAP && $ENVMAPFRESNEL
-// !$ENVMAP && $ENVMAPMASK
-// $ENVMAP && !$READNORMAL
-// $ENVMAPFRESNEL && !$READNORMAL
-// $PHONGFRESNEL && !$READNORMAL
-// $RIMLIGHT && !$READNORMAL
-// !$RIMLIGHT && $RIMLIGHTMODULATELIGHT
-// !$BASETEXTURE2 && $BLENDMODULATE
-// $MODEL && $BASETEXTURE2
-// !$ENVMAP && $PARALLAXCORRECT
-// $MODEL && $PARALLAXCORRECT
-// !$SELFILLUM && $SELFILLUM_MASK
-// !$SELFILLUM && $SELFILLUM_ENVMAP_ALPHA
-// $SELFILLUM_MASK && $SELFILLUM_ENVMAP_ALPHA
-// $SELFILLUM_MASK && $ENVMAPMASK
-// $SELFILLUM_ENVMAP_ALPHA && !$ENVMAPMASK
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-// !$MODEL && $MORPHING_VTEX
-// !$MODEL && $COMPRESSED_VERTS
-// !$MODEL && $SKINNING
-// !$MODEL && $MORPHING_VTEX
-// defined $HDRTYPE && defined $HDRENABLED && !$HDRTYPE && $HDRENABLED
-// defined $PIXELFOGTYPE && defined $WRITEWATERFOGTODESTALPHA && ( $PIXELFOGTYPE != 1 ) && $WRITEWATERFOGTODESTALPHA
-// defined $LIGHTING_PREVIEW && defined $HDRTYPE && $LIGHTING_PREVIEW && $HDRTYPE != 0
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPTINT && $LIGHTING_PREVIEW && $FASTPATHENVMAPTINT
-// defined $LIGHTING_PREVIEW && defined $FASTPATHENVMAPCONTRAST && $LIGHTING_PREVIEW && $FASTPATHENVMAPCONTRAST
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// ($FLASHLIGHT || $FLASHLIGHTSHADOWS) && $LIGHTING_PREVIEW
-
-#pragma once
 #include "shaderlib/cshader.h"
 class composite_ps30_Static_Index
 {
-	unsigned int m_nALPHATEST : 2;
-	unsigned int m_nTRANSLUCENT : 2;
-	unsigned int m_nREADNORMAL : 2;
-	unsigned int m_nNOCULL : 2;
-	unsigned int m_nPHONGFRESNEL : 2;
-	unsigned int m_nENVMAP : 2;
-	unsigned int m_nENVMAPMASK : 2;
-	unsigned int m_nENVMAPFRESNEL : 2;
-	unsigned int m_nRIMLIGHT : 2;
-	unsigned int m_nRIMLIGHTMODULATELIGHT : 2;
-	unsigned int m_nBASETEXTURE2 : 2;
-	unsigned int m_nBLENDMODULATE : 2;
-	unsigned int m_nSELFILLUM : 2;
-	unsigned int m_nSELFILLUM_MASK : 2;
-	unsigned int m_nSELFILLUM_ENVMAP_ALPHA : 2;
-	unsigned int m_nPARALLAXCORRECT : 2;
+private:
+	int m_nALPHATEST;
 #ifdef _DEBUG
-	bool m_bALPHATEST : 1;
-	bool m_bTRANSLUCENT : 1;
-	bool m_bREADNORMAL : 1;
-	bool m_bNOCULL : 1;
-	bool m_bPHONGFRESNEL : 1;
-	bool m_bENVMAP : 1;
-	bool m_bENVMAPMASK : 1;
-	bool m_bENVMAPFRESNEL : 1;
-	bool m_bRIMLIGHT : 1;
-	bool m_bRIMLIGHTMODULATELIGHT : 1;
-	bool m_bBASETEXTURE2 : 1;
-	bool m_bBLENDMODULATE : 1;
-	bool m_bSELFILLUM : 1;
-	bool m_bSELFILLUM_MASK : 1;
-	bool m_bSELFILLUM_ENVMAP_ALPHA : 1;
-	bool m_bPARALLAXCORRECT : 1;
-#endif	// _DEBUG
+	bool m_bALPHATEST;
+#endif
 public:
 	void SetALPHATEST( int i )
 	{
@@ -80,213 +13,417 @@ public:
 		m_nALPHATEST = i;
 #ifdef _DEBUG
 		m_bALPHATEST = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetALPHATEST( bool i )
+	{
+		m_nALPHATEST = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bALPHATEST = true;
+#endif
+	}
+private:
+	int m_nTRANSLUCENT;
+#ifdef _DEBUG
+	bool m_bTRANSLUCENT;
+#endif
+public:
 	void SetTRANSLUCENT( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nTRANSLUCENT = i;
 #ifdef _DEBUG
 		m_bTRANSLUCENT = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetTRANSLUCENT( bool i )
+	{
+		m_nTRANSLUCENT = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bTRANSLUCENT = true;
+#endif
+	}
+private:
+	int m_nREADNORMAL;
+#ifdef _DEBUG
+	bool m_bREADNORMAL;
+#endif
+public:
 	void SetREADNORMAL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nREADNORMAL = i;
 #ifdef _DEBUG
 		m_bREADNORMAL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetREADNORMAL( bool i )
+	{
+		m_nREADNORMAL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bREADNORMAL = true;
+#endif
+	}
+private:
+	int m_nNOCULL;
+#ifdef _DEBUG
+	bool m_bNOCULL;
+#endif
+public:
 	void SetNOCULL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nNOCULL = i;
 #ifdef _DEBUG
 		m_bNOCULL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetNOCULL( bool i )
+	{
+		m_nNOCULL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bNOCULL = true;
+#endif
+	}
+private:
+	int m_nPHONGFRESNEL;
+#ifdef _DEBUG
+	bool m_bPHONGFRESNEL;
+#endif
+public:
 	void SetPHONGFRESNEL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nPHONGFRESNEL = i;
 #ifdef _DEBUG
 		m_bPHONGFRESNEL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetPHONGFRESNEL( bool i )
+	{
+		m_nPHONGFRESNEL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPHONGFRESNEL = true;
+#endif
+	}
+private:
+	int m_nENVMAP;
+#ifdef _DEBUG
+	bool m_bENVMAP;
+#endif
+public:
 	void SetENVMAP( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nENVMAP = i;
 #ifdef _DEBUG
 		m_bENVMAP = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetENVMAP( bool i )
+	{
+		m_nENVMAP = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bENVMAP = true;
+#endif
+	}
+private:
+	int m_nENVMAPMASK;
+#ifdef _DEBUG
+	bool m_bENVMAPMASK;
+#endif
+public:
 	void SetENVMAPMASK( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nENVMAPMASK = i;
 #ifdef _DEBUG
 		m_bENVMAPMASK = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetENVMAPMASK( bool i )
+	{
+		m_nENVMAPMASK = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bENVMAPMASK = true;
+#endif
+	}
+private:
+	int m_nENVMAPFRESNEL;
+#ifdef _DEBUG
+	bool m_bENVMAPFRESNEL;
+#endif
+public:
 	void SetENVMAPFRESNEL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nENVMAPFRESNEL = i;
 #ifdef _DEBUG
 		m_bENVMAPFRESNEL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetENVMAPFRESNEL( bool i )
+	{
+		m_nENVMAPFRESNEL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bENVMAPFRESNEL = true;
+#endif
+	}
+private:
+	int m_nRIMLIGHT;
+#ifdef _DEBUG
+	bool m_bRIMLIGHT;
+#endif
+public:
 	void SetRIMLIGHT( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nRIMLIGHT = i;
 #ifdef _DEBUG
 		m_bRIMLIGHT = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetRIMLIGHT( bool i )
+	{
+		m_nRIMLIGHT = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bRIMLIGHT = true;
+#endif
+	}
+private:
+	int m_nRIMLIGHTMODULATELIGHT;
+#ifdef _DEBUG
+	bool m_bRIMLIGHTMODULATELIGHT;
+#endif
+public:
 	void SetRIMLIGHTMODULATELIGHT( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nRIMLIGHTMODULATELIGHT = i;
 #ifdef _DEBUG
 		m_bRIMLIGHTMODULATELIGHT = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetRIMLIGHTMODULATELIGHT( bool i )
+	{
+		m_nRIMLIGHTMODULATELIGHT = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bRIMLIGHTMODULATELIGHT = true;
+#endif
+	}
+private:
+	int m_nBASETEXTURE2;
+#ifdef _DEBUG
+	bool m_bBASETEXTURE2;
+#endif
+public:
 	void SetBASETEXTURE2( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBASETEXTURE2 = i;
 #ifdef _DEBUG
 		m_bBASETEXTURE2 = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBASETEXTURE2( bool i )
+	{
+		m_nBASETEXTURE2 = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBASETEXTURE2 = true;
+#endif
+	}
+private:
+	int m_nBLENDMODULATE;
+#ifdef _DEBUG
+	bool m_bBLENDMODULATE;
+#endif
+public:
 	void SetBLENDMODULATE( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBLENDMODULATE = i;
 #ifdef _DEBUG
 		m_bBLENDMODULATE = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBLENDMODULATE( bool i )
+	{
+		m_nBLENDMODULATE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBLENDMODULATE = true;
+#endif
+	}
+private:
+	int m_nSELFILLUM;
+#ifdef _DEBUG
+	bool m_bSELFILLUM;
+#endif
+public:
 	void SetSELFILLUM( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nSELFILLUM = i;
 #ifdef _DEBUG
 		m_bSELFILLUM = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetSELFILLUM( bool i )
+	{
+		m_nSELFILLUM = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bSELFILLUM = true;
+#endif
+	}
+private:
+	int m_nSELFILLUM_MASK;
+#ifdef _DEBUG
+	bool m_bSELFILLUM_MASK;
+#endif
+public:
 	void SetSELFILLUM_MASK( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nSELFILLUM_MASK = i;
 #ifdef _DEBUG
 		m_bSELFILLUM_MASK = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetSELFILLUM_MASK( bool i )
+	{
+		m_nSELFILLUM_MASK = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bSELFILLUM_MASK = true;
+#endif
+	}
+private:
+	int m_nSELFILLUM_ENVMAP_ALPHA;
+#ifdef _DEBUG
+	bool m_bSELFILLUM_ENVMAP_ALPHA;
+#endif
+public:
 	void SetSELFILLUM_ENVMAP_ALPHA( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nSELFILLUM_ENVMAP_ALPHA = i;
 #ifdef _DEBUG
 		m_bSELFILLUM_ENVMAP_ALPHA = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetSELFILLUM_ENVMAP_ALPHA( bool i )
+	{
+		m_nSELFILLUM_ENVMAP_ALPHA = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bSELFILLUM_ENVMAP_ALPHA = true;
+#endif
+	}
+private:
+	int m_nPARALLAXCORRECT;
+#ifdef _DEBUG
+	bool m_bPARALLAXCORRECT;
+#endif
+public:
 	void SetPARALLAXCORRECT( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nPARALLAXCORRECT = i;
 #ifdef _DEBUG
 		m_bPARALLAXCORRECT = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	composite_ps30_Static_Index(  )
+	void SetPARALLAXCORRECT( bool i )
 	{
-		m_nALPHATEST = 0;
-		m_nTRANSLUCENT = 0;
-		m_nREADNORMAL = 0;
-		m_nNOCULL = 0;
-		m_nPHONGFRESNEL = 0;
-		m_nENVMAP = 0;
-		m_nENVMAPMASK = 0;
-		m_nENVMAPFRESNEL = 0;
-		m_nRIMLIGHT = 0;
-		m_nRIMLIGHTMODULATELIGHT = 0;
-		m_nBASETEXTURE2 = 0;
-		m_nBLENDMODULATE = 0;
-		m_nSELFILLUM = 0;
-		m_nSELFILLUM_MASK = 0;
-		m_nSELFILLUM_ENVMAP_ALPHA = 0;
-		m_nPARALLAXCORRECT = 0;
+		m_nPARALLAXCORRECT = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPARALLAXCORRECT = true;
+#endif
+	}
+public:
+	composite_ps30_Static_Index( )
+	{
 #ifdef _DEBUG
 		m_bALPHATEST = false;
+#endif // _DEBUG
+		m_nALPHATEST = 0;
+#ifdef _DEBUG
 		m_bTRANSLUCENT = false;
+#endif // _DEBUG
+		m_nTRANSLUCENT = 0;
+#ifdef _DEBUG
 		m_bREADNORMAL = false;
+#endif // _DEBUG
+		m_nREADNORMAL = 0;
+#ifdef _DEBUG
 		m_bNOCULL = false;
+#endif // _DEBUG
+		m_nNOCULL = 0;
+#ifdef _DEBUG
 		m_bPHONGFRESNEL = false;
+#endif // _DEBUG
+		m_nPHONGFRESNEL = 0;
+#ifdef _DEBUG
 		m_bENVMAP = false;
+#endif // _DEBUG
+		m_nENVMAP = 0;
+#ifdef _DEBUG
 		m_bENVMAPMASK = false;
+#endif // _DEBUG
+		m_nENVMAPMASK = 0;
+#ifdef _DEBUG
 		m_bENVMAPFRESNEL = false;
+#endif // _DEBUG
+		m_nENVMAPFRESNEL = 0;
+#ifdef _DEBUG
 		m_bRIMLIGHT = false;
+#endif // _DEBUG
+		m_nRIMLIGHT = 0;
+#ifdef _DEBUG
 		m_bRIMLIGHTMODULATELIGHT = false;
+#endif // _DEBUG
+		m_nRIMLIGHTMODULATELIGHT = 0;
+#ifdef _DEBUG
 		m_bBASETEXTURE2 = false;
+#endif // _DEBUG
+		m_nBASETEXTURE2 = 0;
+#ifdef _DEBUG
 		m_bBLENDMODULATE = false;
+#endif // _DEBUG
+		m_nBLENDMODULATE = 0;
+#ifdef _DEBUG
 		m_bSELFILLUM = false;
+#endif // _DEBUG
+		m_nSELFILLUM = 0;
+#ifdef _DEBUG
 		m_bSELFILLUM_MASK = false;
+#endif // _DEBUG
+		m_nSELFILLUM_MASK = 0;
+#ifdef _DEBUG
 		m_bSELFILLUM_ENVMAP_ALPHA = false;
+#endif // _DEBUG
+		m_nSELFILLUM_ENVMAP_ALPHA = 0;
+#ifdef _DEBUG
 		m_bPARALLAXCORRECT = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nPARALLAXCORRECT = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bALPHATEST && m_bTRANSLUCENT && m_bREADNORMAL && m_bNOCULL && m_bPHONGFRESNEL && m_bENVMAP && m_bENVMAPMASK && m_bENVMAPFRESNEL && m_bRIMLIGHT && m_bRIMLIGHTMODULATELIGHT && m_bBASETEXTURE2 && m_bBLENDMODULATE && m_bSELFILLUM && m_bSELFILLUM_MASK && m_bSELFILLUM_ENVMAP_ALPHA && m_bPARALLAXCORRECT );
-		AssertMsg( !( m_nALPHATEST && m_nTRANSLUCENT ), "Invalid combo combination ( ALPHATEST && TRANSLUCENT )" );
-		AssertMsg( !( !m_nENVMAP && m_nENVMAPFRESNEL ), "Invalid combo combination ( !ENVMAP && ENVMAPFRESNEL )" );
-		AssertMsg( !( !m_nENVMAP && m_nENVMAPMASK ), "Invalid combo combination ( !ENVMAP && ENVMAPMASK )" );
-		AssertMsg( !( m_nENVMAP && !m_nREADNORMAL ), "Invalid combo combination ( ENVMAP && !READNORMAL )" );
-		AssertMsg( !( m_nENVMAPFRESNEL && !m_nREADNORMAL ), "Invalid combo combination ( ENVMAPFRESNEL && !READNORMAL )" );
-		AssertMsg( !( m_nPHONGFRESNEL && !m_nREADNORMAL ), "Invalid combo combination ( PHONGFRESNEL && !READNORMAL )" );
-		AssertMsg( !( m_nRIMLIGHT && !m_nREADNORMAL ), "Invalid combo combination ( RIMLIGHT && !READNORMAL )" );
-		AssertMsg( !( !m_nRIMLIGHT && m_nRIMLIGHTMODULATELIGHT ), "Invalid combo combination ( !RIMLIGHT && RIMLIGHTMODULATELIGHT )" );
-		AssertMsg( !( !m_nBASETEXTURE2 && m_nBLENDMODULATE ), "Invalid combo combination ( !BASETEXTURE2 && BLENDMODULATE )" );
-		AssertMsg( !( !m_nENVMAP && m_nPARALLAXCORRECT ), "Invalid combo combination ( !ENVMAP && PARALLAXCORRECT )" );
-		AssertMsg( !( !m_nSELFILLUM && m_nSELFILLUM_MASK ), "Invalid combo combination ( !SELFILLUM && SELFILLUM_MASK )" );
-		AssertMsg( !( !m_nSELFILLUM && m_nSELFILLUM_ENVMAP_ALPHA ), "Invalid combo combination ( !SELFILLUM && SELFILLUM_ENVMAP_ALPHA )" );
-		AssertMsg( !( m_nSELFILLUM_MASK && m_nSELFILLUM_ENVMAP_ALPHA ), "Invalid combo combination ( SELFILLUM_MASK && SELFILLUM_ENVMAP_ALPHA )" );
-		AssertMsg( !( m_nSELFILLUM_MASK && m_nENVMAPMASK ), "Invalid combo combination ( SELFILLUM_MASK && ENVMAPMASK )" );
-		AssertMsg( !( m_nSELFILLUM_ENVMAP_ALPHA && !m_nENVMAPMASK ), "Invalid combo combination ( SELFILLUM_ENVMAP_ALPHA && !ENVMAPMASK )" );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllStaticVarsDefined = m_bALPHATEST && m_bTRANSLUCENT && m_bREADNORMAL && m_bNOCULL && m_bPHONGFRESNEL && m_bENVMAP && m_bENVMAPMASK && m_bENVMAPFRESNEL && m_bRIMLIGHT && m_bRIMLIGHTMODULATELIGHT && m_bBASETEXTURE2 && m_bBLENDMODULATE && m_bSELFILLUM && m_bSELFILLUM_MASK && m_bSELFILLUM_ENVMAP_ALPHA && m_bPARALLAXCORRECT;
+		Assert( bAllStaticVarsDefined );
+#endif // _DEBUG
 		return ( 2 * m_nALPHATEST ) + ( 4 * m_nTRANSLUCENT ) + ( 8 * m_nREADNORMAL ) + ( 16 * m_nNOCULL ) + ( 32 * m_nPHONGFRESNEL ) + ( 64 * m_nENVMAP ) + ( 128 * m_nENVMAPMASK ) + ( 256 * m_nENVMAPFRESNEL ) + ( 512 * m_nRIMLIGHT ) + ( 1024 * m_nRIMLIGHTMODULATELIGHT ) + ( 2048 * m_nBASETEXTURE2 ) + ( 4096 * m_nBLENDMODULATE ) + ( 8192 * m_nSELFILLUM ) + ( 16384 * m_nSELFILLUM_MASK ) + ( 32768 * m_nSELFILLUM_ENVMAP_ALPHA ) + ( 65536 * m_nPARALLAXCORRECT ) + 0;
 	}
 };
-
-#define shaderStaticTest_composite_ps30 psh_forgot_to_set_static_ALPHATEST + psh_forgot_to_set_static_TRANSLUCENT + psh_forgot_to_set_static_READNORMAL + psh_forgot_to_set_static_NOCULL + psh_forgot_to_set_static_PHONGFRESNEL + psh_forgot_to_set_static_ENVMAP + psh_forgot_to_set_static_ENVMAPMASK + psh_forgot_to_set_static_ENVMAPFRESNEL + psh_forgot_to_set_static_RIMLIGHT + psh_forgot_to_set_static_RIMLIGHTMODULATELIGHT + psh_forgot_to_set_static_BASETEXTURE2 + psh_forgot_to_set_static_BLENDMODULATE + psh_forgot_to_set_static_SELFILLUM + psh_forgot_to_set_static_SELFILLUM_MASK + psh_forgot_to_set_static_SELFILLUM_ENVMAP_ALPHA + psh_forgot_to_set_static_PARALLAXCORRECT
-
-
+#define shaderStaticTest_composite_ps30 psh_forgot_to_set_static_ALPHATEST + psh_forgot_to_set_static_TRANSLUCENT + psh_forgot_to_set_static_READNORMAL + psh_forgot_to_set_static_NOCULL + psh_forgot_to_set_static_PHONGFRESNEL + psh_forgot_to_set_static_ENVMAP + psh_forgot_to_set_static_ENVMAPMASK + psh_forgot_to_set_static_ENVMAPFRESNEL + psh_forgot_to_set_static_RIMLIGHT + psh_forgot_to_set_static_RIMLIGHTMODULATELIGHT + psh_forgot_to_set_static_BASETEXTURE2 + psh_forgot_to_set_static_BLENDMODULATE + psh_forgot_to_set_static_SELFILLUM + psh_forgot_to_set_static_SELFILLUM_MASK + psh_forgot_to_set_static_SELFILLUM_ENVMAP_ALPHA + psh_forgot_to_set_static_PARALLAXCORRECT + 0
 class composite_ps30_Dynamic_Index
 {
-	unsigned int m_nPIXELFOGTYPE : 2;
+private:
+	int m_nPIXELFOGTYPE;
 #ifdef _DEBUG
-	bool m_bPIXELFOGTYPE : 1;
-#endif	// _DEBUG
+	bool m_bPIXELFOGTYPE;
+#endif
 public:
 	void SetPIXELFOGTYPE( int i )
 	{
@@ -294,23 +431,32 @@ public:
 		m_nPIXELFOGTYPE = i;
 #ifdef _DEBUG
 		m_bPIXELFOGTYPE = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	composite_ps30_Dynamic_Index(  )
+	void SetPIXELFOGTYPE( bool i )
 	{
-		m_nPIXELFOGTYPE = 0;
+		m_nPIXELFOGTYPE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bPIXELFOGTYPE = true;
+#endif
+	}
+public:
+	composite_ps30_Dynamic_Index()
+	{
 #ifdef _DEBUG
 		m_bPIXELFOGTYPE = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nPIXELFOGTYPE = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bPIXELFOGTYPE );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllDynamicVarsDefined = m_bPIXELFOGTYPE;
+		Assert( bAllDynamicVarsDefined );
+#endif // _DEBUG
 		return ( 1 * m_nPIXELFOGTYPE ) + 0;
 	}
 };
-
-#define shaderDynamicTest_composite_ps30 psh_forgot_to_set_dynamic_PIXELFOGTYPE
-
+#define shaderDynamicTest_composite_ps30 psh_forgot_to_set_dynamic_PIXELFOGTYPE + 0

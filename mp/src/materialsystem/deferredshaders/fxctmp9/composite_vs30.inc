@@ -1,33 +1,11 @@
-// ALL SKIP STATEMENTS THAT AFFECT THIS SHADER!!!
-// !$MODEL && $DECAL
-// !$BASETEXTURE2 && $BLENDMODULATE
-// $MODEL && $BASETEXTURE2
-// defined $LIGHTING_PREVIEW && defined $FASTPATH && $LIGHTING_PREVIEW && $FASTPATH
-// !$MODEL && $MORPHING_VTEX
-// !$MODEL && $COMPRESSED_VERTS
-// !$MODEL && $SKINNING
-// !$MODEL && $MORPHING_VTEX
-
-#pragma once
 #include "shaderlib/cshader.h"
 class composite_vs30_Static_Index
 {
-	unsigned int m_nMODEL : 2;
-	unsigned int m_nDECAL : 2;
-	unsigned int m_nMORPHING_VTEX : 2;
-	unsigned int m_nEYEVEC : 2;
-	unsigned int m_nBASETEXTURE2 : 2;
-	unsigned int m_nBLENDMODULATE : 2;
-	unsigned int m_nTREESWAY : 2;
+private:
+	int m_nMODEL;
 #ifdef _DEBUG
-	bool m_bMODEL : 1;
-	bool m_bDECAL : 1;
-	bool m_bMORPHING_VTEX : 1;
-	bool m_bEYEVEC : 1;
-	bool m_bBASETEXTURE2 : 1;
-	bool m_bBLENDMODULATE : 1;
-	bool m_bTREESWAY : 1;
-#endif	// _DEBUG
+	bool m_bMODEL;
+#endif
 public:
 	void SetMODEL( int i )
 	{
@@ -35,108 +13,192 @@ public:
 		m_nMODEL = i;
 #ifdef _DEBUG
 		m_bMODEL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetMODEL( bool i )
+	{
+		m_nMODEL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bMODEL = true;
+#endif
+	}
+private:
+	int m_nDECAL;
+#ifdef _DEBUG
+	bool m_bDECAL;
+#endif
+public:
 	void SetDECAL( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nDECAL = i;
 #ifdef _DEBUG
 		m_bDECAL = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetDECAL( bool i )
+	{
+		m_nDECAL = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bDECAL = true;
+#endif
+	}
+private:
+	int m_nMORPHING_VTEX;
+#ifdef _DEBUG
+	bool m_bMORPHING_VTEX;
+#endif
+public:
 	void SetMORPHING_VTEX( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nMORPHING_VTEX = i;
 #ifdef _DEBUG
 		m_bMORPHING_VTEX = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetMORPHING_VTEX( bool i )
+	{
+		m_nMORPHING_VTEX = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bMORPHING_VTEX = true;
+#endif
+	}
+private:
+	int m_nEYEVEC;
+#ifdef _DEBUG
+	bool m_bEYEVEC;
+#endif
+public:
 	void SetEYEVEC( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nEYEVEC = i;
 #ifdef _DEBUG
 		m_bEYEVEC = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetEYEVEC( bool i )
+	{
+		m_nEYEVEC = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bEYEVEC = true;
+#endif
+	}
+private:
+	int m_nBASETEXTURE2;
+#ifdef _DEBUG
+	bool m_bBASETEXTURE2;
+#endif
+public:
 	void SetBASETEXTURE2( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBASETEXTURE2 = i;
 #ifdef _DEBUG
 		m_bBASETEXTURE2 = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBASETEXTURE2( bool i )
+	{
+		m_nBASETEXTURE2 = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBASETEXTURE2 = true;
+#endif
+	}
+private:
+	int m_nBLENDMODULATE;
+#ifdef _DEBUG
+	bool m_bBLENDMODULATE;
+#endif
+public:
 	void SetBLENDMODULATE( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nBLENDMODULATE = i;
 #ifdef _DEBUG
 		m_bBLENDMODULATE = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetBLENDMODULATE( bool i )
+	{
+		m_nBLENDMODULATE = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bBLENDMODULATE = true;
+#endif
+	}
+private:
+	int m_nTREESWAY;
+#ifdef _DEBUG
+	bool m_bTREESWAY;
+#endif
+public:
 	void SetTREESWAY( int i )
 	{
 		Assert( i >= 0 && i <= 2 );
 		m_nTREESWAY = i;
 #ifdef _DEBUG
 		m_bTREESWAY = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	composite_vs30_Static_Index( IShaderShadow* pShaderShadow, IMaterialVar** params )
+	void SetTREESWAY( bool i )
 	{
-		m_nMODEL = 0;
-		m_nDECAL = 0;
-		m_nMORPHING_VTEX = 0;
-		m_nEYEVEC = 0;
-		m_nBASETEXTURE2 = 0;
-		m_nBLENDMODULATE = 0;
-		m_nTREESWAY = 0;
+		m_nTREESWAY = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bTREESWAY = true;
+#endif
+	}
+public:
+	composite_vs30_Static_Index( )
+	{
 #ifdef _DEBUG
 		m_bMODEL = false;
+#endif // _DEBUG
+		m_nMODEL = 0;
+#ifdef _DEBUG
 		m_bDECAL = false;
+#endif // _DEBUG
+		m_nDECAL = 0;
+#ifdef _DEBUG
 		m_bMORPHING_VTEX = false;
+#endif // _DEBUG
+		m_nMORPHING_VTEX = 0;
+#ifdef _DEBUG
 		m_bEYEVEC = false;
+#endif // _DEBUG
+		m_nEYEVEC = 0;
+#ifdef _DEBUG
 		m_bBASETEXTURE2 = false;
+#endif // _DEBUG
+		m_nBASETEXTURE2 = 0;
+#ifdef _DEBUG
 		m_bBLENDMODULATE = false;
+#endif // _DEBUG
+		m_nBLENDMODULATE = 0;
+#ifdef _DEBUG
 		m_bTREESWAY = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nTREESWAY = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bMODEL && m_bDECAL && m_bMORPHING_VTEX && m_bEYEVEC && m_bBASETEXTURE2 && m_bBLENDMODULATE && m_bTREESWAY );
-		AssertMsg( !( !m_nMODEL && m_nDECAL ), "Invalid combo combination ( !MODEL && DECAL )" );
-		AssertMsg( !( !m_nBASETEXTURE2 && m_nBLENDMODULATE ), "Invalid combo combination ( !BASETEXTURE2 && BLENDMODULATE )" );
-		AssertMsg( !( m_nMODEL && m_nBASETEXTURE2 ), "Invalid combo combination ( MODEL && BASETEXTURE2 )" );
-		AssertMsg( !( !m_nMODEL && m_nMORPHING_VTEX ), "Invalid combo combination ( !MODEL && MORPHING_VTEX )" );
-		AssertMsg( !( !m_nMODEL && m_nMORPHING_VTEX ), "Invalid combo combination ( !MODEL && MORPHING_VTEX )" );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllStaticVarsDefined = m_bMODEL && m_bDECAL && m_bMORPHING_VTEX && m_bEYEVEC && m_bBASETEXTURE2 && m_bBLENDMODULATE && m_bTREESWAY;
+		Assert( bAllStaticVarsDefined );
+#endif // _DEBUG
 		return ( 8 * m_nMODEL ) + ( 16 * m_nDECAL ) + ( 32 * m_nMORPHING_VTEX ) + ( 64 * m_nEYEVEC ) + ( 128 * m_nBASETEXTURE2 ) + ( 256 * m_nBLENDMODULATE ) + ( 512 * m_nTREESWAY ) + 0;
 	}
 };
-
-#define shaderStaticTest_composite_vs30 vsh_forgot_to_set_static_MODEL + vsh_forgot_to_set_static_DECAL + vsh_forgot_to_set_static_MORPHING_VTEX + vsh_forgot_to_set_static_EYEVEC + vsh_forgot_to_set_static_BASETEXTURE2 + vsh_forgot_to_set_static_BLENDMODULATE + vsh_forgot_to_set_static_TREESWAY
-
-
+#define shaderStaticTest_composite_vs30 vsh_forgot_to_set_static_MODEL + vsh_forgot_to_set_static_DECAL + vsh_forgot_to_set_static_MORPHING_VTEX + vsh_forgot_to_set_static_EYEVEC + vsh_forgot_to_set_static_BASETEXTURE2 + vsh_forgot_to_set_static_BLENDMODULATE + vsh_forgot_to_set_static_TREESWAY + 0
 class composite_vs30_Dynamic_Index
 {
-	unsigned int m_nCOMPRESSED_VERTS : 2;
-	unsigned int m_nSKINNING : 2;
-	unsigned int m_nMORPHING : 2;
+private:
+	int m_nCOMPRESSED_VERTS;
 #ifdef _DEBUG
-	bool m_bCOMPRESSED_VERTS : 1;
-	bool m_bSKINNING : 1;
-	bool m_bMORPHING : 1;
-#endif	// _DEBUG
+	bool m_bCOMPRESSED_VERTS;
+#endif
 public:
 	void SetCOMPRESSED_VERTS( int i )
 	{
@@ -144,45 +206,82 @@ public:
 		m_nCOMPRESSED_VERTS = i;
 #ifdef _DEBUG
 		m_bCOMPRESSED_VERTS = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetCOMPRESSED_VERTS( bool i )
+	{
+		m_nCOMPRESSED_VERTS = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bCOMPRESSED_VERTS = true;
+#endif
+	}
+private:
+	int m_nSKINNING;
+#ifdef _DEBUG
+	bool m_bSKINNING;
+#endif
+public:
 	void SetSKINNING( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nSKINNING = i;
 #ifdef _DEBUG
 		m_bSKINNING = true;
-#endif	// _DEBUG
+#endif
 	}
-
+	void SetSKINNING( bool i )
+	{
+		m_nSKINNING = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bSKINNING = true;
+#endif
+	}
+private:
+	int m_nMORPHING;
+#ifdef _DEBUG
+	bool m_bMORPHING;
+#endif
+public:
 	void SetMORPHING( int i )
 	{
 		Assert( i >= 0 && i <= 1 );
 		m_nMORPHING = i;
 #ifdef _DEBUG
 		m_bMORPHING = true;
-#endif	// _DEBUG
+#endif
 	}
-
-	composite_vs30_Dynamic_Index( IShaderDynamicAPI* pShaderAPI )
+	void SetMORPHING( bool i )
 	{
-		m_nCOMPRESSED_VERTS = 0;
-		m_nSKINNING = 0;
-		m_nMORPHING = 0;
+		m_nMORPHING = i ? 1 : 0;
+#ifdef _DEBUG
+		m_bMORPHING = true;
+#endif
+	}
+public:
+	composite_vs30_Dynamic_Index()
+	{
 #ifdef _DEBUG
 		m_bCOMPRESSED_VERTS = false;
+#endif // _DEBUG
+		m_nCOMPRESSED_VERTS = 0;
+#ifdef _DEBUG
 		m_bSKINNING = false;
+#endif // _DEBUG
+		m_nSKINNING = 0;
+#ifdef _DEBUG
 		m_bMORPHING = false;
-#endif	// _DEBUG
+#endif // _DEBUG
+		m_nMORPHING = 0;
 	}
-
-	int GetIndex() const
+	int GetIndex()
 	{
-		Assert( m_bCOMPRESSED_VERTS && m_bSKINNING && m_bMORPHING );
+		// Asserts to make sure that we aren't using any skipped combinations.
+		// Asserts to make sure that we are setting all of the combination vars.
+#ifdef _DEBUG
+		bool bAllDynamicVarsDefined = m_bCOMPRESSED_VERTS && m_bSKINNING && m_bMORPHING;
+		Assert( bAllDynamicVarsDefined );
+#endif // _DEBUG
 		return ( 1 * m_nCOMPRESSED_VERTS ) + ( 2 * m_nSKINNING ) + ( 4 * m_nMORPHING ) + 0;
 	}
 };
-
-#define shaderDynamicTest_composite_vs30 vsh_forgot_to_set_dynamic_COMPRESSED_VERTS + vsh_forgot_to_set_dynamic_SKINNING + vsh_forgot_to_set_dynamic_MORPHING
-
+#define shaderDynamicTest_composite_vs30 vsh_forgot_to_set_dynamic_COMPRESSED_VERTS + vsh_forgot_to_set_dynamic_SKINNING + vsh_forgot_to_set_dynamic_MORPHING + 0
