@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Setup
       run: |
-        chmod u+x ./mp/src/buildallprojects
-        mkdir -p /home/runner/.ccache
+        chmod u+x mp/src/buildallprojects devtools/bin/vpc
+        mkdir -p ~/.ccache
     - name: Build
-      run: ./mp/src/buildallprojects
+      run: mp/src/buildallprojects
