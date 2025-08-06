@@ -150,6 +150,11 @@ bld/
 .ninja_deps
 .ninja_log
 compile_commands.json
+mp/game/mod_hl2mp_linux64
+lib/public/linux64/mathlib.a
+lib/public/linux64/raytrace.a
+lib/public/linux64/tier1.a
+lib/public/linux64/vgui_controls.a
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
