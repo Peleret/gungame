@@ -13,5 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Make script executable
+      run: chmod u+x ./mp/src/buildallprojects
     - name: buildallprojects
       run: ./mp/src/buildallprojects
