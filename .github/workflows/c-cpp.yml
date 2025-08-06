@@ -1,0 +1,21 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup
+      run: |
+        chmod u+x mp/src/buildallprojects mp/src/devtools/bin/vpc
+        mkdir -p ~/.ccache
+    - name: Build
+      run: mp/src/buildallprojects
