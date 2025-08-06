@@ -13,7 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Make script executable
-      run: chmod u+x ./mp/src/buildallprojects
-    - name: buildallprojects
+    - name: Setup
+      run: |
+        chmod u+x ./mp/src/buildallprojects
+        mkdir -p /home/runner/.ccache
+    - name: Build
       run: ./mp/src/buildallprojects
